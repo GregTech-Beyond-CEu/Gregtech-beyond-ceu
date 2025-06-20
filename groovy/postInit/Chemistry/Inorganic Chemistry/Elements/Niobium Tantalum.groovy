@@ -91,7 +91,7 @@ mods.gregtech.electrolyzer.removeByInput(60, [metaitem('dustTantalite') * 9], nu
                 .EUt(540)
                 .buildAndRegister();
         
-        CHEMICAL_RECIPES.recipeBuilder() //CSTR
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('potassium_hydroxide')*2000)
                 .fluidInputs(fluid('oxypentafluoroniobate') * 1000)
                 .fluidOutputs(fluid('water')*2000)
@@ -190,7 +190,7 @@ mods.gregtech.electrolyzer.removeByInput(60, [metaitem('dustTantalite') * 9], nu
                 .EUt(200)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()       //FBR
+        FLUIDIZED_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('water')*1000)
                 .fluidInputs(fluid('mesityl_oxide')*1000)
                 .notConsumable(metaitem('dustActivatedCarbon'))
@@ -200,7 +200,7 @@ mods.gregtech.electrolyzer.removeByInput(60, [metaitem('dustTantalite') * 9], nu
                 .EUt(200)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()        //TBR
+        TRICKLE_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('acetone')*2000)
                 .fluidOutputs(fluid('mesityl_oxide')*1000)
                 .fluidOutputs(fluid('water')*1000)
