@@ -6,4 +6,5 @@ crafting.addShaped("handheld_table", item('extendedcrafting:handheld_table'), [
 [ore('stickWood'), null, null]
 ])
 
-crafting.remove('extendedcrafting:black_iron_ingot')
+crafting.remove('extendedcrafting:black_iron_ingot');
+crafting.remove('extendedcrafting:ender_ingot');
