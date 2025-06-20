@@ -1,6 +1,23 @@
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 
+        // Sulfuric Heavy Fuel * 15
+mods.gregtech.distillation_tower.removeByInput(96, null, [fluid('oil') * 50 * 50])
+// Butane Gas * 60
+mods.gregtech.distillation_tower.removeByInput(120, null, [fluid('refinery_gas') * 1000 * 1000])
+// Steam-Cracked Butene Gas * 500
+mods.gregtech.chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('butene') * 1000 * 1000, fluid('steam') * 1000 * 1000])
+
+// Propane Gas * 125
+mods.gregtech.distillation_tower.removeByInput(120, null, [fluid('steamcracked_butane') * 1000 * 1000])
+// Propane Gas * 25
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('steamcracked_butane') * 200 * 200])
+// Ethane Gas * 30
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('steamcracked_butane') * 40 * 40])
+// Ethylene Gas * 30
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 3])], [fluid('steamcracked_butane') * 40 * 40])
+// Methane Gas * 50
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('steamcracked_butane') * 100 * 100])
 
         CENTRIFUGE_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('diluted_oil')*1000)
@@ -52,15 +69,24 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(200)
                 .EUt(70).buildAndRegister();
 
+// Ethylene Gas * 250
+mods.gregtech.distillation_tower.removeByInput(120, null, [fluid('steamcracked_ethane') * 1000 * 1000])
+// Ethylene Gas * 25
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('steamcracked_ethane') * 100 * 100])
+// Methane Gas * 50
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('steamcracked_ethane') * 40 * 40])
+// Butane Gas * 25
+
+
         DISTILLATION_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('steamcracked_ethane')*2000)
-                .fluidOutputs(fluid('ethylene')*500)
-                .fluidOutputs(fluid('propylene')*200)
-                .fluidOutputs(fluid('butane')*100)
-                .fluidOutputs(fluid('hydrogen')*200)
-                .fluidOutputs(fluid('methane')*500)
-                .fluidOutputs(fluid('ethane')*300)
-                .fluidOutputs(fluid('nonene')*200)
+                .fluidInputs(fluid('steamcracked_ethane')*1000)
+                .fluidOutputs(fluid('ethylene')*250)
+                .fluidOutputs(fluid('propylene')*100)
+                .fluidOutputs(fluid('butane')*50)
+                .fluidOutputs(fluid('hydrogen')*100)
+                .fluidOutputs(fluid('methane')*250)
+                .fluidOutputs(fluid('ethane')*150)
+                .fluidOutputs(fluid('nonene')*100)
                 .duration(200)
                 .EUt(249)
                 .buildAndRegister();
@@ -84,12 +110,47 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .buildAndRegister();
 
         DISTILLATION_RECIPES.recipeBuilder().fluidInputs(fluid('steam_cracked_kerosene')*1000)
-                .fluidOutputs(fluid('ethylene')*150).fluidOutputs(fluid('methane')*150)
-                .fluidOutputs(fluid('propane')*150).fluidOutputs(fluid('propene')*100)
-                .fluidOutputs(fluid('ethane')*15).fluidOutputs(fluid('benzene')*125).fluidOutputs(fluid('butene')*80)
-                .fluidOutputs(fluid('butadiene')*50).fluidOutputs(fluid('gasoline')*100)
-                .fluidOutputs(fluid('naphtha')*125).fluidOutputs(fluid('toluene')*80).duration(200).EUt(80)
+                .fluidOutputs(fluid('hexane')*50)
+                .fluidOutputs(fluid('ethylene')*150)
+                .fluidOutputs(fluid('methane')*150)
+                .fluidOutputs(fluid('propane')*150)
+                .fluidOutputs(fluid('propene')*100)
+                .fluidOutputs(fluid('ethane')*15)
+                .fluidOutputs(fluid('benzene')*125)
+                .fluidOutputs(fluid('butene')*80)
+                .fluidOutputs(fluid('butadiene')*50)
+                .fluidOutputs(fluid('gasoline')*100)
+                .fluidOutputs(fluid('naphtha')*125)
+                .fluidOutputs(fluid('toluene')*80)
+                .duration(200)
+                .EUt(80)
                 .buildAndRegister();
+
+// Heavy Fuel * 75
+mods.gregtech.distillation_tower.removeByInput(120, null, [fluid('lightly_steamcracked_naphtha') * 1000 * 1000])
+// Heavy Fuel * 75
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('lightly_steamcracked_naphtha') * 1000 * 1000])
+// Light Fuel * 30
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('lightly_steamcracked_naphtha') * 200 * 200])
+// Toluene * 40
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 3])], [fluid('lightly_steamcracked_naphtha') * 1000 * 1000])
+// Benzene * 30
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('lightly_steamcracked_naphtha') * 200 * 200])
+// Butene Gas * 40
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 5])], [fluid('lightly_steamcracked_naphtha') * 500 * 500])
+// Butadiene Gas * 30
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 6])], [fluid('lightly_steamcracked_naphtha') * 200 * 200])
+// Propane Gas * 15
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 7])], [fluid('lightly_steamcracked_naphtha') * 1000 * 1000])
+// Propene Gas * 40
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 8])], [fluid('lightly_steamcracked_naphtha') * 200 * 200])
+// Ethane Gas * 35
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 9])], [fluid('lightly_steamcracked_naphtha') * 1000 * 1000])
+// Ethylene Gas * 40
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 10])], [fluid('lightly_steamcracked_naphtha') * 200 * 200])
+// Methane Gas * 40
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 11])], [fluid('lightly_steamcracked_naphtha') * 200 * 200])
+
 
         DISTILLATION_RECIPES.recipeBuilder().fluidInputs(fluid('lightly_steamcracked_naphtha')*1000)
                 .fluidOutputs(fluid('ethane')*35)
@@ -108,27 +169,11 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(120)
                 .buildAndRegister();
 
-        DISTILLATION_RECIPES.recipeBuilder().fluidInputs(fluid('severely_steamcracked_naphtha')*1000)
-                .fluidOutputs(fluid('ethane')*65)
-                .fluidOutputs(fluid('ethylene')*500)
-                .fluidOutputs(fluid('methane')*500)
-                .fluidOutputs(fluid('butadiene')*50)
-                .fluidOutputs(fluid('propane')*15)
-                .fluidOutputs(fluid('propene')*300)
-                .fluidOutputs(fluid('benzene')*100)
-                .fluidOutputs(fluid('fraction_c_5')*350)
-                .fluidOutputs(fluid('butene')*50)
-                .fluidOutputs(fluid('kerosene')*25)
-                .fluidOutputs(fluid('gasoline')*50)
-                .fluidOutputs(fluid('toluene')*20)
-                .duration(200)
-                .EUt(120)
-                .buildAndRegister();
-
         DISTILLATION_RECIPES.recipeBuilder().fluidInputs(fluid('fraction_c_5')*1000)
                 .fluidOutputs(fluid('dicyclopentadiene')*200)
-                .fluidOutputs(fluid('pentane')*400)
-                .fluidOutputs(fluid('isoprene')*400).duration(200).EUt(12).buildAndRegister();
+                .fluidOutputs(fluid('cyclooctadiene')*200)
+                .fluidOutputs(fluid('pentane')*300)
+                .fluidOutputs(fluid('isoprene')*300).duration(200).EUt(12).buildAndRegister();
 
         CENTRIFUGE_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('dicyclopentadiene')*1000)
@@ -219,6 +264,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         CENTRIFUGE_RECIPES.recipeBuilder()
                 .inputs(metaitem('rubber_drop')* 1)
+                .circuitMeta(1)
                 .fluidOutputs(fluid('resin')*100)
                 .duration(120)
                 .EUt(80)
@@ -249,14 +295,41 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(480)
                 .buildAndRegister();
 
+// Heavy Fuel * 25
+mods.gregtech.distillation_tower.removeByInput(120, null, [fluid('severely_steamcracked_naphtha') * 1000 * 1000])
+
+// Ethane Gas * 65
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('severely_steamcracked_naphtha') * 1000 * 1000])
+// Butadiene Gas * 25
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('severely_steamcracked_naphtha') * 500 * 500])
+// Propane Gas * 15
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 5])], [fluid('severely_steamcracked_naphtha') * 1000 * 1000])
+// Light Fuel * 25
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('severely_steamcracked_naphtha') * 500 * 500])
+// Toluene * 20
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 3])], [fluid('severely_steamcracked_naphtha') * 1000 * 1000])
+// Butadiene Gas * 25
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 6])], [fluid('severely_steamcracked_naphtha') * 500 * 500])
+// Propane Gas * 15
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 7])], [fluid('severely_steamcracked_naphtha') * 1000 * 1000])
+// Propene Gas * 30
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 8])], [fluid('severely_steamcracked_naphtha') * 100 * 100])
+// Ethylene Gas * 50
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 10])], [fluid('severely_steamcracked_naphtha') * 100 * 100])
+// Methane Gas * 50
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 11])], [fluid('severely_steamcracked_naphtha') * 100 * 100])
+// Ethane Gas * 65
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 9])], [fluid('severely_steamcracked_naphtha') * 1000 * 1000])
+
+
+
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('severely_steamcracked_naphtha')*1000)
                 .fluidOutputs(fluid('ethylene')*500)
                 .fluidOutputs(fluid('methane')*500)
                 .fluidOutputs(fluid('propene')*300)
                 .fluidOutputs(fluid('propane')*15)
-                .fluidOutputs(fluid('ethane')*65)
-                .fluidOutputs(fluid('benzene')*100)
+                .fluidOutputs(fluid('ethane')*65)// Benzene * 50
                 .fluidOutputs(fluid('butene')*50)
                 .fluidOutputs(fluid('butadiene')*50)
                 .fluidOutputs(fluid('heavy_fuel')*25)
@@ -265,41 +338,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .fluidOutputs(fluid('cyclooctadiene')*75)
                 .duration(500)
                 .EUt(480)
-                .buildAndRegister();
-
-        DISTILLATION_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('lightly_steamcracked_naphtha')*1000)
-                .fluidOutputs(fluid('ethylene')*200)
-                .fluidOutputs(fluid('methane')*200)
-                .fluidOutputs(fluid('propene')*200)
-                .fluidOutputs(fluid('propane')*15)
-                .fluidOutputs(fluid('ethane')*35)
-                .fluidOutputs(fluid('benzene')*150)
-                .fluidOutputs(fluid('butene')*80)
-                .fluidOutputs(fluid('butadiene')*150)
-                .fluidOutputs(fluid('heavy_fuel')*75)
-                .fluidOutputs(fluid('light_fuel')*150)
-                .fluidOutputs(fluid('toluene')*40)
-                .fluidOutputs(fluid('cyclooctadiene')*100)
-                .duration(500)
-                .EUt(480)
-                .buildAndRegister();
-
-        DISTILLATION_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('gasoline')*1000)
-                .fluidOutputs(fluid('nheptane')*150)
-                .fluidOutputs(fluid('toluene')*50)
-                .fluidOutputs(fluid('noctane')*150)
-                .fluidOutputs(fluid('ethylbenzene')*50)
-                .fluidOutputs(fluid('mxylene')*50)
-                .fluidOutputs(fluid('nhexadecane')*50)
-                .fluidOutputs(fluid('propane')*100)
-                .fluidOutputs(fluid('ethane')*100)
-                .fluidOutputs(fluid('methane')*200)
-                .fluidOutputs(fluid('butane')*150)
-                .duration(500)
-                .EUt(480)
-                .buildAndRegister();
+                .buildAndRegister();;
 
         SINTERING_OVEN_RECIPES.recipeBuilder()
                 .inputs(metaitem('bituminous_residues')* 1)
@@ -326,10 +365,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(480)
                 .buildAndRegister();
 
-        // Sulfuric Heavy Fuel * 15
-mods.gregtech.distillation_tower.removeByInput(96, null, [fluid('oil') * 50 * 50])
-// Butane Gas * 60
-mods.gregtech.distillation_tower.removeByInput(120, null, [fluid('refinery_gas') * 1000 * 1000])
 
 
 
@@ -357,6 +392,3 @@ mods.gregtech.distillation_tower.removeByInput(120, null, [fluid('refinery_gas')
                 .EUt(170)
                 .buildAndRegister();
 
-//Removals
-// Steam-Cracked Butene Gas * 500
-mods.gregtech.chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('butene') * 1000 * 1000, fluid('steam') * 1000 * 1000])
