@@ -27,12 +27,14 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .fluidInputs(fluid('urethane_pre_polymer')*1000)
                 .fluidOutputs(fluid('polyurethane')*1000)
                 .fluidInputs(fluid('air')*1000)
+                .notConsumable(fluid('isopentane')*1000)
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
 
         POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('urethane_pre_polymer')*1000)
+                .notConsumable(fluid('isopentane')*1000)
                 .fluidOutputs(fluid('polyurethane')*1000)
                 .fluidInputs(fluid('oxygen')*1000)
                 .duration(200)
@@ -41,6 +43,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('urethane_pre_polymer')*1000)
+                .notConsumable(fluid('isopentane')*1000)
                 .fluidOutputs(fluid('polyurethane')*4000)
                 .notConsumable(metaitem('dustKaminskyCatalyst'))
                 .duration(200)
@@ -49,6 +52,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('urethane_pre_polymer')*1000)
+                .notConsumable(fluid('isopentane')*1000)
                 .fluidOutputs(fluid('polyurethane')*2000)
                 .notConsumable(metaitem('dustPhilipsCatalyst'))
                 .duration(200)
@@ -57,6 +61,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('urethane_pre_polymer')*1000)
+                .notConsumable(fluid('isopentane')*1000)
                 .fluidOutputs(fluid('polyurethane')*3000)
                 .notConsumable(metaitem('dustZieglerNattaCatalyst'))
                 .duration(200)
