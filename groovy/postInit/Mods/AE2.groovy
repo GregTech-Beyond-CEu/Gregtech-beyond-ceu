@@ -614,32 +614,11 @@ ASSEMBLER_RECIPES.recipeBuilder()
     .EUt(480)
     .buildAndRegister()
 ASSEMBLER_RECIPES.recipeBuilder()
-    .inputs(ore('circuitEv')*2, item('appliedenergistics2:crafting_accelerator')*2, item('appliedenergistics2:material:36'), metaitem('screwCrystalFluix')*12)
-    .fluidInputs(fluid('certus_quartz')*144)
-    .outputs(item('nae2:coprocessor_4x')*2)
-    .duration(200) 
-    .EUt(480)
-    .buildAndRegister()
-ASSEMBLER_RECIPES.recipeBuilder()
     .inputs(ore('circuitIv')*2, item('nae2:coprocessor_4x')*2, ore('EntropyCore')*4, item('appliedenergistics2:material:37'), metaitem('screwCrystalFluix')*18)
     .fluidInputs(fluid('crystal_fluix')*72)
     .outputs(item('nae2:coprocessor_16x')*2)
     .duration(200) 
     .EUt(480)
-    .buildAndRegister()
-ASSEMBLER_RECIPES.recipeBuilder()
-    .inputs(ore('circuitIv')*2, item('nae2:coprocessor_4x')*2, ore('EntropyCore')*4, item('appliedenergistics2:material:37'), metaitem('screwCrystalFluix')*18)
-    .fluidInputs(fluid('crystal_fluix')*72)
-    .outputs(item('nae2:coprocessor_16x')*2)
-    .duration(200) 
-    .EUt(480)
-    .buildAndRegister()
-ASSEMBLER_RECIPES.recipeBuilder()
-    .inputs(ore('circuitLuv'), item('nae2:coprocessor_16x')*2, ore('EntropyCore')*8, item('appliedenergistics2:material:38'), metaitem('screwCrystalFluix')*24)
-    .fluidInputs(fluid('crystal_fluix')*144)
-    .outputs(item('nae2:coprocessor_64x'))
-    .duration(200) 
-    .EUt(1920)
     .buildAndRegister()
 ASSEMBLER_RECIPES.recipeBuilder()
     .inputs(ore('circuitLuv'), item('nae2:coprocessor_16x')*2, ore('EntropyCore')*8, item('appliedenergistics2:material:38'), metaitem('screwCrystalFluix')*24)
@@ -1060,9 +1039,21 @@ FORMING_PRESS_RECIPES.recipeBuilder()
     .buildAndRegister();
 
 
+crafting.addShaped("storage_cell_housing_recipe", item('appliedenergistics2:material', 39), [
+[item('gregtech:transparent_casing'), ore('plateRedstone'), item('gregtech:transparent_casing')], 
+[ore('circuitHv'), null, ore('circuitHv')], 
+[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')]
+])
 
-
-
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(ore('circuitHv')*2)
+    .inputs(ore('plateSteel')*3)
+    .inputs(ore('plateRedstone'))
+    .inputs(item('gregtech:transparent_casing')*2)
+    .outputs(item('appliedenergistics2:material', 39))
+    .EUt(80)
+    .duration(200)
+    .buildAndRegister();
 
 
 
@@ -1240,3 +1231,5 @@ FORMING_PRESS_RECIPES.recipeBuilder()
     .EUt(20)
     .duration(200)
     .buildAndRegister();
+
+crafting.remove('appliedenergistics2:materials/advancedcard')
