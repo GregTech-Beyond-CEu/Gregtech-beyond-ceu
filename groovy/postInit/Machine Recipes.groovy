@@ -245,3 +245,14 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(200)
                 .EUt(700)
                 .buildAndRegister();
+
+        crafting.addShaped("drying_column", item('gregtech:machine', 3066), [
+                [item('gregtech:meta_item_1', 144), ore('circuitHv'), item('gregtech:meta_item_1', 144)], 
+                [ore('pipeSmallFluidAluminium'), item('gregtech:machine', 4152), ore('pipeSmallFluidAluminium')], 
+                [ore('pipeSmallFluidAluminium'), ore('circuitHv'), ore('pipeSmallFluidAluminium')]])
+
+        crafting.addShaped("fbr", item('gregtech:machine', 3067), [
+                [ore('pipeHugeFluidPolytetrafluoroethylene'), ore('circuitHv'), ore('pipeHugeFluidPolytetrafluoroethylene')], 
+                [item('gregtech:meta_item_1', 144), item('gregtech:machine', 988), item('gregtech:meta_item_1', 144)], 
+                [ore('pipeHugeFluidPolytetrafluoroethylene'), ore('circuitHv'), ore('pipeHugeFluidPolytetrafluoroethylene')]
+                ])
