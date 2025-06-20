@@ -2,6 +2,17 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 
 
+// Propane Gas * 200
+mods.gregtech.distillation_tower.removeByInput(70, null, [fluid('gasoline') * 1000 * 1000])
+// Propane Gas * 40
+mods.gregtech.distillery.removeByInput(17, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('gasoline') * 200 * 200])
+// Ethane Gas * 30
+mods.gregtech.distillery.removeByInput(17, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('gasoline') * 100 * 100])
+// Methane Gas * 35
+mods.gregtech.distillery.removeByInput(17, [metaitem('circuit.integrated').withNbt(['Configuration': 3])], [fluid('gasoline') * 100 * 100])
+// Butane Gas * 30
+mods.gregtech.distillery.removeByInput(17, [metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('gasoline') * 200 * 200])
+
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('gasoline')*1000)
                 .fluidOutputs(fluid('nheptane')*400)
