@@ -23,206 +23,165 @@ public class SecondDegreeMaterials {
 
 
         StyreneSuspension = new Material.Builder(10001, GTBUtil.gtb("styrene_suspension"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x898685)
-                .build();
-
-        StyreneSuspension.setFormula("C8H8(H2O)", true)
+                .build().setFormula("C8H8(H2O)", true)
 
         PolystyreneSuspension = new Material.Builder(10002, GTBUtil.gtb("polystyrene_suspension"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x7A7474)
-                .build();
-
-        PolystyreneSuspension.setFormula("[(C8H8)(H2O)]n", true)
+                .build().setFormula("[(C8H8)(H2O)]n", true)
 
         PolyvinylAcetateSolution = new Material.Builder(10003, GTBUtil.gtb("polyvinyl_acetate_solution"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0xC88B79)
-                .build();
-
-        PolyvinylAcetateSolution.setFormula("[(C4H6O2)(H2O)]n", true)
+                .build().setFormula("[(C4H6O2)(H2O)]n", true)
 
         PolyvinylChlorideSolution = new Material.Builder(10004, GTBUtil.gtb("polyvinyl_chloride_solution"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0xB7D4D8)
-                .build();
-
-        PolyvinylChlorideSolution.setFormula("[(C2H3Cl)(H2O)]n", true)
+                .build().setFormula("[(C2H3Cl)(H2O)]n", true)
 
         PeekReactionMixture = new Material.Builder(10005, GTBUtil.gtb("peek_reaction_mixture"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x808687)
-                .build();
-
-        PeekReactionMixture.setFormula("(C6H6O2)(C13H8OF2)(K2CO3)(C12H10O2S)", true)
+                .build().setFormula("(C6H6O2)(C13H8OF2)(K2CO3)(C12H10O2S)", true)
 
         PostPolymerizationPeekMixture = new Material.Builder(10006, GTBUtil.gtb("post_polymerization_peek_mixture"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x6A6D6D)
-                .build();
-
-        PostPolymerizationPeekMixture.setFormula("[(C6H6O2)(C13H8OF2)(K2CO3)(C12H10O2S)]n", true)
+                .build().setFormula("[(C6H6O2)(C13H8OF2)(K2CO3)(C12H10O2S)]n", true)
 
         FluorobenzeneMixture = new Material.Builder(10007, GTBUtil.gtb("fluorobenzene_mixture"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x4F6466)
-                .build();
-
-        FluorobenzeneMixture.setFormula("(CS2)(C6H5F)", true)
+                .build().setFormula("(CS2)(C6H5F)", true)
 
         PrecipitatedPeekMixture = new Material.Builder(10008, GTBUtil.gtb("precipitated_peek_mixture"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x323333)
-                .build();
-
-        PrecipitatedPeekMixture.setFormula("[(C6H6O2)(C13H8OF2)(K2CO3)]n", true)
+                .build().setFormula("[(C6H6O2)(C13H8OF2)(K2CO3)]n", true)
 
         PolyetheretherketoneWaste = new Material.Builder(10009, GTBUtil.gtb("polyetheretherketone_waste"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x333636)
-                .build();
-
-        PolyetheretherketoneWaste.setFormula("2(HF)(CH3OH)", true)
+                .build().setFormula("2(HF)(CH3OH)", true)
 
         Polyetheretherketone = new Material.Builder(10010, GTBUtil.gtb("polyetheretherketone"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .dust()
                 .flags(GENERATE_PLATE, GENERATE_FRAME, GENERATE_ROD)
                 .color(0x373737)
-                .build();
-
-        Polyetheretherketone.setFormula("[(C19H12O3)]n", true)
+                .build().setFormula("[(C19H12O3)]n", true)
 
         PurifiedPeekMixture = new Material.Builder(10011, GTBUtil.gtb("purified_peek_mixture"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x5E5E5E)
-                .build();
-        PurifiedPeekMixture.setFormula("[(C6H6O2)(C13H8OF2)]n", true)
+                .build().setFormula("[(C6H6O2)(C13H8OF2)]n", true)
 
         CrackingCatalystPreparation = new Material.Builder(10012, GTBUtil.gtb("cracking_catalyst_preparation"))
                 .dust()
                 .color(0x5E5E5E)
-                .build();
-        CrackingCatalystPreparation.setFormula("(SiO2)(Na2LiAl2Si2(H2O)6)(AlO2)", true)
+                .build().setFormula("(SiO2)(Na2LiAl2Si2(H2O)6)(AlO2)", true)
 
         SilicaGelBase = new Material.Builder(10013, GTBUtil.gtb("silica_gel_base"))
                 .dust()
                 .color(0x5E5E5E)
-                .build();
-        SilicaGelBase.setFormula("SiO2(HCl)(NaOH)(H2O)", true)
+                .build()setFormula("SiO2(HCl)(NaOH)(H2O)", true)
 
         Dimethylformamide = new Material.Builder(10014, GTBUtil.gtb("dimethylformamide")) // TODO DMF Tooltip
                 .fluid()
                 .color(0x42BDFF)
-                
-                .build()
-                .setFormula("(CH3)2NC(O)H", true);
+                .build().setFormula("(CH3)2NC(O)H", true);
 
         Oxydianiline = new Material.Builder(10015, GTBUtil.gtb("oxydianiline"))
                 .dust()
                 .color(0xF0E130)
-                .build()
-                .setFormula("O(C6H4NH2)2", true);
+                .build().setFormula("O(C6H4NH2)2", true);
 
         KaptonK = new Material.Builder(10016, GTBUtil.gtb("kapton_k"))
                 .ingot().fluid()
                 .color(0xFFCE52)
                 .flags(GENERATE_PLATE, GENERATE_FOIL)
-                .build()
-                .setFormula("(C7H2N2O4)(O(C6H4)2)", true);
+                .build().setFormula("(C7H2N2O4)(O(C6H4)2)", true);
 
         BiphenylTetracarboxylicAcidDianhydride = new Material.Builder(10017, GTBUtil.gtb("biphenyl_tetracarboxylic_acid_dianhydride"))
-                        .dust()
-                        .color(0xFF7F50)
-                        .build()
-                        .setFormula("(C8H3O3)2", true);
+                .dust()
+                .color(0xFF7F50)
+                .build().setFormula("(C8H3O3)2", true);
 
         KaptonE = new Material.Builder(10018, GTBUtil.gtb("kapton_e"))
                 .ingot()
                 .fluid()
                 .color(0xFFDF8C)
                 .flags(GENERATE_PLATE, GENERATE_FOIL)
-                .build()
-                .setFormula("[O(C6H4NH2)2]n", true);
+                .build().setFormula("[O(C6H4NH2)2]n", true);
 
         DilutedAcetone = new Material.Builder(10020, GTBUtil.gtb("diluted_acetone"))
                 .fluid()
-                .color(0xBAD5E1).build()
-                .setFormula("(C3H6O)(H2O)", true);
-
+                .color(0xBAD5E1)
+                .build().setFormula("(C3H6O)(H2O)", true);
 
         Kevlar = new Material.Builder(10021, GTBUtil.gtb("kevlar"))
                 .ingot().fluid()
                 .color(0xF0F078)
                 .flags(GENERATE_PLATE, GENERATE_FOIL)
-                .build()
-                .setFormula("(C6H4)2(CO)2(NH)2", true);
+                .build().setFormula("(C6H4)2(CO)2(NH)2", true);
 
         KevlarConcentrate = new Material.Builder(10022, GTBUtil.gtb("kevlar_concentrate"))
                 .dust()
                 .fluid()
                 .color(0xcfc532)
                 .iconSet(SHINY)
-                .build()
-                .setFormula("(C6H4)2(CO)2(NH)2", true);
+                .build().setFormula("(C6H4)2(CO)2(NH)2", true);
 
         PurifiedKevlarConcentrate = new Material.Builder(10023, GTBUtil.gtb("purified_kevlar_concentrate"))
                 .dust()
                 .fluid()
                 .color(0xcfc532)
                 .iconSet(SHINY)
-                .build()
-                .setFormula("((C6H4)2(CO)2(NH)2)+", true);
+                .build().setFormula("((C6H4)2(CO)2(NH)2)+", true);
 
         KevlarBlend = new Material.Builder(10024, GTBUtil.gtb("kevlar_blend"))
                 .dust()
                 .fluid()
                 .color(0xcfc532)
                 .iconSet(SHINY)
-                .build()
-                .setFormula("(C6H4)2(CO)2(NH)2", true);
+                .build().setFormula("(C6H4)2(CO)2(NH)2", true);
 
         Durene = new Material.Builder(10025, GTBUtil.gtb("durene"))
                 .dust()
                 .color(0x336040)
                 .iconSet(FINE)
-                .build()
-                .setFormula("C6H2(CH3)4", true);
+                .build().setFormula("C6H2(CH3)4", true);
 
         PyromelliticDianhydride = new Material.Builder(10026, GTBUtil.gtb("pyromellitic_dianhydride")) // TODO
                 .dust()
                 .color(0xF0EAD6)
                 .iconSet(ROUGH)
-                .build()
-                .setFormula("C6H2(C2O3)2", true);
+                .build().setFormula("C6H2(C2O3)2", true);
 
         Bistrichloromethylbenzene = new Material.Builder(10027, GTBUtil.gtb("bistrichloromethylbenzene"))
                 .fluid()
                 .color(0xCF8498)
-                .build()
-                .setFormula("C6H4(CCl3)2", true);
+                .build().setFormula("C6H4(CCl3)2", true);
 
         TerephthalicAcid = new Material.Builder(10028, GTBUtil.gtb("terephthalic_acid"))
                 .dust()
                 .color(0x5ACCDA)
                 .iconSet(ROUGH)
-                .build()
-                .setFormula("C6H4(CO2H)2", true);
+                .build().setFormula("C6H4(CO2H)2", true);
 
         TerephthaloylChloride = new Material.Builder(10029, GTBUtil.gtb("terephthaloyl_chloride"))
                 .dust()
                 .color(0xFAC4DA)
                 .iconSet(SHINY)
-                .build()
-                .setFormula("C6H4(COCl)2", true);
+                .build().setFormula("C6H4(COCl)2", true);
 
         Butanediol = new Material.Builder(10030, GTBUtil.gtb("butanediol"))
                 .fluid()
                 .color(0xAAC4DA)
-                
-                .build()
-                .setFormula("C4H8(OH)2", true);
+                .build().setFormula("C4H8(OH)2", true);
 
         FusedColumbite = new Material.Builder(10031, GTBUtil.gtb("fused_columbite"))
                 .dust()
@@ -248,59 +207,74 @@ public class SecondDegreeMaterials {
         FusedTantalite = new Material.Builder(10035, GTBUtil.gtb("fused_tantalite"))
                 .dust()
                 .iconSet(ROUGH)
-                .color(0x57382F).build().setFormula("(Fe2O3)(NaO)Ta2O5", true);
+                .color(0x57382F)
+                .build().setFormula("(Fe2O3)(NaO)Ta2O5", true);
 
         LeachedTantalite = new Material.Builder(10036, GTBUtil.gtb("leached_tantalite"))
                 .dust()
-                .color(0x5A200E).build().setFormula("(Ta2O5)9Nb2O5?", true);
+                .color(0x5A200E)
+                .build().setFormula("(Ta2O5)9Nb2O5?", true);
 
         AcidicLeachedPyrochlore = new Material.Builder(10037, GTBUtil.gtb("acidic_leached_pyrochlore"))
                 .dust()
-                .color(0x8F4630).build().setFormula("(H2SO4)Ca12Sr6Ba6?ThUNb26O78F26", true);
+                .color(0x8F4630)
+                .build().setFormula("(H2SO4)Ca12Sr6Ba6?ThUNb26O78F26", true);
 
         LeachedPyrochlore = new Material.Builder(10038, GTBUtil.gtb("leached_pyrochlore"))
                 .dust()
-                .color(0x8F4630).build().setFormula("(Nb2O5)9Ta2O5?", true);
+                .color(0x8F4630)
+                .build().setFormula("(Nb2O5)9Ta2O5?", true);
 
 
         TributylPhosphate = new Material.Builder(10039, GTBUtil.gtb("tributyl_phosphate"))
                 .fluid()
-                .color(0x8E422B).build().setFormula("(C4H9)3PO4", true);
+                .color(0x8E422B)
+                .build().setFormula("(C4H9)3PO4", true);
 
         NiobiumTantalumOxide = new Material.Builder(10040, GTBUtil.gtb("niobium_tantalum_dust"))
                 .dust()
-                .color(0xC66262).build().setFormula("(Nb2O5)(Ta2O5)", true);
+                .color(0xC66262)
+                .build().setFormula("(Nb2O5)(Ta2O5)", true);
         
         NbTaFluorideMix = new Material.Builder(10041, GTBUtil.gtb("nb_ta_fluoride_mix"))
                 .fluid()
-                .color(0x786158).build().setFormula("(H2NbOF5)(H2TaF7)", true);
+                .color(0x786158)
+                .build().setFormula("(H2NbOF5)(H2TaF7)", true);
 
-                DilutedCeriumFiltrate = new Material.Builder(10042, GTBUtil.gtb("diluted_cerium_filtrate"))
+        DilutedCeriumFiltrate = new Material.Builder(10042, GTBUtil.gtb("diluted_cerium_filtrate"))
                 .fluid()
-                .color(0x406742).build().setFormula("Ce(H2O)?", true);
+                .color(0x406742)
+                .build().setFormula("Ce(H2O)?", true);
+
         DilutedAquaRegia = new Material.Builder(10043, GTBUtil.gtb("diluted_aqua_regia"))
                 .fluid()
-                .color(0xB27743).build().setFormula("(HNO3)(HCl)2", true);
+                .color(0xB27743)
+                .build().setFormula("(HNO3)(HCl)2", true);
 
         DilutedCeriumSolution = new Material.Builder(10044, GTBUtil.gtb("diluted_cerium_solution"))
                 .fluid()
-                .color(0x677753).build().setFormula("Ce?(H2O)2", true);
+                .color(0x677753)
+                .build().setFormula("Ce?(H2O)2", true);
 
         AluminiumHydroxide = new Material.Builder(10045, GTBUtil.gtb("aluminium_hydroxide"))
                 .dust()
-                .color(0x2E325B).build().setFormula("Al(HO2)", true);
+                .color(0x2E325B)
+                .build().setFormula("Al(HO2)", true);
 
         WetHafniumZirconiumBlend = new Material.Builder(10046, GTBUtil.gtb("wet_hafnium_zirconium_blend"))
                 .dust()
-                .color(0x645C5B).build().setFormula("(HfO2)(ZrO2)(H2O)?", true);
+                .color(0x645C5B)
+                .build().setFormula("(HfO2)(ZrO2)(H2O)?", true);
 
         HafniumZirconiumSlag = new Material.Builder(10047, GTBUtil.gtb("hafnium_zirconium_blend"))
                 .dust()
-                .color(0x863F2A).build().setFormula("(HfO2)(ZrO2)?", true);
+                .color(0x863F2A)
+                .build().setFormula("(HfO2)(ZrO2)?", true);
 
         RoastedHafniumZirconiumSlag = new Material.Builder(10048, GTBUtil.gtb("roasted_hafnium_zirconium_slag"))
-                        .dust()
-                        .color(0x5D3017).build().setFormula("(HfO2)(ZrO2)", true);
+                .dust()
+                .color(0x5D3017)
+                .build().setFormula("(HfO2)(ZrO2)", true);
 
         Rhodium_II_Acetate = new Material.Builder(10049, GTBUtil.gtb("rhodium_ii_acetate"))
                 .dust()
@@ -329,40 +303,48 @@ public class SecondDegreeMaterials {
 
         TitaniumNitrate = new Material.Builder(10054, GTBUtil.gtb("titanium_nitrate"))
                 .dust()
-                .color(0x7E24A3).build().setFormula("Ti(NO3)4", true);
+                .color(0x7E24A3)
+                .build().setFormula("Ti(NO3)4", true);
 
         LithiumCarbonateSolution = new Material.Builder(10055, GTBUtil.gtb("lithium_carbonate_solution"))
                 .fluid()
-                .color(0x2196F3).build().setFormula("Li2CO3(H2O)", true);
+                .color(0x2196F3)
+                .build().setFormula("Li2CO3(H2O)", true);
 
         LithiumPeroxideSolution = new Material.Builder(10056, GTBUtil.gtb("lithium_peroxide_solution"))
                 .fluid()
-                .color(0x81D4FA).build().setFormula("(H2O)Li2O2", true);
+                .color(0x81D4FA)
+                .build().setFormula("(H2O)Li2O2", true);
 
         OrthoXyleneZeoliteMixture = new Material.Builder(10057, GTBUtil.gtb("ortho_xylene_zeolite_mixture"))
                 .fluid()
-                .color(0x636363).build().setFormula("(NaC4Si27Al9(H2O)28O72C6H4(CH3)2", true);
+                .color(0x636363)
+                .build().setFormula("(NaC4Si27Al9(H2O)28O72C6H4(CH3)2", true);
 
         ChlorodiisopropylPhosphine = new Material.Builder(10058, GTBUtil.gtb("chlorodiisopropyl_phosphine"))
                 .fluid()
-                .color(0x26C6DA).build().setFormula("[(CH3)2CH]2PCl", true);
+                .color(0x26C6DA)
+                .build().setFormula("[(CH3)2CH]2PCl", true);
 
         CalcinatedSiliconDioxide = new Material.Builder(10059, GTBUtil.gtb("calcinated_silicon_dioxide"))
                 .dust()
-                .color(0xCEABAB).build().setFormula("(SiO2)?", true);
+                .color(0xCEABAB)
+                .build().setFormula("(SiO2)?", true);
 
         CalcinatedResidues = new Material.Builder(10060, GTBUtil.gtb("calcinated_residues"))
                 .dust()
                 .fluid()
-                .color(0x7A3926).build().setFormula("(SiO2)??", true);
+                .color(0x7A3926)
+                .build().setFormula("(SiO2)??", true);
 
         MuddyWater = new Material.Builder(10061, GTBUtil.gtb("muddy_water"))
                 .fluid()
-                .color(0x6D4C41).build().setFormula("(H2O)?", true);
+                .color(0x6D4C41)
+                .build().setFormula("(H2O)?", true);
 
         DilutedCaesiumSolution = new Material.Builder(10062, GTBUtil.gtb("diluted_caesium_solution"))
                 .fluid()
-                
+
                 .color(0x302C2B)
                 .build().setFormula("Cs(H2O)", true);
 
@@ -384,14 +366,14 @@ public class SecondDegreeMaterials {
                 .build().setFormula("(C8H8)(C4H6)(C2H6O)", true);
 
         TriethylAluminium = new Material.Builder(10066, GTBUtil.gtb("triethylaluminium"))
-                        .fluid()
-                        .color(0x4780B9)
-                        .build().setFormula("Al2(C2H5)6", true);
+                .fluid()
+                .color(0x4780B9)
+                .build().setFormula("Al2(C2H5)6", true);
 
         TrimethylAluminium = new Material.Builder(10067, GTBUtil.gtb("trimethylaluminium"))
-                        .fluid()
-                        .color(0x0097A7)
-                        .build().setFormula("Al(CH3)3", true);
+                .fluid()
+                .color(0x0097A7)
+                .build().setFormula("Al(CH3)3", true);
 
         TriarylPhosphineSolution = new Material.Builder(10068, GTBUtil.gtb("triaryl_phosphine_solution"))
                 .fluid()
@@ -399,10 +381,10 @@ public class SecondDegreeMaterials {
                 .build().setFormula("(H5C6)3P(H2O)?", true);
 
         HeavyAlkaliChlorideSolution = new Material.Builder(10069, GTBUtil.gtb("heavy_alkali_chloride_solution"))
-                        .fluid()
-                        .color(0x8F5353)
-                        .build()
-                        .setFormula("RbCl(CsCl)2Cl3(H2O)2", true);
+                .fluid()
+                .color(0x8F5353)
+                .build()
+                .setFormula("RbCl(CsCl)2Cl3(H2O)2", true);
 
         TriarylPhosphine = new Material.Builder(10070, GTBUtil.gtb("triaryl_phosphine"))
                 .fluid()
@@ -526,24 +508,23 @@ public class SecondDegreeMaterials {
                 .color(0x0277BD)
                 .build().setFormula("(H2O)LiOH", true);
 
-                RhodiumSulfateSolution = new Material.Builder(10093, GTBUtil.gtb("rhodium_sulfate_solution"))
+        RhodiumSulfateSolution = new Material.Builder(10093, GTBUtil.gtb("rhodium_sulfate_solution"))
                 .fluid()
                 .color(0xC7C7C7)
                 .build().setFormula("(RhSO4?)(H2O)", true);
 
         RutheniumTetroxideSolution = new Material.Builder(10094, GTBUtil.gtb("ruthenium_tetroxide_solution"))
                 .fluid()
-                .dust()
                 .color(0xAAC0BC)
                 .build().setFormula("(NaCl)2RuO4", true);
 
         AcidicIridiumDioxide = new Material.Builder(10095, GTBUtil.gtb("acidic_iridium_dioxide"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0xD4CAB0)
                 .build().setFormula("(HCl)2(IrO2)2", true);
 
         PalladiumEnrichedAmmonia = new Material.Builder(10096, GTBUtil.gtb("palladium_enriched_ammonia"))
-                .liquid(new FluidBuilder())
+                .fluid()
                 .color(0x7B7C7C)
                 .build().setFormula("Pd(NH3)?", true);
 
@@ -677,6 +658,141 @@ public class SecondDegreeMaterials {
                 .color(0x3C2C28)
                 .build();
 
+        PmmaPolymerizationMix = new Material.Builder(10123, GTBUtil.gtb("pmma_polymerization_mix"))
+                .fluid()
+                .color(0x98B3C8)
+                .build();
+
+        GalliumTrichloride = new Material.Builder(10124, GTBUtil.gtb("gallium_trichloride"))
+                .fluid()
+                .color(0x88A7AA)
+                .build().setFormula("GaCl3", true);
+
+        MagnesiumBromideChlorideSalt = new Material.Builder(10125, GTBUtil.gtb("magnesium_bromide_chloride_salt"))
+                .dust()
+                .color(0xC8A9AC)
+                .build().setFormula("MgBrCl", true);
+
+        MagnesiumHydroxide = new Material.Builder(10126, GTBUtil.gtb("magnesium_hydroxide"))
+                .fluid()
+                .color(0xF7D7DA)
+                .build().setFormula("MgOH", true);
+
+        SodiumMetaphosphate = new Material.Builder(10127, GTBUtil.gtb("sodium_metaphosphate"))
+                .dust()
+                .color(0xCCBE46)
+                .iconSet(ROUGH)
+                .build().setFormula("NaPO", true);
+
+        MagnesiumHydroxide = new Material.Builder(10128, GTBUtil.gtb("magnesium_hydroxide"))
+                .dust()
+                .color(0xC9B9CC)
+                .build().setFormula("MgOH", true);
+
+        PhosphorusTriiodide = new Material.Builder(10129, GTBUtil.gtb("phosphorus_triiodide"))
+                .dust()
+                .color(0x8A8668)
+                .build().setFormula("PI3", true);
+
+        PhosphorousAcid = new Material.Builder(10130, GTBUtil.gtb("phosphorous_acid"))
+                .fluid()
+                .color(0x8A8668)
+                .build().setFormula("H3PO3", true);
+
+        RadonContainingNobleGasses = new Material.Builder(10131, GTBUtil.gtb("radon_containing_noble_gasses"))
+                .fluid()
+                .color(0xC685D2)
+                .build().setFormula("Rn?", true);
+
+        RadonRichAir = new Material.Builder(10132, GTBUtil.gtb("radon_rich_air"))
+                .fluid()
+                .color(0xBC8EC4)
+                .build().setFormula("Rn?", true);
+
+        ChilledRadonRichAir = new Material.Builder(10133, GTBUtil.gtb("chilled_radon_rich_air"))
+                .fluid()
+                .color(0xA77FAD)
+                .build().setFormula("Rn?", true);
+
+        OlefinMixture = new Material.Builder(10134, GTBUtil.gtb("olefin_mixture"))
+                .fluid()
+                .color(0xC47158)
+                .build();
+
+        Octene = new Material.Builder(10135, GTBUtil.gtb("1_octene"))
+                .fluid()
+                .color(0xB34E2F)
+                .build().setFormula("C8H16", true);
+
+        Dodecene = new Material.Builder(10136, GTBUtil.gtb("1_dodecene"))
+                .fluid()
+                .color(0xB94B2A)
+                .build().setFormula("C12H24", true);
+
+        Hexene = new Material.Builder(10137, GTBUtil.gtb("1_hexene"))
+                .fluid()
+                .color(0xBA5334)
+                .build().setFormula("C6H12", true);
+
+        Decene = new Material.Builder(10138, GTBUtil.gtb("1_decene"))
+                .fluid()
+                .color(0xB64C2C)
+                .build().setFormula("C10H20", true);
+
+        ZirconylChloride = new Material.Builder(10139, GTBUtil.gtb("zirconyl_chloride"))
+                .dust()
+                .color(0xC9B7CD)
+                .build().setFormula("ZrOCl2", true);
+
+        ZirconiumTetrachloride = new Material.Builder(10140, GTBUtil.gtb("zirconium_tetrachloride"))
+                .dust()
+                .color(0xE2E8E2)
+                .build().setFormula("ZrCl4", true);
+
+        PurifiedDecene = new Material.Builder(10141, GTBUtil.gtb("purified_1_decene"))
+                .fluid()
+                .color(0xAA4628)
+                .build().setFormula("C10H20", true);
+
+        LeachedCobaltSolution = new Material.Builder(10142, GTBUtil.gtb("leached_cobalt_solution"))
+                .fluid()
+                .color(0x1E609A)
+                .build().setFormula("Co?", true);
+
+        PregnantCobaltLeach = new Material.Builder(10143, GTBUtil.gtb("pregnant_cobalt_leach"))
+                .fluid()
+                .color(0x2B699F)
+                .build().setFormula("Co?", true);
+
+        CobaltLeach = new Material.Builder(10144, GTBUtil.gtb("cobalt_leach"))
+                .fluid()
+                .color(0x3A6285)
+                .build().setFormula("Co?", true);
+
+        NickelLeach = new Material.Builder(10145, GTBUtil.gtb("nickel_leach"))
+                .fluid()
+                .color(0xD2BC9F)
+                .build().setFormula("Ni?", true);
+
+        NeutralizedCobaltLeachSolution = new Material.Builder(10146, GTBUtil.gtb("neutralized_cobalt_leach_solution"))
+                .fluid()
+                .color(0x3F6880)
+                .build().setFormula("CoNi?", true);
+
+        LeachedCobaltLeachSolution = new Material.Builder(10147, GTBUtil.gtb("leached_cobalt_leach_solution"))
+                .fluid()
+                .color(0x1E5576)
+                .build().setFormula("CoNi?", true);
+
+        Isopentane = new Material.Builder(10148, GTBUtil.gtb("isopentane"))
+                .fluid()
+                .color(0xC85B39)
+                .build().setFormula("C5H12", true);
+
+
+
+
+                
 
 
 

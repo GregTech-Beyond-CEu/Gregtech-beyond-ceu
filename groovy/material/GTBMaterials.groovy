@@ -28,7 +28,7 @@ class GTBMaterials {
         public static Material Carrolite;
         public static Material CarroliteSulfuricSolution;
         public static Material CobaltOxideHydroxide;
-        public static Material ImpureCobaltSulfideSolution;
+        public static Material ImpureCobaltSulfateSolution;
         public static Material SodiumHydrosulfide;
         public static Material RoastedCarrolite;
         public static Material Vermiculite;
@@ -61,9 +61,39 @@ class GTBMaterials {
         public static Material FusedMetakaolin;
         public static Material PurifiedXenotimeSlurry;
         public static Material ImpureXenotimeSlurry;
+        public static Material AluminiumSulfate;
+        public static Material Dirt;
+        public static Material CadmiumOleate;
+        public static Material MonodisperseQuantumDots;
+        public static Material QuantumDots;
 
         //Unknown Materials
 
+        public static Material LeachedCobaltLeachSolution;
+        public static Material NeutralizedCobaltLeachSolution;
+        public static Material PregnantCobaltLeach;
+        public static Material CobaltLeach;
+        public static Material NickelLeach;
+        public static Material LeachedCobaltSolution;
+        public static Material PurifiedDecene;
+        public static Material ZirconiumTetrachloride;
+        public static Material ZirconylChloride;
+        public static Material Decene;
+        public static Material Hexene;
+        public static Material Dodecene;
+        public static Material Octene;
+        public static Material OlefinMixture;
+        public static Material RadonRichAir;
+        public static Material ChilledRadonRichAir;
+        public static Material RadonContainingNobleGasses;
+        public static Material PhosphorousAcid;
+        public static Material PhosphorusTriiodide;
+        public static Material SodiumSulfite;
+        public static Material SodiumThiosulfate;
+        public static Material SodiumMetaphosphate;
+        public static Material MagnesiumHydroxide;
+        public static Material MagnesiumBromideChlorideSalt;
+        public static Material GalliumTrichloride;
         public static Material EthylToluene;
         public static Material EthylChloride;
         public static Material VinylToluene;
@@ -209,8 +239,8 @@ class GTBMaterials {
         public static Material RoastedBornite;
         public static Material MalachiteSlag;
         public static Material SinteredMalachiteSlag;
-        public static Material CobaltSulfide;
-        public static Material NickelSulfide;
+        public static Material CobaltSulfate;
+        public static Material NickelSulfate;
         public static Material AmmoniaMetalSulfuricSolution;
         public static Material CopperFreeNickelSulfide;
         public static Material NickelSulfatePrecipitate;
@@ -307,6 +337,10 @@ class GTBMaterials {
         public static Material BCl_Cl2_Ar;
         public static Material ArsenicTrichloride;
         public static Material Arsine;
+        public static Material DielectricPaste;
+        public static Material SiliconNitride;
+        public static Material PyromelliticDianhydrideOxydianilin;
+        public static Material PyromelliticDianhydrideSolution;
 
         //Biology Materials
 
@@ -513,7 +547,22 @@ class GTBMaterials {
 
 
         //Second Degree Material
-
+        public static Material Isopentane;
+        public static Material StearicAcid;
+        public static Material PalladiumCarbonMixture;
+        public static Material CericAmmoniumNitrate;
+        public static Material GlacialAceticAcid;
+        public static Material ChromiumEtchant;
+        public static Material TetramethylammoniumHydroxide;
+        public static Material TetramethylammoniumIodide;
+        public static Material DilutedTMAH;
+        public static Material SilverHydroxide;
+        public static Material MethylIodide;
+        public static Material ReducedPalladiumCarbonMixture;
+        public static Material ActivatedCarbonSuspension;
+        public static Material PalladiumChloride;
+        public static Material PalladiumOnCarbon;
+        public static Material PmmaPolymerizationMix;
         public static Material AmmoniumBisulfate;
         public static Material PToluenesulfonicAcid;
         public static Material PhenolFormaldehydePrecursor;
@@ -1009,7 +1058,6 @@ class GTBMaterials {
         public static Material DilutedRubidiumSolution;
         public static Material DilutedCaesiumSolution;
         public static Material Alumina;
-        public static Material StannicChloride;
         public static Material RubidiumChlorostannate;
         public static Material CaesiumChlorostannate;
         public static Material HeavyAlkaliChlorideSolution;
@@ -1031,6 +1079,7 @@ class GTBMaterials {
         public static Material SinteredSilver;
         public static Material CopperSulfateSolution;
         public static Material MasonryBrick;
+        public static Material Pmma;
 
         //Fantasy Materials
 
