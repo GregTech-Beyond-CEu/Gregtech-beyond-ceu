@@ -30,7 +30,9 @@ mods.gregtech.electrolyzer.removeByInput(30, null, [fluid('distilled_water') * 1
 
         // Deuterium Gas * 40
 mods.gregtech.centrifuge.removeByInput(20, null, [fluid('hydrogen') * 160 * 160])
-        
+        // Nitrogen Dioxide Gas * 3900
+mods.gregtech.centrifuge.removeByInput(480, null, [fluid('ender_air') * 10000 * 10000])
+
         COLD_TOWER.recipeBuilder()
                 .fluidInputs(fluid('demineralized_water')*16000)
                 .fluidInputs(fluid('hydrogen_sulfide')*2000)
