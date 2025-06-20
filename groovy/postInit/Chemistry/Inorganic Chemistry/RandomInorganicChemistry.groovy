@@ -11,7 +11,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
             .EUt(12)
             .buildAndRegister();
 
-    CHEMICAL_RECIPES.recipeBuilder()    //CSTR
+    CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
             .fluidInputs(fluid('ammonia')*1000)
             .fluidInputs(fluid('nitric_acid')*1000)
             .fluidOutputs(fluid('ammonium_nitrate')*1000)
@@ -79,7 +79,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
                 .duration(100)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()    //CSTR
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('dichloromethane')*1000)
                 .fluidInputs(fluid('propargyl_alcohol')*1000)
                 .fluidInputs(fluid('thionyl_chloride')*1000)
