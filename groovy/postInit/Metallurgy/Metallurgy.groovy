@@ -38,13 +38,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .buildAndRegister();
 
         VACUUM_FURNACE_RECIPES.recipeBuilder()
-                .inputs(metaitem('dustCupronickel'))
-                .outputs(metaitem('ingotCupronickel'))
-                .EUt(2)
-                .duration(200)
-                .buildAndRegister();
-
-        VACUUM_FURNACE_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustSolderingAlloy'))
                 .outputs(metaitem('ingotSolderingAlloy'))
                 .EUt(2)
@@ -137,20 +130,12 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(180)
                 .buildAndRegister();
 
-        MACERATOR_RECIPES.recipeBuilder()
-                .inputs(metaitem('ingotPlatinumRaw'))
-                .outputs(metaitem('ingotPlatinumRaw'))
-                .EUt(12)
-                .duration(80)
-                .buildAndRegister();
-
         VACUUM_FURNACE_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustBorosilicateGlass'))
                 .outputs(metaitem('ingotBorosilicateGlass'))
                 .EUt(2)
                 .duration(200)
                 .buildAndRegister();
-
 
         VACUUM_FURNACE_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustCupronickel'))
@@ -192,7 +177,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(120)
                 .buildAndRegister();
 
-         SINTERING_OVEN_RECIPES.recipeBuilder()
+        SINTERING_OVEN_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('methane')*1000)
                 .notConsumable(metaitem('shape.extruder.ingot'))
                 .inputs(metaitem('dustSilver'))
