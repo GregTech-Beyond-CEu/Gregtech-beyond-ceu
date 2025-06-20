@@ -3,6 +3,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
 crafting.remove('gregtech:compressed_clay')
 furnace.removeByInput(metaitem('dustTinAlloy'));
+furnace.removeByInput(metaitem('dustCerium'));
 
 VACUUM_FURNACE_RECIPES.recipeBuilder()
     .inputs(metaitem('dustTinAlloy'))
@@ -236,4 +237,513 @@ CHEMICAL_RECIPES.recipeBuilder()
     .fluidOutputs(fluid('hydrogen')*2000)
     .duration(220)
     .EUt(110)
+    .buildAndRegister();
+
+SINTERING_OVEN_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('air')*100)
+    .fluidInputs(fluid('methane')*100)
+    .inputs(item('minecraft:quartz'))
+    .outputs(metaitem('fused_quartz'))
+    .duration(220)
+    .EUt(110)
+    .buildAndRegister();
+
+crafting.addShaped("fused_quartz_block", item('gtb:gtb_multiblock_casing2', 3), [
+[item('gregtech:meta_item_2', 438), item('gregtech:meta_item_2', 438)], 
+[item('gregtech:meta_item_2', 438), item('gregtech:meta_item_2', 438)]
+])
+
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('plateSteel')*5)
+    .circuitMeta(5)
+    .outputs(metaitem('fume_hood'))
+    .duration(220)
+    .EUt(110)
+    .buildAndRegister();
+
+SINTERING_OVEN_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('oxygen')*1000)
+    .notConsumable(metaitem('shape.extruder.rod'))
+    .inputs(metaitem('stickSteel'))
+    .fluidInputs(fluid('silver')*576)
+    .outputs(metaitem('silver_electrode'))
+    .duration(250)
+    .EUt(70)
+    .buildAndRegister();
+
+SINTERING_OVEN_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('oxygen')*1000)
+    .notConsumable(metaitem('shape.extruder.rod'))
+    .inputs(metaitem('stickSteel'))
+    .fluidInputs(fluid('gold')*576)
+    .outputs(metaitem('gold_electrode'))
+    .duration(250)
+    .EUt(70)
+    .buildAndRegister();
+
+CHEMICAL_BATH_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('creosote')*100)
+    .inputs(item('minecraft:leather'))
+    .outputs(metaitem('treated_leather'))
+    .duration(250)
+    .EUt(20)
+    .buildAndRegister();
+
+CHEMICAL_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('distilled_water')*1000)
+    .inputs(metaitem('dustActivatedCarbon'))
+    .fluidOutputs(fluid('activated_carbon_suspension')*1000)
+    .duration(400)
+    .EUt(120)
+    .buildAndRegister();
+
+CHEMICAL_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('chlorine')*2000)
+    .inputs(metaitem('dustPalladium'))
+    .fluidOutputs(fluid('palladium_chloride')*1000)
+    .duration(400)
+    .EUt(120)
+    .buildAndRegister();
+
+CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('hydrochloric_acid')*1000)
+    .fluidInputs(fluid('activated_carbon_suspension')*1000)
+    .fluidInputs(fluid('palladium_chloride')*1000)
+    .fluidOutputs(fluid('palladium_carbon_mixture')*1000)
+    .duration(400)
+    .EUt(120)
+    .buildAndRegister();
+
+CHEMICAL_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('deionized_water')*1000)
+    .inputs(metaitem('dustActivatedCarbon'))
+    .fluidOutputs(fluid('activated_carbon_suspension')*1000)
+    .duration(400)
+    .EUt(120)
+    .buildAndRegister();
+
+CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('palladium_carbon_mixture')*1000)
+    .fluidInputs(fluid('formaldehyde')*1000)
+    .fluidOutputs(fluid('reduced_palladium_carbon_mixture')*1000)
+    .duration(400)
+    .EUt(120)
+    .buildAndRegister();
+
+DISTILLATION_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('reduced_palladium_carbon_mixture')*1000)
+    .fluidOutputs(fluid('formaldehyde')*1000)
+    .outputs(metaitem('dustPalladiumOnCarbon'))
+    .fluidOutputs(fluid('deionized_water')*1000)
+    .fluidOutputs(fluid('hydrochloric_acid')*2000)
+    .duration(400)
+    .EUt(120)
+    .buildAndRegister();
+
+CHEMICAL_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('stearic_acid')*1000)
+    .notConsumable(metaitem('dustPalladiumOnCarbon'))
+    .fluidOutputs(fluid('oleic_acid')*1000)
+    .duration(400)
+    .EUt(120)
+    .buildAndRegister();
+
+EXTRUDER_RECIPES.recipeBuilder()
+    .outputs(metaitem('graphite_electrode'))
+    .inputs(metaitem('dustGraphite'))
+    .notConsumable(metaitem('shape.extruder.rod'))
+    .duration(260)
+    .EUt(20)
+    .buildAndRegister();
+
+DRYING_COLUMN_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('acetic_acid')*1000)
+    .fluidOutputs(fluid('glacial_acetic_acid')*1000)
+    .duration(1000)
+    .EUt(480)
+    .buildAndRegister();
+
+crafting.addShaped("tubey", item('gregtech:machine', 3056), [
+[ore('pipeSmallFluidSteel'), ore('circuitHv'), ore('pipeSmallFluidSteel')], 
+[ore('pipeSmallFluidSteel'), ore('circuitHv'), ore('pipeSmallFluidSteel')], 
+[item('gregtech:meta_item_1', 144), item('gregtech:machine', 988), item('gregtech:meta_item_1', 144)]
+])
+
+crafting.addShaped("reactive_ion_etcher", item('gregtech:machine', 3058), [
+[ore('pipeNormalFluidLead'), item('gregtech:meta_item_1', 175), ore('pipeNormalFluidLead')], 
+[ore('circuitEv'), item('gregtech:machine', 988), ore('circuitEv')], 
+[item('gregtech:meta_item_1', 145), item('gregtech:meta_item_1', 175), item('gregtech:meta_item_1', 145)]
+])
+
+crafting.addShaped("pvd_unit", item('gregtech:machine', 3059), [
+[item('gregtech:meta_item_1', 145), item('gtb:gtb_multiblock_casing2'), item('gregtech:meta_item_1', 145)], 
+[item('gregtech:meta_item_1', 175), ore('circuitEv'), item('gregtech:meta_item_1', 175)], 
+[item('gregtech:meta_item_1', 145), item('gtb:gtb_multiblock_casing2'), item('gregtech:meta_item_1', 145)]
+])
+
+crafting.addShaped("blender", item('gregtech:machine', 3060), [
+[item('gregtech:meta_item_1', 144), ore('rotorStainlessSteel'), item('gregtech:meta_item_1', 144)], 
+[ore('circuitEv'), item('gregtech:machine', 988), ore('circuitEv')], 
+[item('gregtech:meta_item_1', 174), item('gregtech:meta_item_1', 144), item('gregtech:meta_item_1', 174)]
+])
+
+crafting.addShaped("sonicator", item('gregtech:machine', 3061), [
+[item('gregtech:meta_item_1', 145), ore('pipeQuadrupleFluidTitanium'), item('gregtech:meta_item_1', 145)], 
+[ore('circuitEv'), item('gtb:gtb_multiblock_casing2', 1), ore('circuitEv')], 
+[item('gregtech:meta_item_1', 175), ore('pipeQuadrupleFluidTitanium'), item('gregtech:meta_item_1', 175)]
+])
+
+crafting.addShaped("electron_beam", item('gregtech:machine', 3062), [
+[item('gregtech:meta_item_1', 145), item('gregtech:meta_item_1', 235), item('gregtech:meta_item_1', 145)], 
+[ore('circuitHv'), item('gregtech:metal_casing', 4), ore('circuitHv')], 
+[item('gregtech:meta_item_1', 160), item('gregtech:meta_item_1', 220), item('gregtech:meta_item_1', 160)]
+])
+
+crafting.addShaped("thermal_vacuum_thingy", item('gregtech:machine', 3063), [
+[ore('circuitEv'), item('gtb:gtb_multiblock_casing2', 2), ore('circuitEv')], 
+[item('gregtech:meta_item_1', 145), item('gregtech:wire_coil', 2), item('gregtech:meta_item_1', 145)], 
+[ore('circuitEv'), item('gtb:gtb_multiblock_casing2', 2), ore('circuitEv')]
+])
+
+crafting.addShaped("atomic_layer_deposition", item('gregtech:machine', 3065), [
+[item('gregtech:meta_item_1', 145), ore('circuitHv'), item('gregtech:meta_item_1', 145)], 
+[ore('rotorStainlessSteel'), item('gregtech:metal_casing', 5), ore('rotorStainlessSteel')], 
+[item('gregtech:meta_item_1', 175), ore('circuitHv'), item('gregtech:meta_item_1', 175)]
+])
+
+crafting.addShaped("adsorption_tower_recipes", item('gregtech:machine', 3057), [
+[item('gregtech:meta_item_1', 175), item('gregtech:meta_item_1', 145), item('gregtech:meta_item_1', 175)], 
+[ore('rotorStainlessSteel'), item('gregtech:metal_casing', 4), ore('rotorStainlessSteel')], 
+[item('gregtech:meta_item_1', 145), ore('circuitHv'), item('gregtech:meta_item_1', 145)]
+])
+
+crafting.addShaped("basic_structural_casing", item('gtb:gtb_multiblock_casing', 7), [
+[ore('screwAluminium'), ore('plateTinAlloy'), ore('screwAluminium')], 
+[ore('plateTinAlloy'), ore('frameGtSteel'), ore('plateTinAlloy')], 
+[ore('screwAluminium'), ore('plateTinAlloy'), ore('screwAluminium')]
+])
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .circuitMeta(6)
+    .inputs(item('gregtech:meta_block_frame_3', 7))
+    .inputs(metaitem('plateLead')*6)
+    .duration(300)
+    .EUt(12)
+    .outputs(item('gtb:gtb_multiblock_casing', 15))
+    .buildAndRegister();
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .circuitMeta(6)
+    .inputs(item('gregtech:meta_block_frame_524', 14))
+    .inputs(metaitem('platePurifiedSiliconCarbide')*6)
+    .duration(300)
+    .EUt(12)
+    .outputs(item('gtb:gtb_multiblock_casing', 10))
+    .buildAndRegister();
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .circuitMeta(6)
+    .inputs(metaitem('frameHssg'))
+    .inputs(metaitem('plateHssg')*6)
+    .duration(400)
+    .EUt(180)
+    .outputs(item('gtb:gtb_multiblock_casing2'))
+    .buildAndRegister();
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .circuitMeta(6)
+    .inputs(metaitem('pipeNormalFluidTitanium')*2)
+    .inputs(metaitem('circuit.nano_processor')*2)
+    .inputs(metaitem('frameTitanium'))
+    .inputs(metaitem('plateTitanium')*6)
+    .outputs(item('gtb:gtb_multiblock_casing2', 1)*6)
+    .duration(400)
+    .EUt(180)
+    .buildAndRegister();
+
+crafting.addShaped("thermal_evaporation", item('gtb:gtb_multiblock_casing2', 2), [
+[ore('plateAnnealedCopper'), item('gregtech:meta_item_1', 143), ore('plateAnnealedCopper')], 
+[ore('plateAnnealedCopper'), ore('frameGtSteel'), ore('plateAnnealedCopper')], 
+[ore('plateAnnealedCopper'), item('gregtech:meta_item_1', 143), ore('plateAnnealedCopper')]
+])
+
+MIXER_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustIndium'))
+    .inputs(metaitem('dustGallium'))
+    .inputs(metaitem('dustArsenic'))
+    .outputs(metaitem('dustIndiumGalliumArsenide')*3)
+    .duration(200)
+    .EUt(40)
+    .buildAndRegister();
+
+crafting.remove("gregtech:cracking_unit");
+
+BLAST_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustCerium'))
+    .outputs(metaitem('ingotCerium'))
+    .blastFurnaceTemp(3000)
+    .EUt(800)
+    .duration(300)
+    .buildAndRegister();
+
+    // Water * 2000
+mods.gregtech.chemical_reactor.removeByInput(120, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('ammonia') * 1000 * 1000, fluid('methanol') * 2000 * 2000])
+
+
+
+BLAST_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustDisodiumPhosphate')*8)
+    .fluidOutputs(fluid('steam')*1000)
+    .outputs(metaitem('dustSodiumMetaphosphate')*5)
+    .EUt(100)
+    .duration(150)
+    .buildAndRegister();
+
+BLAST_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustSodiumMetaphosphate')*20)
+    .inputs(metaitem('dustCarbon')*10)
+    .outputs(metaitem('dustPhosphate'))
+    .fluidOutputs(fluid('carbon_monoxide')*10000)
+    .outputs(metaitem('dustSodium')*4)
+    .EUt(100)
+    .duration(150)
+    .buildAndRegister();
+
+CHEMICAL_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustSodiumIodide')*2)
+    .fluidInputs(fluid('hydrogen_peroxide')*1000)
+    .fluidInputs(fluid('hydrochloric_acid')*2000)
+    .outputs(metaitem('dustIodine')*2)
+    .outputs(metaitem('dustSalt')*2)
+    .fluidOutputs(fluid('water')*2000)
+    .EUt(50)
+    .duration(90)
+    .buildAndRegister();
+
+// Sodium Dust * 2
+mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustSodiumSulfide') * 3], null)
+
+CHEMICAL_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustSodiumSulfide')*3)
+    .fluidInputs(fluid('hydrogen_peroxide')*1000)
+    .outputs(metaitem('dustSulfur'))
+    .outputs(metaitem('dustSodiumHydroxide')*2)
+    .EUt(150)
+    .duration(50)
+    .buildAndRegister();
+
+CHEMICAL_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustSodiumIodate')*2)
+    .inputs(metaitem('dustSodiumThiosulfate')*5)
+    .fluidInputs(fluid('hydrogen')*6000)
+    .outputs(metaitem('dustIodine')*2)
+    .outputs(metaitem('dustSodiumSulfate')*7)
+    .fluidOutputs(fluid('water')*1000)
+    .EUt(150)
+    .duration(50)
+    .buildAndRegister();
+
+
+CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustSulfur'))
+    .inputs(metaitem('dustSodiumSulfite')*6)
+    .outputs(metaitem('dustSodiumThiosulfate')*7)
+    .notConsumable(fluid('water')*1000)
+    .duration(50)
+    .EUt(120)
+    .buildAndRegister();
+
+
+CHEMICAL_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('sulfur_dioxide')*1000)
+    .inputs(metaitem('dustSodiumHydroxide')*2)
+    .outputs(metaitem('dustSodiumSulfite')*6)
+    .fluidOutputs(fluid('water')*1000)
+    .duration(80)
+    .EUt(70)
+    .buildAndRegister();
+
+//Methyl Iodide
+
+CHEMICAL_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustIodine')*3)
+    .inputs(metaitem('dustPhosphorus'))
+    .outputs(metaitem('dustPhosphorusTriiodide')*4)
+    .duration(80)
+    .EUt(70)
+    .buildAndRegister();
+
+CHEMICAL_RECIPES.recipeBuilder()
+    .fluidOutputs(fluid('methyl_iodide')*3000)
+    .fluidInputs(fluid('methanol')*3000)
+    .inputs(metaitem('dustPhosphorusTriiodide')*4)
+    .fluidOutputs(fluid('phosphorous_acid')*1000)
+    .duration(80)
+    .EUt(70)
+    .buildAndRegister();
+
+//CHEMICAL_RECIPES.recipeBuilder() //Batch Reactor
+//    .fluidInputs(fluid())
+
+CHEMICAL_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('gtfo_sodium_stearate') * 1000)
+    .fluidInputs(fluid('hydrochloric_acid') * 1000)
+    .outputs(metaitem('dustSalt')*2)
+    .fluidOutputs(fluid('stearic_acid') * 1000)
+    .duration(80)
+    .EUt(70)
+    .buildAndRegister();
+
+CRYSTALLIZATION_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('zirconium_chlorine')*1000)
+    .outputs(metaitem('dustZirconiumTetrachloride')*5)
+    .duration(80)
+    .EUt(50)
+    .buildAndRegister();
+
+BATCH_REACTOR_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('pentane')*1000)
+    .notConsumable(metaitem('dustAluminiumChloride'))
+    .fluidOutputs(fluid('isopentane')*1000)
+    .EUt(90)
+    .duration(400)
+    .buildAndRegister();
+
+TRICKLE_BED_REACTOR_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('sulfuric_acid')*1000)
+    .inputs(metaitem('crushedCopper')*4)
+    .fluidOutputs(fluid('blue_vitriol')*1000)
+    .duration(500)
+    .EUt(18)
+    .buildAndRegister();
+
+//IV Overhaul
+
+// IV Machine Hull * 1
+mods.gregtech.assembler.removeByInput(16, [item('gregtech:machine_casing', 5), metaitem('cableGtSinglePlatinum') * 2], [fluid('polytetrafluoroethylene') * 288 * 288])
+
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('cableGtSinglePlatinum')*2)
+    .inputs(item('gregtech:machine_casing', 5))
+    .fluidInputs(fluid('nomex')*288)
+    .outputs(item('gregtech:machine', 990))
+    .EUt(2000)
+    .duration(300)
+    .buildAndRegister();
+
+crafting.remove('gregtech:gregtech.machine.hull.iv');
+
+crafting.addShaped("hull_iv", metaitem('hull.iv'), [
+[ore('plateNomex'), ore('plateTungstenSteel'), ore('plateNomex')], 
+[ore('cableGtSinglePlatinum'), item('gregtech:machine_casing', 5), ore('cableGtSinglePlatinum')]
+])
+
+// IV Output Bus * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('hull.iv'), metaitem('crate.stainless_steel'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('polytetrafluoroethylene') * 576 * 576])
+// IV Output Bus * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('hull.iv'), metaitem('crate.stainless_steel'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('polybenzimidazole') * 144 * 144])
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('hull.iv'))
+    .inputs(metaitem('crate.stainless_steel'))
+    .fluidInputs(fluid('nomex')*576)
+    .circuitMeta(2)
+    .outputs(metaitem('item_bus.export.iv'))
+    .EUt(7680)
+    .duration(300)
+    .buildAndRegister();
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('hull.iv'))
+    .inputs(metaitem('crate.stainless_steel'))
+    .fluidInputs(fluid('nomex')*576)
+    .circuitMeta(1)
+    .outputs(metaitem('item_bus.import.iv'))
+    .EUt(7680)
+    .duration(300)
+    .buildAndRegister();
+
+// IV Input Hatch * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('hull.iv'), metaitem('drum.stainless_steel'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('polytetrafluoroethylene') * 576 * 576])
+// IV Input Hatch * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('hull.iv'), metaitem('drum.stainless_steel'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('polybenzimidazole') * 144 * 144])
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('hull.iv'))
+    .inputs(metaitem('drum.stainless_steel'))
+    .fluidInputs(fluid('nomex')*576)
+    .circuitMeta(1)
+    .outputs(metaitem('fluid_hatch.import.iv'))
+    .EUt(7680)
+    .duration(300)
+    .buildAndRegister();
+
+// IV Output Hatch * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('hull.iv'), metaitem('drum.stainless_steel'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('polytetrafluoroethylene') * 576 * 576])
+// IV Output Hatch * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('hull.iv'), metaitem('drum.stainless_steel'), metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('polybenzimidazole') * 144 * 144])
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('hull.iv'))
+    .inputs(metaitem('drum.stainless_steel'))
+    .fluidInputs(fluid('nomex')*576)
+    .circuitMeta(2)
+    .outputs(metaitem('fluid_hatch.export.iv'))
+    .EUt(7680)
+    .duration(300)
+    .buildAndRegister();
+
+// IV Input Bus * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('hull.iv'), metaitem('crate.stainless_steel'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('polytetrafluoroethylene') * 576 * 576])
+// IV Input Bus * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('hull.iv'), metaitem('crate.stainless_steel'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('polybenzimidazole') * 144 * 144])
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('fluid_hatch.import.iv'))
+    .inputs(metaitem('pipeQuadrupleFluidTungstenSteel'))
+    .circuitMeta(4)
+    .fluidInputs(fluid('nomex')*576)
+    .outputs(metaitem('fluid_hatch.import_4x.iv'))
+    .duration(400)
+    .EUt(7680)
+    .buildAndRegister();
+
+// IV Quadruple Input Hatch * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('fluid_hatch.import.iv'), metaitem('pipeQuadrupleFluidTungstenSteel'), metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('polytetrafluoroethylene') * 576 * 576])
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('fluid_hatch.export.iv'))
+    .inputs(metaitem('pipeQuadrupleFluidTungstenSteel'))
+    .outputs(metaitem('fluid_hatch.export_4x.iv'))
+    .circuitMeta(4)
+    .fluidInputs(fluid('nomex')*576)
+    .duration(400)
+    .EUt(7680)
+    .buildAndRegister();
+
+// IV Quadruple Output Hatch * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('fluid_hatch.export.iv'), metaitem('pipeQuadrupleFluidTungstenSteel'), metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('polytetrafluoroethylene') * 576 * 576])
+// IV Nonuple Output Hatch * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('fluid_hatch.export.iv'), metaitem('pipeNonupleFluidTungstenSteel'), metaitem('circuit.integrated').withNbt(['Configuration': 9])], [fluid('polytetrafluoroethylene') * 1296 * 1296])
+// IV Nonuple Input Hatch * 1
+mods.gregtech.assembler.removeByInput(7680, [metaitem('fluid_hatch.import.iv'), metaitem('pipeNonupleFluidTungstenSteel'), metaitem('circuit.integrated').withNbt(['Configuration': 9])], [fluid('polytetrafluoroethylene') * 1296 * 1296])
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('fluid_hatch.export.iv'))
+    .inputs(metaitem('pipeNonupleFluidTungstenSteel'))
+    .outputs(metaitem('fluid_hatch.export_9x.iv'))
+    .circuitMeta(9)
+    .fluidInputs(fluid('nomex')*1296)
+    .duration(400)
+    .EUt(7680)
+    .buildAndRegister();
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('fluid_hatch.export.iv'))
+    .inputs(metaitem('pipeNonupleFluidTungstenSteel'))
+    .outputs(metaitem('fluid_hatch.export_9x.iv'))
+    .circuitMeta(9)
+    .fluidInputs(fluid('nomex')*1296)
+    .duration(400)
+    .EUt(7680)
     .buildAndRegister();
