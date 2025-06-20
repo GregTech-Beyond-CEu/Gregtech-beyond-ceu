@@ -12,17 +12,9 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(1400)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
-                .inputs(metaitem('dustTin'))
-                .fluidInputs(fluid('chlorine')*4000)
-                .fluidOutputs(fluid('stannic_chloride')*1000)
-                .duration(100)
-                .EUt(300)
-                .buildAndRegister();
-
        CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('heavy_alkali_chloride_solution')*1000)
-                .fluidInputs(fluid('stannic_chloride')*1500)
+                .inputs(metaitem('dustTinFourChloride')*2)
                 .outputs(metaitem('dustRubidiumChlorostannate')* 4)
                 .outputs(metaitem('dustCaesiumChlorostannate')* 9)
                 .fluidOutputs(fluid('water')*2000)
