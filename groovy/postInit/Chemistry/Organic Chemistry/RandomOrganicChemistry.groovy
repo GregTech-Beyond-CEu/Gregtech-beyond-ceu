@@ -201,7 +201,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(80)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder() // CSTR
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('hydrofluoric_acid')*2000)
                 .inputs(metaitem('dustPotassiumCarbonate'))
                 .outputs(metaitem('dustPotassiumFluoride')*2)
@@ -238,3 +238,5 @@ mods.gregtech.chemical_reactor.removeByInput(7, null, [fluid('chlorine') * 1000 
                 .fluidOutputs(fluid('hydrogen')*2000)
                 .fluidOutputs(fluid('styrene')*1000)
                 .buildAndRegister();
+
+        
