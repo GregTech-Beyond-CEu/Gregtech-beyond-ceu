@@ -5,7 +5,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
         CHEMICAL_BATH_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('iron_iii_chloride')*100)
                 .inputs(metaitem('patterened_phenol_circuit_board'))
-                .outputs(metaitem('circuit_board.good'))
+                .outputs(metaitem('drenched_phenolic_circuit_board'))
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
@@ -13,7 +13,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
         CHEMICAL_BATH_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('sodium_bisulfate_solution')*100)
                 .inputs(metaitem('patterened_phenol_circuit_board'))
-                .outputs(metaitem('circuit_board.good'))
+                .outputs(metaitem('drenched_phenolic_circuit_board'))
                 .duration(200)
                 .EUt(8)
                 .buildAndRegister();
@@ -34,3 +34,11 @@ mods.gregtech.chemical_reactor.removeByInput(30, [metaitem('foilSilver') * 4, me
 mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('foilSilver') * 4, metaitem('board.phenolic')], [fluid('sodium_persulfate') * 200 * 200])
 // Good Circuit Board * 1
 mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('foilSilver') * 4, metaitem('board.phenolic')], [fluid('iron_iii_chloride') * 100 * 100])
+
+        FORMING_PRESS_RECIPES.recipeBuilder()
+                .inputs(metaitem('drenched_phenolic_circuit_board'))
+                .inputs(metaitem('foilSilver')*2)
+                .outputs(metaitem('circuit_board.good'))
+                .duration(250)
+                .EUt(20)
+                .buildAndRegister();
