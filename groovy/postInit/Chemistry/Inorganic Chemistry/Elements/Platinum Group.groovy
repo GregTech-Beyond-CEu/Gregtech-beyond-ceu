@@ -50,7 +50,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('chlorine')*4000)
+                .fluidInputs(fluid('chlorine')*2000)
                 .inputs(metaitem('dustSodiumRuthenate')* 14)
                 .fluidOutputs(fluid('ruthenium_tetroxide_solution')*2000)
                 .EUt(30)
@@ -61,7 +61,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .fluidInputs(fluid('ruthenium_tetroxide_solution')*1000)
                 .outputs(metaitem('dustSalt')* 4)
                 .fluidOutputs(fluid('ruthenium_tetroxide_liquid')*1000)
-                .fluidOutputs(fluid('water')*1000)
                 .EUt(480)
                 .duration(2000)
                 .buildAndRegister();
@@ -303,3 +302,6 @@ mods.gregtech.electrolyzer.removeByInput(120, [metaitem('dustPlatinumRaw') * 3],
                 .EUt(200)
                 .duration(300)
                 .buildAndRegister();
+
+// Rhodium Dust * 2
+mods.gregtech.electrolyzer.removeByInput(120, null, [fluid('rhodium_sulfate') * 1000 * 1000])
