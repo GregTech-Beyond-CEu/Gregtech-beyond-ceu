@@ -93,8 +93,8 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('hydrogen_sulfide')*2000)
-                .outputs(metaitem('dustCobaltSulfide')* 2)
-                .outputs(metaitem('dustNickelSulfide')* 2)
+                .outputs(metaitem('dustCobaltSulfate')* 2)
+                .outputs(metaitem('dustNickelSulfate')* 2)
                 .fluidInputs(fluid('ammonia_metal_sulfuric_solution')*5000)
                 .duration(200)
                 .EUt(70)
@@ -141,4 +141,56 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCupricOxide') * 2], 
                 .fluidOutputs(fluid('pregnant_cobalt_leach_solution')*1000)
                 .duration(40)
                 .EUt(50)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('sulfuric_acid')*1000)
+                .fluidInputs(fluid('pregnant_cobalt_leach_solution')*1000)
+                .fluidOutputs(fluid('leached_cobalt_leach_solution')*1000)
+                .duration(240)
+                .EUt(150)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('leached_cobalt_leach_solution')*1000)
+                .inputs(metaitem('dustCalciumHydroxide')*3)
+                .fluidOutputs(fluid('neutralized_cobalt_leach_solution')*1000)
+                .chancedOutput(metaitem('dustAluminiumHydroxide')*1, 2000, 100)
+                .duration(200)
+                .EUt(50)
+                .buildAndRegister();
+
+        SIFTER_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('neutralized_cobalt_leach_solution')*1000)
+                .chancedOutput(metaitem('dustManganese')*1, 4000, 100)
+                .chancedOutput(metaitem('dustCopper')*1, 7000, 400)
+                .chancedOutput(metaitem('dustZinc')*1, 1500, 200)
+                .fluidOutputs(fluid('pregnant_cobalt_leach')*1000)
+                .duration(400)
+                .EUt(80)
+                .buildAndRegister();
+
+        CENTRIFUGE_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('pregnant_cobalt_leach')*1000)
+                .fluidInputs(fluid('cyanex_923')*1000)
+                .fluidOutputs(fluid('cobalt_leach')*900)
+                .fluidOutputs(fluid('nickel_leach')*100)
+                .duration(400)
+                .EUt(80)
+                .buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('cobalt_leach')*1000)
+                .fluidOutputs(fluid('cyanex_923')*1000)
+                .outputs(metaitem('dustCobaltSulfate')*3)
+                .duration(200)
+                .EUt(110)
+                .buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('nickel_leach')*1000)
+                .fluidOutputs(fluid('cyanex_923')*1000)
+                .outputs(metaitem('dustNickelSulfate')*3)
+                .duration(200)
+                .EUt(110)
                 .buildAndRegister();
