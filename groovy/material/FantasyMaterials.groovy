@@ -31,49 +31,47 @@ public class FantasyMaterials {
                 .fluid()
                 .flags(GENERATE_FRAME, GENERATE_PLATE, GENERATE_ROD)
                 .color(0x6A8D9F)
-                .build();
+                .build().setFormula("Re*", true)
 
-        DegenerateRhenium.setFormula("Re*", true)
-
-        NaquadahWaste = new Material.Builder(14009,
-                GTBUtil.gtb("naquadah_waste"))
-                        .fluid()
-                        .color(0x2d690b).build().setFormula("Nq?");
+        NaquadahWaste = new Material.Builder(14009,GTBUtil.gtb("naquadah_waste"))
+                .fluid()
+                .color(0x2d690b)
+                .build().setFormula("Nq?");
 
         RareNaquadahWaste = new Material.Builder(14010, GTBUtil.gtb("rare_naquadah_waste"))
-                        .fluid()
-                        .color(0x0c2100)
-                        .build().setFormula("Nq*?");
+                .fluid()
+                .color(0x0c2100)
+                .build().setFormula("Nq*?");
 
         NaqHydrochloricAcid = new Material.Builder(14011, GTBUtil.gtb("naq_hydrochloric_acid"))
-                        .fluid()
-                        .color(0x1d4f00)
-                        .build().setFormula("Nq(HCl)");
+                .fluid()
+                .color(0x1d4f00)
+                .build().setFormula("Nq(HCl)");
 
         RareNaqFluoroantimonicAcid = new Material.Builder(14012, GTBUtil.gtb("rare_naq_fluoroantimonic_acid"))
-                        .fluid()
-                        .color(0xa1c9a5)
-                        .build().setFormula("Nq*H2SbF7");
+                .fluid()
+                .color(0xa1c9a5)
+                .build().setFormula("Nq*H2SbF7");
 
         CrystalFluix = new Material.Builder(14013, GTBUtil.gtb("crystal_fluix"))
-                        .gem()
-                        .fluid()
-                        .color(0x975CF7).iconSet("certus") //make it a bit brighter
-                        .flags("GENERATE_PLATE", "CRYSTALLIZABLE", "GENERATE_BOLT_SCREW")
-                        .components(material('silicon')*1, material('redstone')*1, material('nether_quartz')*1, material('certus_quartz')*1)
-                        .build();
+                .gem()
+                .fluid()
+                .color(0x975CF7).iconSet("certus") //make it a bit brighter
+                .flags("GENERATE_PLATE", "CRYSTALLIZABLE", "GENERATE_BOLT_SCREW")
+                .components(material('silicon')*1, material('redstone')*1, material('nether_quartz')*1, material('certus_quartz')*1)
+                .build();
 
         ImpureCrystalFluix = new Material.Builder(14014, GTBUtil.gtb("impure_crystal_fluix"))
-                        .gem()
-                        .color(0x6C3584).iconSet("certus") //make it a bit brighter
-                        .components(material('silicon')*1, material('redstone')*1, material('nether_quartz')*1, material('certus_quartz')*1)
-                        .build();
+                .gem()
+                .color(0x6C3584).iconSet("certus") //make it a bit brighter
+                .components(material('silicon')*1, material('redstone')*1, material('nether_quartz')*1, material('certus_quartz')*1)
+                .build();
 
         ImpureCrystalFluixSolution = new Material.Builder(14015, GTBUtil.gtb("impure_crystal_fluix_solution"))
-                        .fluid()
-                        .color(0x8D54A4).iconSet("certus") //make it a bit brighter
-                        .components(material('silicon')*1, material('redstone')*1, material('nether_quartz')*1, material('certus_quartz')*1)
-                        .build();
+                .fluid()
+                .color(0x8D54A4).iconSet("certus") //make it a bit brighter
+                .components(material('silicon')*1, material('redstone')*1, material('nether_quartz')*1, material('certus_quartz')*1)
+                .build();
 
 
 
