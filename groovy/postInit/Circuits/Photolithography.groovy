@@ -58,14 +58,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(120)
                 .buildAndRegister();
 
-        LASER_ENGRAVER_RECIPES.recipeBuilder()
-                .notConsumable(metaitem('ram_lithography_mask'))
-                .inputs(metaitem('wafer.silicon'))
-                .outputs(metaitem('engraved_ram_wafer'))
-                .duration(20)
-                .EUt(12)
-                .buildAndRegister();
-
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
                 .inputs(metaitem('wireGtSingleUraniumTriplatinum')* 2)
                 .inputs(metaitem('uhpic_base'))
@@ -95,13 +87,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(12)
                 .buildAndRegister();
 
-        LASER_ENGRAVER_RECIPES.recipeBuilder()
-                .inputs(metaitem('wafer.silicon'))
-                .outputs(metaitem('engraved_ram_wafer'))
-                .duration(20)
-                .EUt(12)
-                .buildAndRegister();
-
         CHEMICAL_BATH_RECIPES.recipeBuilder()
                 .inputs(metaitem('doped_ram_wafer'))
                 .fluidInputs(fluid('very_hot_nitrogen')*1000)
@@ -116,14 +101,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .outputs(metaitem('wafer.central_processing_unit'))
                 .duration(80)
                 .EUt(120)
-                .buildAndRegister();
-
-        LASER_ENGRAVER_RECIPES.recipeBuilder()
-                .notConsumable(metaitem('cpu_lithography_mask'))
-                .inputs(metaitem('wafer.silicon'))
-                .outputs(metaitem('engraved_cpu_wafer'))
-                .duration(20)
-                .EUt(12)
                 .buildAndRegister();
 
         BENDER_RECIPES.recipeBuilder()
@@ -375,31 +352,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(80)
                 .buildAndRegister();
 
-        LASER_ENGRAVER_RECIPES.recipeBuilder().inputs(metaitem('wafer.silicon'))
-                .notConsumable(metaitem('integrated_circuit_lithography_mask')).outputs(metaitem('engraved_ic_wafer')).duration(400).EUt(12)
-                .buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().inputs(metaitem('wafer.phosphorus'))
-                .notConsumable(metaitem('integrated_circuit_lithography_mask')).outputs(metaitem('engraved_ic_wafer')*4).duration(400).EUt(12)
-                .buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().inputs(metaitem('wafer.naquadah'))
-                .notConsumable(metaitem('integrated_circuit_lithography_mask')).outputs(metaitem('engraved_ic_wafer')*8).duration(400).EUt(12)
-                .buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().inputs(metaitem('wafer.neutronium'))
-                .notConsumable(metaitem('integrated_circuit_lithography_mask')).outputs(metaitem('engraved_ic_wafer')*12).duration(400).EUt(12)
-                .buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().inputs(metaitem('wafer.silicon'))
-                .notConsumable(metaitem('nanocpu_lithography_mask')).outputs(metaitem('engraved_nanocpu_wafer')).duration(400)
-                .EUt(480).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().inputs(metaitem('wafer.phosphorus'))
-                .notConsumable(metaitem('nanocpu_lithography_mask')).outputs(metaitem('engraved_nanocpu_wafer')*4).duration(400)
-                .EUt(480).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().inputs(metaitem('wafer.naquadah'))
-                .notConsumable(metaitem('nanocpu_lithography_mask')).outputs(metaitem('engraved_nanocpu_wafer')*8).duration(400)
-                .EUt(480).buildAndRegister();
-        LASER_ENGRAVER_RECIPES.recipeBuilder().inputs(metaitem('wafer.neutronium'))
-                .notConsumable(metaitem('nanocpu_lithography_mask')).outputs(metaitem('engraved_nanocpu_wafer')*12).duration(400)
-                .EUt(480).buildAndRegister();
-
         CVD_UNIT_RECIPES.recipeBuilder()
                 .inputs(metaitem('doped_nanocpu_wafer'))
                 .fluidInputs(fluid('trichlorosilane')*1000)
@@ -516,7 +468,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .inputs(metaitem('lithography_base_mask')).inputs(ore('dyeBlack'))
-                .circuitMeta(7)
+                .circuitMeta(8)
                 .outputs(metaitem('nor_photolithography_mask'))
                 .duration(50)
                 .EUt(12)
@@ -524,7 +476,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .inputs(metaitem('lithography_base_mask')).inputs(ore('dyeBlack'))
-                .circuitMeta(8)
+                .circuitMeta(9)
                 .outputs(metaitem('nand_photolithography_mask'))
                 .duration(50)
                 .EUt(12)
@@ -532,7 +484,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .inputs(metaitem('lithography_base_mask')).inputs(ore('dyeBlack'))
-                .circuitMeta(9)
+                .circuitMeta(10)
                 .outputs(metaitem('soc_lithography_mask'))
                 .duration(50)
                 .EUt(12)
@@ -540,7 +492,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .inputs(metaitem('lithography_base_mask')).inputs(ore('dyeBlack'))
-                .circuitMeta(10)
+                .circuitMeta(12)
                 .outputs(metaitem('pre_engraving_oganesson_lithography_mask'))
                 .duration(50)
                 .EUt(12)
@@ -548,7 +500,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         ASSEMBLER_RECIPES.recipeBuilder()
                 .inputs(metaitem('lithography_base_mask')).inputs(ore('dyeBlack'))
-                .circuitMeta(11)
+                .circuitMeta(13)
                 .outputs(metaitem('uhasoc_lithography_mask'))
                 .duration(50)
                 .EUt(12)
@@ -686,33 +638,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(100)
                 .buildAndRegister();
 
-        CUTTER_RECIPES.recipeBuilder()
-                .inputs(metaitem('boule.silicon'))
-                .outputs(metaitem('wafer.silicon')*16)
-                .outputs(metaitem('monocrystalline_seed_crystal'))
-                .fluidInputs(fluid('water')*12)
-                .duration(300)
-                .EUt(8)
-                .buildAndRegister();
-
-        CUTTER_RECIPES.recipeBuilder()
-                .inputs(metaitem('boule.silicon'))
-                .outputs(metaitem('wafer.silicon')*16)
-                .outputs(metaitem('monocrystalline_seed_crystal'))
-                .fluidInputs(fluid('distilled_water')*6)
-                .duration(150)
-                .EUt(8)
-                .buildAndRegister();
-
-        CUTTER_RECIPES.recipeBuilder()
-                .inputs(metaitem('boule.silicon'))
-                .outputs(metaitem('wafer.silicon')*16)
-                .outputs(metaitem('monocrystalline_seed_crystal'))
-                .fluidInputs(fluid('lubricant')*5)
-                .duration(50)
-                .EUt(8)
-                .buildAndRegister();
-
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('nitrogen')*3000)
                 .inputs(metaitem('dustNickel'))
@@ -839,30 +764,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(90)
                 .buildAndRegister();
 
-        CUTTER_RECIPES.recipeBuilder()
-                .inputs(metaitem('wafer.qbit_central_processing_unit'))
-                .outputs(metaitem('qbit_cpu_die')*5)
-                .fluidInputs(fluid('water')*12)
-                .duration(200)
-                .EUt(80)
-                .buildAndRegister();
-
-        CUTTER_RECIPES.recipeBuilder()
-                .inputs(metaitem('plate.qbit_central_processing_unit'))
-                .outputs(metaitem('qbit_cpu_die')*5)
-                .fluidInputs(fluid('distilled_water')*8)
-                .duration(100)
-                .EUt(80)
-                .buildAndRegister();
-
-        CUTTER_RECIPES.recipeBuilder()
-                .inputs(metaitem('plate.qbit_central_processing_unit'))
-                .outputs(metaitem('qbit_cpu_die')*5)
-                .fluidInputs(fluid('lubricant')*6)
-                .duration(60)
-                .EUt(60)
-                .buildAndRegister();
-
         FORMING_PRESS_RECIPES.recipeBuilder()
                 .inputs(metaitem('qbit_cpu_die'))
                 .inputs(metaitem('platePolytetrafluoroethylene'))
@@ -950,6 +851,8 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(800)
                 .EUt(77000)
                 .buildAndRegister();
+// HASoC Wafer * 1
+mods.gregtech.laser_engraver.removeByInput(7680, [metaitem('wafer.neutronium'), metaitem('glass_lens.black')], null)
 
         POLARIZER_RECIPES.recipeBuilder()
                 .inputs(metaitem('unpolarized_hasoc_wafer'))
@@ -957,19 +860,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(7000)
                 .EUt(8112)
                 .buildAndRegister();
-
-        CUTTER_RECIPES.recipeBuilder()
-                .inputs(metaitem('wafer.highly_advanced_system_on_chip'))
-                .outputs(metaitem('hasoc_die')* 6)
-                .fluidInputs(fluid('water')*12)
-                .duration(2000)
-                .EUt(80000)
-                .buildAndRegister();
-
-        CUTTER_RECIPES.recipeBuilder().inputs(metaitem('wafer.highly_advanced_system_on_chip')).outputs(metaitem('hasoc_die')*6)
-                .fluidInputs(fluid('distilled_water')*6).duration(1000).EUt(80000).buildAndRegister();
-        CUTTER_RECIPES.recipeBuilder().inputs(metaitem('wafer.highly_advanced_system_on_chip')).outputs(metaitem('hasoc_die')*6)
-                .fluidInputs(fluid('lubricant')*6).duration(600).EUt(60000).buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
                 .inputs(metaitem('hasoc_die')).inputs(metaitem('neurological_life_support_unit')).inputs(metaitem('platePolybenzimidazole'))
@@ -1212,14 +1102,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .outputs(metaitem('insulated_inp_wafer'))
                 .duration(720)
                 .EUt(8134590)
-                .buildAndRegister();
-
-        MIXER_RECIPES.recipeBuilder()
-                .inputs(metaitem('dustCarbonNanotubes'))
-                .fluidInputs(fluid('xenon')*2000)
-                .outputs(metaitem('dustDopedNanotubeDepositionMix'))
-                .EUt(8003490)
-                .duration(120)
                 .buildAndRegister();
 
         CVD_UNIT_RECIPES.recipeBuilder()
@@ -1504,15 +1386,6 @@ for (pdopant in PDopant.pdopants) {
                         .EUt(100)
                         .buildAndRegister();
 
-                CHEMICAL_BATH_RECIPES.recipeBuilder()
-                        .fluidInputs(fluid('very_hot_nitrogen')*1000)
-                        .fluidOutputs(fluid('nitrogen')*1000)
-                        .inputs(metaitem('doped_ic_wafer'))
-                        .outputs(metaitem('wafer.integrated_logic_circuit'))
-                        .duration(200)
-                        .EUt(12)
-                        .buildAndRegister();
-
                 ION_IMPLANTER_RECIPES.recipeBuilder()
                         .inputs(metaitem('engraved_nanocpu_wafer') * batchSize)
                         .fluidInputs(fluid('very_hot_argon')*1000 * batchSize)
@@ -1561,16 +1434,18 @@ for (pdopant in PDopant.pdopants) {
                         .EUt(100)
                         .buildAndRegister();
 
-                ION_IMPLANTER_RECIPES.recipeBuilder()
-                        .inputs(metaitem('silicon_dioxide_wafer') * batchSize)
-                        .inputs(metaitem(ndopant.metaItemName))
-                        .outputs(metaitem('n_doped_silicon_dioxide_wafer') * batchSize)
-                        .duration(800)
-                        .EUt(100)
-                        .buildAndRegister();
-
             }
 }
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('very_hot_nitrogen')*1000)
+                .fluidOutputs(fluid('nitrogen')*1000)
+                .inputs(metaitem('doped_ic_wafer'))
+                .outputs(metaitem('wafer.integrated_logic_circuit'))
+                .duration(200)
+                .EUt(12)
+                .buildAndRegister();
+                
         FUSION_RECIPES.recipeBuilder()
                 .EUToStart(160000000)
                 .fluidInputs(fluid('helium_3')*12)
@@ -1697,6 +1572,12 @@ for (pdopant in PDopant.pdopants) {
                 .duration(400)
                 .EUt(2)
                 .buildAndRegister();
+// Silicon Wafer * 16
+mods.gregtech.cutter.removeByInput(64, [metaitem('boule.silicon')], [fluid('water') * 80 * 80])
+// Silicon Wafer * 16
+mods.gregtech.cutter.removeByInput(64, [metaitem('boule.silicon')], [fluid('distilled_water') * 60 * 60])
+// Silicon Wafer * 16
+mods.gregtech.cutter.removeByInput(64, [metaitem('boule.silicon')], [fluid('lubricant') * 20 * 20])
 
         CUTTER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('lubricant')*20)
@@ -1835,3 +1716,187 @@ mods.gregtech.large_chemical_reactor.removeByInput(120, [metaitem('wafer.ultra_h
                 .duration(200)
                 .EUt(12)
                 .buildAndRegister();
+
+        //Chrome Shadow Maks
+
+        HIGH_VACUUM_EVAPORATION_RECIPES.recipeBuilder()
+                .inputs(metaitem('wafer.silicon'))
+                .inputs(metaitem('dustChrome'))
+                .outputs(metaitem('chrome_deposited_wafer'))
+                .duration(200)
+                .EUt(212)
+                .buildAndRegister();
+
+        SPINCOATER_RECIPES.recipeBuilder()
+                .inputs(metaitem('chrome_deposited_wafer'))
+                .fluidInputs(fluid('pmma')*100)
+                .outputs(metaitem('spincoated_chrome_wafer'))
+                .duration(300)
+                .EUt(180)
+                .buildAndRegister();
+
+        UV_LIGHT_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('novolacs_photoresist')*20)
+                .inputs(metaitem('spincoated_chrome_wafer'))
+                .inputs(metaitem('lithography_base_mask'))
+                .outputs(metaitem('exposed_chrome_wafer'))
+                .duration(300)
+                .EUt(220)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('trimethylamine')*1000)
+                .fluidInputs(fluid('methyl_iodide')*1000)
+                .fluidOutputs(fluid('tetramethylammonium_iodide')*1000)
+                .duration(300)
+                .EUt(220)
+                .buildAndRegister();
+
+        ION_EXCHANGE_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('tetramethylammonium_iodide')*1000)
+                .fluidOutputs(fluid('tetramethylammonium_hydroxide')*1000)
+                .duration(300)
+                .EUt(220)
+                .buildAndRegister();
+
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('tetramethylammonium_hydroxide')*1000)
+                .fluidInputs(fluid('distilled_water')*3000)
+                .fluidOutputs(fluid('diluted_tmah')*4000)
+                .duration(300)
+                .EUt(220)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('diluted_tmah')*500)
+                .inputs(metaitem('exposed_chrome_wafer'))
+                .outputs(metaitem('developed_chrome_wafer'))
+                .duration(300)
+                .EUt(220)
+                .buildAndRegister();
+
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
+                .inputs(metaitem('dustCeriumOxide'))
+                .fluidInputs(fluid('nitric_acid')*1000)
+                .fluidInputs(fluid('ammonium_nitrate')*1000)
+                .fluidInputs(fluid('deionized_water')*1000)
+                .fluidOutputs(fluid('ceric_ammonium_nitrate')*1000)
+                .duration(500)
+                .EUt(400)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('ceric_ammonium_nitrate')*1000)
+                .fluidInputs(fluid('glacial_acetic_acid')*1000)
+                .fluidOutputs(fluid('chromium_etchant')*1000)
+                .duration(300)
+                .EUt(200)
+                .buildAndRegister();
+
+        REACTIVE_ION_ETCHER_RECIPES.recipeBuilder()
+                .inputs(metaitem('developed_chrome_wafer'))
+                .outputs(metaitem('etched_chrome_wafer'))
+                .fluidInputs(fluid('chromium_etchant')*200)
+                .duration(400)
+                .EUt(450)
+                .buildAndRegister();
+
+        CHEMICAL_BATH_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('acetone')*100)
+                .inputs(metaitem('etched_chrome_wafer'))
+                .outputs(metaitem('chromium_shadow_mask'))
+                .duration(400)
+                .EUt(450)
+                .buildAndRegister();
+
+        BLENDER_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('boron_trichloride')*1000)
+                .fluidInputs(fluid('chlorine')*2000)
+                .fluidInputs(fluid('argon')*1000)
+                .fluidOutputs(fluid('bcl_cl_2_ar') * 1000)
+                .duration(400)
+                .EUt(450)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .notConsumable(fluid('nitrogen')*1000)
+                .inputs(metaitem('dustGallium'))
+                .fluidInputs(fluid('chlorine')*3000)
+                .fluidOutputs(fluid('gallium_trichloride')*1000)
+                .duration(200)
+                .EUt(45)
+                .buildAndRegister();
+        
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .outputs(metaitem('dustGallium'))
+                .fluidOutputs(fluid('chlorine')*3000)
+                .fluidInputs(fluid('gallium_trichloride')*1000)
+                .notConsumable(metaitem('stickPlatinum'))
+                .notConsumable(metaitem('stickIron'))
+                .duration(210)
+                .EUt(85)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('gallium_trichloride')*1000)
+                .fluidInputs(fluid('methylmagnesium_bromide') * 3000)
+                .fluidOutputs(fluid('trimethylgallium')*1000)
+                .outputs(metaitem('dustMagnesiumBromideChlorideSalt')*3)
+                .duration(220)
+                .EUt(65)
+                .buildAndRegister();
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .inputs(metaitem('dustMagnesiumBromideChlorideSalt'))
+                .inputs(metaitem('dustSodiumHydroxide')*2)
+                .outputs(metaitem('dustMagnesiumHydroxide'))
+                .outputs(metaitem('dustSalt'))
+                .outputs(metaitem('dustSodiumBromide'))
+                .duration(250)
+                .EUt(30)
+                .buildAndRegister();
+
+        ROASTER_RECIPES.recipeBuilder() //TODO Tube Furnace
+                .inputs(metaitem('dustMagnesiumHydroxide'))
+                .outputs(metaitem('dustMagnesia')*2)
+                .fluidOutputs(fluid('water')*1000)
+                .duration(150)
+                .EUt(50)
+                .buildAndRegister();
+
+        OXIDATION_FURNACE_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('chlorine')*2000)
+                .inputs(metaitem('dustSodiumBromide')*2)
+                .fluidOutputs(fluid('bromine')*2000)
+                .outputs(metaitem('dustSalt')*2)
+                .duration(80)
+                .EUt(40)
+                .buildAndRegister();
+
+        ION_IMPLANTER_RECIPES.recipeBuilder()
+                .inputs(metaitem('silicon_dioxide_wafer'))
+                .inputs(metaitem('dustBoron'))
+                .outputs(metaitem('n_doped_silicon_dioxide_wafer'))
+                .duration(800)
+                .EUt(100)
+                .buildAndRegister();
+
+        ION_IMPLANTER_RECIPES.recipeBuilder()
+                .inputs(metaitem('silicon_dioxide_wafer')*2)
+                .inputs(metaitem('dustGallium'))
+                .outputs(metaitem('n_doped_silicon_dioxide_wafer')*2)
+                .duration(800)
+                .EUt(100)
+                .buildAndRegister();
+
+        ION_IMPLANTER_RECIPES.recipeBuilder()
+                .inputs(metaitem('silicon_dioxide_wafer')*2)
+                .inputs(metaitem('dustTinyIndium'))
+                .outputs(metaitem('n_doped_silicon_dioxide_wafer')*2)
+                .duration(800)
+                .EUt(100)
+                .buildAndRegister();
+// Qubit CPU Wafer * 1
+mods.gregtech.large_chemical_reactor.removeByInput(1920, [metaitem('wafer.nano_central_processing_unit'), metaitem('quantumeye') * 2], [fluid('gallium_arsenide') * 288 * 288])
+// Qubit CPU Wafer * 1
+mods.gregtech.large_chemical_reactor.removeByInput(1920, [metaitem('wafer.nano_central_processing_unit'), metaitem('dustIndiumGalliumPhosphide')], [fluid('radon') * 50 * 50])
