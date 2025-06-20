@@ -164,7 +164,7 @@ mods.gregtech.electrolyzer.removeByInput(80, [metaitem('dustHafniumOxide') * 2],
                 .EUt(140)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder() //CSTR
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('tridecylphosphine')*1000)
                 .fluidInputs(fluid('oxygen')*1000)
                 .fluidOutputs(fluid('tridecylphosphine_oxide')*1000)
@@ -200,7 +200,7 @@ mods.gregtech.electrolyzer.removeByInput(80, [metaitem('dustHafniumOxide') * 2],
                 .EUt(140)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder() //CSTR
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('trioctylphosphine')*1000)
                 .fluidInputs(fluid('oxygen')*1000)
                 .fluidOutputs(fluid('trioctylphosphine_oxide')*1000)
