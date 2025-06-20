@@ -29,7 +29,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         ROASTER_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustManganeseSulfate')* 3)
-                .fluidOutputs(fluid('sulfur_dioxide') *2000)
+                .fluidOutputs(fluid('sulfur_dioxide') *1000)
                 .outputs(metaitem('dustManganese')* 1)
                 .circuitMeta(0)
                 .duration(200)
