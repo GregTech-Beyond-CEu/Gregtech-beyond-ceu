@@ -96,3 +96,11 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(30)
                 .EUt(12000)
                 .buildAndRegister();
+
+        FLUID_HEATER_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('kapton_k')*1000)
+                .fluidOutputs(fluid('pyromellitic_dianhydride_oxydianilin') * 1000)
+                .circuitMeta(1)
+                .duration(230)
+                .EUt(12)
+                .buildAndRegister();
