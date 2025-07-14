@@ -438,6 +438,9 @@ eventManager.listen {
         customMetaItems.addItem(564, "ring_laser_diode_wafer");
         customMetaItems.addItem(565, "quantum_integrated_engine_controller");
         customMetaItems.addItem(566, "parity_checker_ic");
+        customMetaItems.addItem(567, "beryllium_tube");
+        customMetaItems.addItem(568, "oxygen_mask_protective_layer");
+        customMetaItems.addItem(569, "co2_scrubber");
         customMetaItems.addItem(570, "plate.xor");
         customMetaItems.addItem(571, "silicon_wafer_slice");
         customMetaItems.addItem(572, "gold_plated_pin_grid");
@@ -448,6 +451,7 @@ eventManager.listen {
         customMetaItems.addItem(577, "speaker");
         customMetaItems.addItem(578, "timer");
         customMetaItems.addItem(579, "simple_alarm_circuit");
+        customMetaItems.addItem(580, "copper_anode_slime");
 
         
 }
