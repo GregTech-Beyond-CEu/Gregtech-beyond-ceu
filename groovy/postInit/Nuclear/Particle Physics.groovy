@@ -58,3 +58,29 @@ DILUTION_REFRIGERATOR_RECIPES.recipeBuilder()
     .EUt(1000)
     .duration(400)
     .buildAndRegister();
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('beryllium_tube')*16)
+    .outputs(item('gtb:gtb_multiblock_casing2', 7))
+    .EUt(2000)
+    .duration(800)
+    .buildAndRegister();
+
+CNC_RECIPES.recipeBuilder()
+    .inputs(metaitem('stickBeryllium'))
+    .outputs(metaitem('beryllium_tube'))
+    .fluidInputs(fluid('acetone')*1000)
+    .EUt(2000)
+    .duration(800)
+    .buildAndRegister();
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('ultra_stable_laser_array')*8)
+    .inputs(metaitem('plateSteel')*8)
+    .inputs(metaitem('frameSteel'))
+    .inputs(ore('circuitIv'))
+    .outputs(item('gtb:gtb_multiblock_casing2', 12))
+    .circuitMeta(12)
+    .EUt(4000)
+    .duration(800)
+    .buildAndRegister();
