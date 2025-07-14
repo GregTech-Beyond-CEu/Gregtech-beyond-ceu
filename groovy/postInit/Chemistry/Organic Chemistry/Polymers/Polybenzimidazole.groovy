@@ -1,10 +1,13 @@
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
+// Phenol * 1000
+mods.gregtech.chemical_reactor.removeByInput(7680, null, [fluid('diaminobenzidine') * 1000, fluid('diphenyl_isophthalate') * 1000])
+mods.gregtech.large_chemical_reactor.removeByInput(7680, null, [fluid('diaminobenzidine') * 1000, fluid('diphenyl_isophthalate') * 1000])
 
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('diaminobenzidine')*1000)
                 .fluidInputs(fluid('diphenyl_isophthalate') * 1000)
-                .outputs(metaitem('dustPolybenzimidazolePrePolymerFoam')*1)
+                .outputs(metaitem('dustPolybenzimidazolePrePolymerFoam'))
                 .duration(120)
                 .EUt(800)
                 .buildAndRegister();
@@ -40,6 +43,3 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(120)
                 .EUt(700)
                 .buildAndRegister();
-
-// Phenol * 1000
-mods.gregtech.chemical_reactor.removeByInput(7680, null, [fluid('diaminobenzidine') * 1000 * 1000, fluid('diphenyl_isophthalate') * 1000 * 1000])
