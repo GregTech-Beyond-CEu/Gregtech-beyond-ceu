@@ -1,0 +1,25 @@
+// Mega Electric Blast Furnace * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('electric_blast_furnace') * 64], [fluid('tin') * 18432 * 18432])
+// Mega Electric Blast Furnace * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('electric_blast_furnace') * 64], [fluid('soldering_alloy') * 9216 * 9216])
+// Mega Vacuum Freezer * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('vacuum_freezer') * 64], [fluid('tin') * 18432 * 18432])
+// Mega Vacuum Freezer * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('vacuum_freezer') * 64], [fluid('soldering_alloy') * 9216 * 9216])
+// Mega Oil Cracking Unit * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('cracker') * 64], [fluid('tin') * 18432 * 18432])
+// Mega Oil Cracking Unit * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('cracker') * 64], [fluid('soldering_alloy') * 9216 * 9216])
+// Queebf * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('electric_blast_furnace') * 4, metaitem('plateInvar') * 4, metaitem('circuit.advanced_integrated'), metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('tin') * 1152 * 1152])
+// Queebf * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('electric_blast_furnace') * 4, metaitem('plateInvar') * 4, metaitem('circuit.advanced_integrated'), metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('soldering_alloy') * 576 * 576])
+// Queezer * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('vacuum_freezer') * 4, metaitem('plateAluminium') * 4, metaitem('circuit.advanced_integrated'), metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('tin') * 1152 * 1152])
+// Queezer * 1
+mods.gregtech.assembler.removeByInput(480, [metaitem('vacuum_freezer') * 4, metaitem('plateAluminium') * 4, metaitem('circuit.advanced_integrated'), metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('soldering_alloy') * 576 * 576])
+
+
+crafting.remove('zbgt:quad_ebf')
+crafting.remove('zbgt:queezer')
+crafting.remove('zbgt:industrial_pbf')
