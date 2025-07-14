@@ -11,7 +11,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
             .EUt(12)
             .buildAndRegister();
 
-    CHEMICAL_RECIPES.recipeBuilder()    //CSTR
+    CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
             .fluidInputs(fluid('ammonia')*1000)
             .fluidInputs(fluid('nitric_acid')*1000)
             .fluidOutputs(fluid('ammonium_nitrate')*1000)
@@ -79,7 +79,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
                 .duration(100)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()    //CSTR
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('dichloromethane')*1000)
                 .fluidInputs(fluid('propargyl_alcohol')*1000)
                 .fluidInputs(fluid('thionyl_chloride')*1000)
@@ -236,4 +236,65 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
                 .outputs(metaitem('dustBoron'))
                 .duration(200)
                 .EUt(40)
+                .buildAndRegister();
+
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('nitric_acid')*1000)
+                .fluidInputs(fluid('distilled_water')*1000)
+                .inputs(metaitem('dustLead')*2)
+                .fluidOutputs(fluid('lead_nitrate_solution')*1000)
+                .duration(300)
+                .EUt(50)
+                .buildAndRegister();
+
+        VACUUM_DESICCATOR_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('lead_nitrate_solution')*1000)
+                .fluidOutputs(fluid('water')*1000)
+                .outputs(metaitem('dustLeadNitrate')*2)
+                .duration(300)
+                .EUt(50)
+                .buildAndRegister();
+
+        //Diborane
+
+        TRICKLE_BED_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('boron_trifluoride')*2000)
+                .inputs(metaitem('dustLithiumAluminiumHydride')*3)
+                .fluidOutputs(fluid('diborane')*1000)
+                .outputs(metaitem('dustLithiumFluoride')*3)
+                .outputs(metaitem('dustAluminiumTrifluoride')*3)
+                .duration(300)
+                .EUt(50)
+                .buildAndRegister();
+
+        //Sodium Silicate
+
+
+        CHEMICAL_RECIPES.recipeBuilder()
+                .inputs(metaitem('dustSodaAsh'))
+                .inputs(metaitem('dustSiliconDioxide'))
+                .outputs(metaitem('dustSodiumSilicate'))
+                .fluidOutputs(fluid('carbon_dioxide')*1000)
+                .duration(300)
+                .EUt(50)
+                .buildAndRegister();
+
+        //Lithium Aluminium Hydride
+
+        TRICKLE_BED_REACTOR_RECIPES.recipeBuilder()
+                .inputs(metaitem('dustLithiumHydride')*4)
+                .inputs(metaitem('dustAluminiumChloride'))
+                .fluidInputs(fluid('diethyl_ether')*1000)
+                .fluidOutputs(fluid('lithium_aluminium_hydride_solution')*1000)
+                .duration(400)
+                .EUt(150)
+                .buildAndRegister();
+
+        DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('lithium_aluminium_hydride_solution')*1000)
+                .outputs(metaitem('dustLithiumAluminiumHydride'))
+                .fluidOutputs(fluid('diethyl_ether')*1000)
+                .fluidOutputs(fluid('lithium_chloride_solution')*3000)
+                .duration(400)
+                .EUt(150)
                 .buildAndRegister();
