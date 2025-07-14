@@ -515,7 +515,6 @@ class GTBMaterials {
         public static Material Alamine_336;
         public static Material Cyanex_923;
         public static Material Trioctylamine;
-        public static Material Tridecylamine;
         public static Material TridecylphosphineOxide;
         public static Material TrioctylphosphineOxide;
         public static Material Tridecylphosphine;
@@ -550,6 +549,11 @@ class GTBMaterials {
         public static Material BiphenylDiphenylEtherSolution;
         public static Material Acrolein;
         public static Material Dihydrophenanthroline;
+        public static Material Lexan;
+        public static Material IndiumTrichloride;
+        public static Material IndiumPrecipitationSolution;
+        public static Material HighPurityIndiumSolution;
+        public static Material IndiumMotherLiqour;
 
         //First Degree Materials
 
