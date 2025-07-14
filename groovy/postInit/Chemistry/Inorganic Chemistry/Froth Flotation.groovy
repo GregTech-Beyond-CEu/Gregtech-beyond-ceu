@@ -131,7 +131,7 @@ mods.gregtech.mixer.removeByInput(1920, [metaitem('crushedGreenSapphire') * 2], 
 
 //Methyl Isobutyl Carbonyl production
 
-        CHEMICAL_RECIPES.recipeBuilder()     //TODO TBR
+        TRICKLE_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('air')*1000)
                 .fluidInputs(fluid('1_butene')*1000)
                 .fluidOutputs(fluid('methyl_isobutyl_carbonyl')*1000)
