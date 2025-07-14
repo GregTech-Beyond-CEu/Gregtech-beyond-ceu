@@ -74,7 +74,7 @@ MIXER_RECIPES.recipeBuilder()
     .EUt(130)
     .buildAndRegister();
 
-CHEMICAL_RECIPES.recipeBuilder() //CSTR
+CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
     .fluidInputs(fluid('fluorobenzene_mixture')*1000)
     .fluidInputs(fluid('fluorobenzoyl_chloride')*1000)
     .notConsumable(metaitem('dustAluminiumChloride'))
@@ -92,7 +92,7 @@ CHEMICAL_RECIPES.recipeBuilder() //CSTR
 //2(C6H4(OH)2) + 2(C13H8OF2) -> 4HF + 2(C19H12O3)
 
     //2(C6H4(OH)2) + 2(C13H8OF2) + 2(K2CO3) + 4(C12H10O2S) -> 12(C6H4(OH)2)(C13H8OF2)(K2CO3)(C12H10O2S)
-CHEMICAL_RECIPES.recipeBuilder() //CSTR TODO
+CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
     .fluidInputs(fluid('hydroquinone') * 2000)
     .fluidInputs(fluid('difluorobenzophenone')*2000)
     .inputs(metaitem('dustPotassiumCarbonate')*2)
@@ -107,7 +107,7 @@ POLYMERIZATION_TANK_RECIPES.recipeBuilder()
     .fluidInputs(fluid('peek_reaction_mixture')*1000)
     .fluidInputs(fluid('nitrogen')*2000)
     .notConsumable(metaitem('dustZieglerNattaCatalyst'))
-    .fluidOutputs(fluid('post_polymerization_peek_mixture')*1000) //
+    .fluidOutputs(fluid('post_polymerization_peek_mixture')*1000)
     .duration(200)
     .EUt(500)
     .buildAndRegister();
