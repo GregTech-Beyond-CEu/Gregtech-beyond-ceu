@@ -62,3 +62,11 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(200)
                 .EUt(20)
                 .buildAndRegister();
+
+        FRACTIONAL_DISTILLATION_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('ethanol')*1000)
+                .fluidOutputs(fluid('ethanol_100') * 800)
+                .fluidOutputs(fluid('water')*200)
+                .duration(400)
+                .EUt(120)
+                .buildAndRegister();
