@@ -859,3 +859,15 @@ CHEMICAL_RECIPES.recipeBuilder()
     .duration(300)
     .EUt(145)
     .buildAndRegister();
+
+//Boron Trichloride
+
+BATCH_REACTOR_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('chlorine')*6000)
+    .inputs(metaitem('dustCarbon')*3)
+    .inputs(metaitem('supercritical:dustBoronTrioxide')*5)
+    .fluidOutputs(fluid('carbon_monoxide')*3000)
+    .fluidOutputs(fluid('boron_trichloride')*2000)
+    .duration(400)
+    .EUt(245)
+    .buildAndRegister();
