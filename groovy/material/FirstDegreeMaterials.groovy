@@ -282,27 +282,27 @@ public class FirstDegreeMaterials {
 
         SodiumBorohydride = new Material.Builder(8052, GTBUtil.gtb("sodium_borohydride"))
                 .dust()
-                .color(0x9DD6D0)
+                .color(0x2FA6E0)
                 .build().setFormula("NaBH4", true);
 
         SodiumHydride = new Material.Builder(8053, GTBUtil.gtb("sodium_hydride"))
                 .dust()
-                .color(0x9DD6D0)
+                .color(0x545C93)
                 .build().setFormula("NaH", true);
 
         BoricAcid = new Material.Builder(8054, GTBUtil.gtb("boric_acid"))
                 .fluid()
-                .color(0x9DD6D0)
+                .color(0xDFDCD1)
                 .build().setFormula("H3BO3", true);
 
         SodiumEthoxide = new Material.Builder(8055, GTBUtil.gtb("sodium_ethoxide"))
                 .dust()
-                .color(0x9DD6D0)
+                .color(0xF0724A)
                 .build().setFormula("C2H5ONa", true);
 
         PotassiumManganate = new Material.Builder(8056, GTBUtil.gtb("potassium_manganate"))
                 .dust()
-                .color(0x9DD6D0)
+                .color(0xDFCDE3)
                 .build().setFormula("K2MnO4", true);
 
         PotassiumHydroxide = new Material.Builder(8057, GTBUtil.gtb("potassium_hydroxide"))
@@ -313,12 +313,12 @@ public class FirstDegreeMaterials {
 
         AluminiumChloride = new Material.Builder(8058, GTBUtil.gtb("aluminium_chloride"))
                 .dust()
-                .color(0x9DD6D0)
+                .color(0x2FA6E0)
                 .build().setFormula("AlCl3", true);
 
         CucrmgbaCatalyst = new Material.Builder(8059, GTBUtil.gtb("cucrmgba_catalyst"))
                 .dust()
-                .color(0x4A148C)
+                .color(0xE98219)
                 .build().setFormula("CuCrMgBa", true);
 
         OneFourButanediol = new Material.Builder(8060, GTBUtil.gtb("one_four_butanediol"))
@@ -328,7 +328,7 @@ public class FirstDegreeMaterials {
 
         OneFourButynediol = new Material.Builder(8061, GTBUtil.gtb("one_four_butynediol"))
                 .fluid()
-                .color(0x4A148C)
+                .color(0x7D3690)
                 .build().setFormula("C4H6O2", true);
 
         NaquadahDioxide = new Material.Builder(8062, GTBUtil.gtb("naquadah_dioxide"))
@@ -611,23 +611,23 @@ public class FirstDegreeMaterials {
         PhosphorusTrichloride = new Material.Builder(8115, GTBUtil.gtb("phosphorus_trichloride"))
                 .fluid()
                 .dust()
-                .color(0xEF9A9A)
+                .color(0x598781)
                 .build().setFormula("PCl3", true);
 
         TolueneDiisocyanate = new Material.Builder(8116, GTBUtil.gtb("toluene_diisocyanate"))
                 .fluid()
                 .dust()
-                .color(0xEF9A9A)
+                .color(0x94BAB6)
                 .build().setFormula("C9H6N2O2", true);
 
         PrePolymerizedCaprolactam = new Material.Builder(8117, GTBUtil.gtb("pre_polymerized_caprolactam"))
                 .dust()
-                .color(0xEF9A9A)
+                .color(0x5F5552)
                 .build().setFormula("(CH2)5C(O)NH", true);
 
         Ether = new Material.Builder(8118, GTBUtil.gtb("ether"))
                 .fluid()
-                .color(0xEF9A9A)
+                .color(0xD36E4F)
                 .build().setFormula("C2H8SO5", true);
 
         Grisium = new Material.Builder(8119, GTBUtil.gtb("grisium"))
@@ -2757,11 +2757,6 @@ public class FirstDegreeMaterials {
                 .fluid()
                 .color(0x5B356B)
                 .build().setFormula("C13H29PO",true);
-
-        Tridecylamine = new Material.Builder(8537, GTBUtil.gtb("tridecylamine"))
-                .fluid()
-                .color(0x9E81AA)
-                .build().setFormula("C13H29N",true);
 
         Trioctylamine = new Material.Builder(8538, GTBUtil.gtb("trioctylamine"))
                 .fluid()
