@@ -140,7 +140,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustBandedIron') * 5], n
 
         BLAST_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustIronSulfate')*12)
-                .outputs(metaitem('dustIronOxide'))
+                .outputs(metaitem('dustIronOxide')*5)
                 .fluidOutputs(fluid('sulfur_dioxide')*2000)
                 .fluidOutputs(fluid('sulfur_trioxide')*2000)
                 .fluidInputs(fluid('air')*1000)
