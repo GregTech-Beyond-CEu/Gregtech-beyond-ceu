@@ -121,3 +121,9 @@ crafting.remove('minecraft:spruce_boat')
 crafting.remove('minecraft:birch_boat')
 crafting.remove('minecraft:jungle_boat')
 crafting.remove('minecraft:dark_oak_boat')
+
+
+crafting.remove('minecraft:leather_helmet')
+crafting.remove('minecraft:leather_leggings')
+crafting.remove('minecraft:leather_chestplate')
+crafting.remove('minecraft:leather_boots')
