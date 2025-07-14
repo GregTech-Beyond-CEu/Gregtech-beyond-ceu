@@ -231,7 +231,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .inputs(metaitem('dustSilicon')* 32)
                 .inputs(metaitem('monocrystalline_seed_crystal'))
                 .outputs(metaitem('unbaked_monocrystalline_silicon_boule'))
-                .duration(200)
+                .duration(1000)
                 .EUt(12)
                 .buildAndRegister();
 
@@ -239,7 +239,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .blastFurnaceTemp(800)
                 .inputs(metaitem('unbaked_monocrystalline_silicon_boule'))
                 .outputs(metaitem('boule.silicon'))
-                .duration(200)
+                .duration(2000)
                 .EUt(70)
                 .buildAndRegister();
 
