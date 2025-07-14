@@ -1161,6 +1161,36 @@ public class UnknownCompositionMaterials {
                 .color(0xAAA952)
                 .build().setFormula("C12H10N2", true);
 
+        Lexan = new Material.Builder(14724, GTBUtil.gtb("lexan"))
+                .fluid()
+                .dust()
+                .ingot()
+                .flags(GENERATE_PLATE, GENERATE_ROD)
+                .color(0xDD3C38)
+                .build().setFormula("(C16H15O3)n", true);
+
+        IndiumTrichloride = new Material.Builder(14725, GTBUtil.gtb("indium_trichloride"))
+                .fluid()
+                .dust()
+                .color(0x6C3E78)
+                .build().setFormula("InCl3", true);
+
+        IndiumPrecipitationSolution = new Material.Builder(14726, GTBUtil.gtb("indium_precipitation_solution"))
+                .fluid()
+                .color(0x511F5F)
+                .build();
+
+        IndiumMotherLiqour = new Material.Builder(14727, GTBUtil.gtb("indium_mother_liqour"))
+                .fluid()
+                .color(0x8D4C9E)
+                .build();
+
+        HighPurityIndiumSolution = new Material.Builder(14728, GTBUtil.gtb("high_purity_indium_solution"))
+                .fluid()
+                .color(0xC48DD2)
+                .build().setFormula("In(H2O)*");
+
+
 
 
 
