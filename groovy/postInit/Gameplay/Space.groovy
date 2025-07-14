@@ -566,3 +566,38 @@ ROCKET_ASSEMBLY_RECIPES.recipeBuilder()
 
 crafting.addShaped("rocket_assembly_machine", item('gregtech:machine', 3082), [[ore('circuitIv'), item('gregtech:machine', 112), ore('circuitIv')], [item('gregtech:meta_item_1', 189), item('gregtech:machine', 988), item('gregtech:meta_item_1', 189)], [item('gregtech:machine', 4302), ore('circuitIv'), item('gregtech:machine', 637)]])
 crafting.addShaped("rocket_launch_pad", item('gregtech:machine', 3083), [[item('galacticraftcore:landing_pad'), item('galacticraftcore:landing_pad'), item('galacticraftcore:landing_pad')], [ore('circuitIv'), item('gregtech:machine', 988), ore('circuitIv')], [item('gregtech:meta_item_1', 174), ore('circuitIv'), item('gregtech:meta_item_1', 174)]])
+
+
+//Oxygen Mask
+
+FORMING_PRESS_RECIPES.recipeBuilder()
+    .inputs(metaitem('plateSiliconeRubber'))
+    .inputs(metaitem('plateLexan'))
+    .inputs(metaitem('plateKevlar'))
+    .outputs(metaitem('oxygen_mask_protective_layer'))
+    .duration(1200)
+    .EUt(800)
+    .buildAndRegister();
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('plateSteel')*2)
+    .inputs(metaitem('dustLithiumHydroxide'))
+    .outputs(metaitem('co2_scrubber'))
+    .inputs(item('gregtech:transparent_casing', 2))
+    .duration(1500)
+    .EUt(1200)
+    .buildAndRegister();
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('oxygen_mask_protective_layer')*5)
+    .inputs(metaitem('co2_scrubber'))
+    .circuitMeta(5)
+    .inputs(metaitem('ringSteel'))
+    .inputs(item('gregtech:transparent_casing', 2)*2)
+    .outputs(item('galacticraftcore:oxygen_mask'))
+    .duration(600)
+    .EUt(2200)
+    .buildAndRegister();
+
+crafting.remove('galacticraftcore:oxygen_mask');
+
