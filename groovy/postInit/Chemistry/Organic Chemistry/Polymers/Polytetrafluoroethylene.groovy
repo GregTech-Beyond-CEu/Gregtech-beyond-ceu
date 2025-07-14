@@ -1,6 +1,19 @@
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 
+// Liquid Polytetrafluoroethylene (PTFE) * 144
+mods.gregtech.chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('air') * 1000 * 1000, fluid('tetrafluoroethylene') * 144 * 144])
+// Liquid Polytetrafluoroethylene (PTFE) * 216
+mods.gregtech.chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('oxygen') * 1000 * 1000, fluid('tetrafluoroethylene') * 144 * 144])
+// Liquid Polytetrafluoroethylene (PTFE) * 3240
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('air') * 7500 * 7500, fluid('tetrafluoroethylene') * 2160 * 2160, fluid('titanium_tetrachloride') * 100 * 100])
+// Liquid Polytetrafluoroethylene (PTFE) * 4320
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('oxygen') * 7500 * 7500, fluid('tetrafluoroethylene') * 2160 * 2160, fluid('titanium_tetrachloride') * 100 * 100])
+// Liquid Polytetrafluoroethylene (PTFE) * 144
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('air') * 1000 * 1000, fluid('tetrafluoroethylene') * 144 * 144])
+// Liquid Polytetrafluoroethylene (PTFE) * 216
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('oxygen') * 1000 * 1000, fluid('tetrafluoroethylene') * 144 * 144])
+
         POLYMERIZATION_TANK_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('tetrafluoroethylene')*144)
                 .notConsumable(metaitem('dustKaminskyCatalyst'))
