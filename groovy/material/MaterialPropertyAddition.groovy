@@ -48,6 +48,7 @@ public class MaterialPropertyAddition {
 
             Nickel.addFlags(GENERATE_ROD);
             Graphene.addFlags(GENERATE_ROD);
+            Beryllium.addFlags(GENERATE_ROD);
 
 
             
