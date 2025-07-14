@@ -151,3 +151,77 @@ CRYSTALLIZATION_RECIPES.recipeBuilder()
     .EUt(400)
     .duration(550)
     .buildAndRegister();
+
+//High Purity Copper
+
+ELECTROLYTIC_CELL_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('copper')*1000)
+    .chancedOutput(metaitem('copper_anode_slime')*1, 2000, 100)
+    .notConsumable(fluid('copper_sulfate_solution') * 1000)
+    .notConsumable(metaitem('plateTitanium'))
+    .fluidOutputs(fluid('high_purity_copper')*800)
+    .EUt(120)
+    .duration(500)
+    .buildAndRegister();
+
+//High Purity Zinc
+
+VACUUM_DISTILLATION_TOWER_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('zinc')*1000)
+    .fluidOutputs(fluid('high_purity_zinc')*900)
+    .duration(300)
+    .EUt(400)
+    .buildAndRegister();
+
+//High Purity Indium
+
+BATCH_REACTOR_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('hydrochloric_acid')*3000)
+    .inputs(metaitem('dustIndium'))
+    .fluidOutputs(fluid('indium_trichloride')*1000)
+    .fluidOutputs(fluid('hydrogen')*3000)
+    .notConsumable(metaitem('fume_hood'))
+    .duration(250)
+    .EUt(450)
+    .buildAndRegister();
+
+CRYSTALLIZATION_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('indium_trichloride')*1000)
+    .outputs(metaitem('dustIndiumTrichloride'))
+    .duration(300)
+    .EUt(400)
+    .buildAndRegister();
+
+CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustIndiumTrichloride'))
+    .inputs(metaitem('dustZinc'))
+    .fluidInputs(fluid('ultrapure_water_grade_1') * 1000)
+    .fluidOutputs(fluid('indium_precipitation_solution')*1000)
+    .duration(300)
+    .EUt(400)
+    .buildAndRegister();
+
+CENTRIFUGE_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('indium_precipitation_solution')*1000)
+    .fluidInputs(fluid('cyanex_923') * 1000)
+    .fluidOutputs(fluid('indium_mother_liqour')*1000)
+    .fluidOutputs(fluid('high_purity_indium_solution')*1000)
+    .EUt(2000)
+    .duration(300)
+    .buildAndRegister();
+
+DISTILLATION_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('high_purity_indium_solution')*1000)
+    .fluidOutputs(fluid('water')*1000)
+    .outputs(metaitem('dustHighPurityIndium'))
+    .duration(300)
+    .EUt(189)
+    .buildAndRegister();
+
+DISTILLATION_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('indium_mother_liqour')*1000)
+    .fluidOutputs(fluid('cyanex_923')*1000)
+    .outputs(metaitem('dustZinc'))
+    .EUt(800)
+    .duration(300)
+    .buildAndRegister();
