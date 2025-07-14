@@ -2,8 +2,15 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 
 // Naphthalene * 400
-mods.gregtech.distillation_tower.removeByInput(120, null, [fluid('coal_tar') * 1000 * 1000])
-
+mods.gregtech.distillation_tower.removeByInput(120, null, [fluid('coal_tar') * 1000])
+// Naphthalene * 40
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('coal_tar') * 100 * 100])
+// Hydrogen Sulfide Gas * 30
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('coal_tar') * 100 * 100])
+// Creosote * 40
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 3])], [fluid('coal_tar') * 200 * 200])
+// Phenol * 50
+mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 4])], [fluid('coal_tar') * 500 * 500])
 
         DISTILLATION_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('coal_tar')*1000)
@@ -14,7 +21,7 @@ mods.gregtech.distillation_tower.removeByInput(120, null, [fluid('coal_tar') * 1
                 .fluidOutputs(fluid('creosote')*200)
                 .chancedOutput(metaitem('dustCoke')*1, 2000, 20)
                 .duration(100)
-                .EUt(780)
+                .EUt(200)
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
