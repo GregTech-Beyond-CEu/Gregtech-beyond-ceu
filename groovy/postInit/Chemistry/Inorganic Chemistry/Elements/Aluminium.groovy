@@ -194,7 +194,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustSapphire') * 5], nul
                 .duration(250)
                 .buildAndRegister()
 
-        CHEMICAL_RECIPES.recipeBuilder() //CSTR
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('distilled_water')*2000)
                 .notConsumable(metaitem('fume_hood'))
                 .inputs(metaitem('dustAluminiumSulfate')*2)
