@@ -17,3 +17,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .outputs(metaitem('biologically_approved_lens'))
                 .EUt(120)
                 .buildAndRegister();
+
+// Crystal CPU * 1
+mods.gregtech.laser_engraver.removeByInput(10000, [metaitem('engraved.crystal_chip'), metaitem('glass_lens.lime')], null)
