@@ -338,9 +338,19 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('hydrogen')*1000)
-                .inputs(metaitem('dustSodium')* 1)
+                .fluidInputs(fluid('hydrogen')*2000)
+                .inputs(metaitem('dustSodium')* 2)
                 .outputs(metaitem('dustSodiumHydride')* 2)
+                .duration(200)
+                .EUt(78)
+                .buildAndRegister();
+
+        ELECTROLYZER_RECIPES.recipeBuilder()
+                .fluidOutputs(fluid('hydrogen')*2000)
+                .outputs(metaitem('dustSodium')* 2)
+                .notConsumable(metaitem('stickPlatinum'))
+                .notConsumable(metaitem('graphite_electrode'))
+                .inputs(metaitem('dustSodiumHydride')* 2)
                 .duration(200)
                 .EUt(78)
                 .buildAndRegister();
