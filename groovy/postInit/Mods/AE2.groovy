@@ -91,6 +91,7 @@ crafting.remove('ae2fc:ingredient_buffer')
 crafting.remove('ae2fc:large_ingredient_buffer')
 crafting.remove('ae2fc:burette')
 crafting.remove('wct:magnet_card')
+crafting.remove('appliedenergistics2:materials/basiccard')
 
 //Crafting Table Recipes
 crafting.addShapeless('magnetcardlv', item('wct:magnet_card'), [item('appliedenergistics2:material:28'), metaitem('item_magnet.lv')])
@@ -614,32 +615,11 @@ ASSEMBLER_RECIPES.recipeBuilder()
     .EUt(480)
     .buildAndRegister()
 ASSEMBLER_RECIPES.recipeBuilder()
-    .inputs(ore('circuitEv')*2, item('appliedenergistics2:crafting_accelerator')*2, item('appliedenergistics2:material:36'), metaitem('screwCrystalFluix')*12)
-    .fluidInputs(fluid('certus_quartz')*144)
-    .outputs(item('nae2:coprocessor_4x')*2)
-    .duration(200) 
-    .EUt(480)
-    .buildAndRegister()
-ASSEMBLER_RECIPES.recipeBuilder()
     .inputs(ore('circuitIv')*2, item('nae2:coprocessor_4x')*2, ore('EntropyCore')*4, item('appliedenergistics2:material:37'), metaitem('screwCrystalFluix')*18)
     .fluidInputs(fluid('crystal_fluix')*72)
     .outputs(item('nae2:coprocessor_16x')*2)
     .duration(200) 
     .EUt(480)
-    .buildAndRegister()
-ASSEMBLER_RECIPES.recipeBuilder()
-    .inputs(ore('circuitIv')*2, item('nae2:coprocessor_4x')*2, ore('EntropyCore')*4, item('appliedenergistics2:material:37'), metaitem('screwCrystalFluix')*18)
-    .fluidInputs(fluid('crystal_fluix')*72)
-    .outputs(item('nae2:coprocessor_16x')*2)
-    .duration(200) 
-    .EUt(480)
-    .buildAndRegister()
-ASSEMBLER_RECIPES.recipeBuilder()
-    .inputs(ore('circuitLuv'), item('nae2:coprocessor_16x')*2, ore('EntropyCore')*8, item('appliedenergistics2:material:38'), metaitem('screwCrystalFluix')*24)
-    .fluidInputs(fluid('crystal_fluix')*144)
-    .outputs(item('nae2:coprocessor_64x'))
-    .duration(200) 
-    .EUt(1920)
     .buildAndRegister()
 ASSEMBLER_RECIPES.recipeBuilder()
     .inputs(ore('circuitLuv'), item('nae2:coprocessor_16x')*2, ore('EntropyCore')*8, item('appliedenergistics2:material:38'), metaitem('screwCrystalFluix')*24)
@@ -1060,9 +1040,21 @@ FORMING_PRESS_RECIPES.recipeBuilder()
     .buildAndRegister();
 
 
+crafting.addShaped("storage_cell_housing_recipe", item('appliedenergistics2:material', 39), [
+[item('gregtech:transparent_casing'), ore('plateRedstone'), item('gregtech:transparent_casing')], 
+[ore('circuitHv'), null, ore('circuitHv')], 
+[ore('plateSteel'), ore('plateSteel'), ore('plateSteel')]
+])
 
-
-
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(ore('circuitHv')*2)
+    .inputs(ore('plateSteel')*3)
+    .inputs(ore('plateRedstone'))
+    .inputs(item('gregtech:transparent_casing')*2)
+    .outputs(item('appliedenergistics2:material', 39))
+    .EUt(80)
+    .duration(200)
+    .buildAndRegister();
 
 
 
@@ -1243,3 +1235,27 @@ FORMING_PRESS_RECIPES.recipeBuilder()
 
 crafting.remove('appliedenergistics2:materials/advancedcard')
 
+mods.appliedenergistics2.grinder.removeByInput(item('galacticraftplanets:asteroids_block', 4))
+
+mods.appliedenergistics2.grinder.recipeBuilder()
+    .input(item('galacticraftplanets:asteroids_block', 4))
+    .output(metaitem('dustTitanium'),metaitem('dustIron'))
+    .turns(4)
+    .chance1(1.0)
+    .register()
+
+mods.appliedenergistics2.grinder.removeByInput(item('galacticraftplanets:asteroids_block', 5))
+
+mods.appliedenergistics2.grinder.recipeBuilder()
+    .input(item('galacticraftplanets:asteroids_block', 5))
+    .output(metaitem('dustIron'))
+    .turns(4)
+    .register()
+
+mods.appliedenergistics2.grinder.removeByInput(item('galacticraftplanets:mars', 3))
+
+mods.appliedenergistics2.grinder.recipeBuilder()
+    .input(item('galacticraftplanets:mars', 3))
+    .output(metaitem('dustIron'))
+    .turns(4)
+    .register()
