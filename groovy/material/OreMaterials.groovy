@@ -58,15 +58,15 @@ public class OreMaterials {
                 .color(0xEB6A42)
                 .build().setFormula('(CuCo2SO2)(HSO4)', true);
 
-        ImpureCobaltSulfideSolution = new Material.Builder(16008, GTBUtil.gtb("impure_cobalt_sulfide_solution"))
+        ImpureCobaltSulfateSolution = new Material.Builder(16008, GTBUtil.gtb("impure_cobalt_sulfate_solution"))
                 .liquid(new FluidBuilder())
                 .color(0x667791)
-                .build().setFormula('(CuCo2SO2)(HSO4)', true);
+                .build().setFormula('(CuCo2SO4)(HSO4)', true);
 
         SodiumHydrosulfide = new Material.Builder(16009, GTBUtil.gtb("sodium_hydrosulfide"))
                 .dust()
                 .color(0xE2D59D)
-                .build().setFormula('(CuCo2SO2)(HSO4)', true);
+                .build().setFormula('NaHS', true);
 
         CobaltOxideHydroxide = new Material.Builder(16010, GTBUtil.gtb("cobalt_oxide_hydroxide"))
                 .dust()
