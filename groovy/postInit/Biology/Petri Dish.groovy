@@ -5,7 +5,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         DEHYDRATOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('one_four_butanediol')*1000)
-                .fluidOutputs(fluid('y_butyralacetone') * 1000)
+                .fluidOutputs(fluid('gamma_butyrolactone') * 1000)
                 .notConsumable(metaitem('dustCucrmgbaCatalyst')* 1)
                 .EUt(210)
                 .duration(80)
