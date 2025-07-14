@@ -91,7 +91,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
             .EUt(130)
             .buildAndRegister()
 
-    CHEMICAL_RECIPES.recipeBuilder() //CSTR
+    CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
             .fluidInputs(fluid('chlorosulfonic_acid')*1000)
             .fluidOutputs(fluid('hydrochloric_acid')*1000)
             .fluidOutputs(fluid('water')*1000)
