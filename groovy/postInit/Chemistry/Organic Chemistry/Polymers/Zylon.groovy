@@ -50,6 +50,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .fluidInputs(fluid('hydrochloric_acid')*1000)
                 .fluidInputs(fluid('propene')*1000)
                 .fluidOutputs(fluid('isochloropropane')*1000)
+                .circuitMeta(2)
                 .EUt(480)
                 .duration(110)
                 .buildAndRegister()
