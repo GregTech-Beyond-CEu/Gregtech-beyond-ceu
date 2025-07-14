@@ -41,25 +41,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(240)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('butene')*1000)
-                .fluidInputs(fluid('hypochlorous_acid')*1000)
-                .fluidInputs(fluid('water')*1000)
-                .fluidOutputs(fluid('butanediol')*1000)
-                .fluidOutputs(fluid('hydrochloric_acid')*1000)
-                .duration(60)
-                .EUt(230)
-                .buildAndRegister();
-
-        // C4H10O2 -> C4H6O2 + 4H (4H lost)
-        BREWING_RECIPES.recipeBuilder()
-                .notConsumable(metaitem('dustCopper'))
-                .fluidInputs(fluid('butanediol')*1000)
-                .fluidOutputs(fluid('gamma_butyrolactone')*1000)
-                .duration(120)
-                .EUt(1200)
-                .buildAndRegister();
-
         // CH3NH2 + C4H6O2 -> C5H9NO + H2O
         CHEMICAL_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('methylamine')*1000)
