@@ -39,14 +39,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(8)
                 .buildAndRegister();
 
-        ALLOY_SMELTER_RECIPES.recipeBuilder()
-                .inputs(metaitem('dustSiliconDioxide'))
-                .inputs(metaitem('dustGreenSapphire'))
-                .outputs(metaitem('dustAluminoSilicateWool')* 2)
-                .duration(100)
-                .EUt(8)
-                .buildAndRegister();
-
         MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('water')*1000)
                 .inputs(metaitem('dustAluminoSilicateWool'))
@@ -86,9 +78,12 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(200)
                 .EUt(80)
                 .buildAndRegister();
+                
+// Nickel Ingot * 1
+mods.gregtech.arc_furnace.removeByInput(30, [metaitem('plateNickel')], [fluid('oxygen') * 58 * 58])
 
         ARC_FURNACE_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('oxygen')*1000)
+                .fluidInputs(fluid('oxygen')*100)
                 .inputs(metaitem('plateNickel'))
                 .outputs(metaitem('annealed_nickel_plate'))
                 .duration(200)
