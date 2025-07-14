@@ -116,7 +116,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
         SIFTER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('purified_scandium_leach_residues')*1000)
                 .fluidOutputs(fluid('hydrochloric_acid')*1000)
-                .chancedOutput(metaitem('dustScandiumOxide')* 2, 200, 100)
+                .chancedOutput(metaitem('dustScandiumOxide')* 2, 2000, 1000)
                 .chancedOutput(metaitem('dustPotassium')*1, 2500, 0)
                 .duration(200)
                 .EUt(800)
@@ -155,28 +155,3 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(200)
                 .EUt(800)
                 .buildAndRegister();
-
-        ELECTROLYZER_RECIPES.recipeBuilder()
-                .inputs(metaitem('dustDysprosiumOxide')* 2)
-                .fluidOutputs(fluid('oxygen')*1000)
-                .outputs(metaitem('dustDysprosium'))
-                .duration(900)
-                .EUt(80)
-                .buildAndRegister();
-
-        ELECTROLYZER_RECIPES.recipeBuilder()
-                .inputs(metaitem('dustErbiumOxide')* 2)
-                .fluidOutputs(fluid('oxygen')*1000)
-                .outputs(metaitem('dustErbium'))
-                .duration(900)
-                .EUt(80)
-                .buildAndRegister();
-
-        ELECTROLYZER_RECIPES.recipeBuilder()
-                .inputs(metaitem('dustYttriumOxide')* 2)
-                .fluidOutputs(fluid('oxygen')*1000)
-                .outputs(metaitem('dustYttrium'))
-                .duration(900)
-                .EUt(80)
-                .buildAndRegister();
-    
