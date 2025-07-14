@@ -20,6 +20,7 @@ public class MaterialPropertyAddition {
             Barium.setProperty(PropertyKey.INGOT, new IngotProperty());
             Cadmium.setProperty(PropertyKey.INGOT, new IngotProperty());
             Cerium.setProperty(PropertyKey.INGOT, new IngotProperty());
+            Zirconium.setProperty(PropertyKey.INGOT, new IngotProperty());
             NetherQuartz.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
             CertusQuartz.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
             Quartzite.setProperty(PropertyKey.FLUID, new FluidProperty(FluidStorageKeys.LIQUID, new FluidBuilder()));
@@ -41,16 +42,30 @@ public class MaterialPropertyAddition {
 
             BlueAlloy.addFlags(GENERATE_FINE_WIRE);
             Cerium.addFlags(GENERATE_FINE_WIRE);
+            Ruthenium.addFlags(GENERATE_FINE_WIRE);
 
 
 
             Nickel.addFlags(GENERATE_ROD);
+            Graphene.addFlags(GENERATE_ROD);
+
+
+            
+            Nickel.addFlags(GENERATE_FOIL);
+
+            NiobiumTitanium.addFlags(GENERATE_FRAME);
+
+            
+            BorosilicateGlass.addFlags(GENERATE_PLATE);
 
 
             Phosphate.setProperty(PropertyKey.ORE, new OreProperty());
             Andradite.setProperty(PropertyKey.ORE, new OreProperty());
             Zinc.setProperty(PropertyKey.ORE, new OreProperty());
             Rutile.setProperty(PropertyKey.ORE, new OreProperty());
-      
+
+
+        //Supercritical 
+
       }
   }
