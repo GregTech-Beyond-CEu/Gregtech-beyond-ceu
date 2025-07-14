@@ -155,9 +155,10 @@ CUTTER_RECIPES.recipeBuilder()
     .duration(1200)
     .buildAndRegister();
 
-MOCVD_UNIT_RECIPES.recipeBuilder() //Aluminium Gallium Arsenide 300
+MOCVD_UNIT_RECIPES.recipeBuilder()
     .inputs(metaitem('dustGalliumArsenide'))
     .inputs(metaitem('dustIndiumGalliumArsenide'))
+    .fluidInputs(fluid('aluminium_gallium_arsenide')*300)
     .fluidInputs(fluid('ozone')*1000)
     .fluidInputs(fluid('ammonia')*1000)
     .inputs(metaitem('ga_as_wafer'))
@@ -209,10 +210,11 @@ REACTIVE_ION_ETCHER_RECIPES.recipeBuilder()
     .buildAndRegister();
 
 CVD_UNIT_RECIPES.recipeBuilder()
-    .fluidInputs(fluid('nitrogen')*1000)
-    .inputs(metaitem('dustSiliconDioxide'))
+    .fluidInputs(fluid('silane')*100)
+    .fluidInputs(fluid('oxygen')*400)
     .inputs(metaitem('etched_spincoated_ga_as_wafer'))
     .outputs(metaitem('passivated_spincoated_ga_as_wafer'))
+    .fluidOutputs(fluid('steam')*200)
     .duration(300)
     .EUt(400)
     .buildAndRegister();
@@ -307,6 +309,7 @@ CHEMICAL_BATH_RECIPES.recipeBuilder()
     .buildAndRegister();
 
 ELECTRON_BEAM_LITHOGRAPHER_RECIPES_MULTI.recipeBuilder()
+    .fluidInputs(fluid('novolacs_photoresist')*200)
     .inputs(metaitem('coated_ga_as_substrate'))
     .inputs(metaitem('gold_electrode'))
     .inputs(metaitem('silver_electrode'))
@@ -315,8 +318,16 @@ ELECTRON_BEAM_LITHOGRAPHER_RECIPES_MULTI.recipeBuilder()
     .EUt(150)
     .buildAndRegister();
 
-SPINCOATER_RECIPES.recipeBuilder()
+REACTIVE_ION_ETCHER_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('sulfuric_acid')*1000)
     .inputs(metaitem('electrode_deposited_ga_as_substrate'))
+    .outputs(metaitem('etched_electrode_deposited_ga_as_substrate'))
+    .duration(300)
+    .EUt(150)
+    .buildAndRegister();
+
+SPINCOATER_RECIPES.recipeBuilder()
+    .inputs(metaitem('etched_electrode_deposited_ga_as_substrate'))
     .outputs(metaitem('spincoated_ga_as_substrate'))
     .fluidInputs(fluid('novolacs_photoresist')*100)
     .duration(300)
@@ -408,8 +419,8 @@ CUTTER_RECIPES.recipeBuilder()
 
 CVD_UNIT_RECIPES.recipeBuilder()
     .inputs(metaitem('silicon_dioxide_wafer'))
-    .inputs(metaitem('dustAlumina'))
-    .fluidInputs(fluid('methane')*40)
+    .fluidInputs(fluid('trimethylaluminium')*500)
+    .fluidInputs(fluid('chloromethane')*250)
     .outputs(metaitem('alumina_based_sio2_wafer'))
     .duration(350)
     .EUt(150)
@@ -423,8 +434,16 @@ HIGH_VACUUM_EVAPORATION_RECIPES.recipeBuilder()
     .EUt(180)
     .buildAndRegister();
 
-UV_LIGHT_RECIPES.recipeBuilder()
+SPINCOATER_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('novolacs_photoresist')*100)
     .inputs(metaitem('deposited_alumina_wafer'))
+    .outputs(metaitem('spincoated_deposited_alumina_wafer'))
+    .duration(400)
+    .EUt(200)
+    .buildAndRegister();
+
+UV_LIGHT_RECIPES.recipeBuilder()
+    .inputs(metaitem('spincoated_deposited_alumina_wafer'))
     .notConsumable(metaitem('inductor_lithography_mask'))
     .outputs(metaitem('patterned_alumina_wafer'))
     .duration(500)
@@ -446,18 +465,21 @@ REACTIVE_ION_ETCHER_RECIPES.recipeBuilder()
     .duration(440)
     .EUt(450)
     .buildAndRegister();
-
-CHEMICAL_BATH_RECIPES.recipeBuilder()
-    .fluidInputs(fluid('copper')*288)
+ //Conductive Substrate
+ELECTROLYZER_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('copper_sulfate_solution')*500)
     .inputs(metaitem('etched_alumina_wafer'))
+    .notConsumable(metaitem('stickSteel'))
     .outputs(metaitem('electroplated_alumina_wafer'))
     .duration(440)
     .EUt(450)
     .buildAndRegister();
 
 CVD_UNIT_RECIPES.recipeBuilder()    
-    .fluidInputs(fluid('nitrogen')*1000)
+    .fluidInputs(fluid('silane')*500)
+    .fluidInputs(fluid('oxygen')*4000)
     .inputs(metaitem('dustSiliconDioxide'))
+    .fluidOutputs(fluid('steam')*2000)
     .inputs(metaitem('electroplated_alumina_wafer'))
     .outputs(metaitem('passivated_alumina_wafer'))
     .duration(460)
@@ -503,4 +525,3 @@ CUTTER_RECIPES.recipeBuilder()
     .duration(800)
     .EUt(500)
     .buildAndRegister();
-
