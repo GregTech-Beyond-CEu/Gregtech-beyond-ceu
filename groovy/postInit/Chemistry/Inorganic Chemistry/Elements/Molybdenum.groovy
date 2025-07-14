@@ -58,7 +58,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .outputs(metaitem('dustSalt')*6)
                 .fluidOutputs(fluid('carbon_dioxide')*1000)
                 .duration(100)
-                .EUt(5000)
+                .EUt(500)
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
@@ -66,7 +66,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .fluidInputs(fluid('ammonia')*1000)
                 .outputs(metaitem('dustAmmoniumPerrhenate')*10)
                 .duration(100)
-                .EUt(1600)
+                .EUt(400)
                 .buildAndRegister();
 
         CHEMICAL_RECIPES.recipeBuilder()
@@ -77,5 +77,5 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .outputs(metaitem('dustAmmoniumChloride')*2)
                 .fluidOutputs(fluid('sulfuric_acid')*1000)
                 .duration(100)
-                .EUt(1600)
+                .EUt(160)
                 .buildAndRegister();
