@@ -58,7 +58,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .inputs(metaitem('dustGlucose')* 1)
                 .notConsumable(metaitem('dustCupriavidusNecator'))
                 .fluidInputs(fluid('palm_oil')*20)
-                .fluidInputs(fluid('y_butyralacetone')*20)
+                .fluidInputs(fluid('gamma_butyrolactone') * 20)
                 .fluidOutputs(fluid('polyhydroxylalkanoate')*100)
                 .duration(200)
                 .EUt(700)
