@@ -27,4 +27,23 @@ import crafttweaker.oredict.IOreDictEntry;
 <ore:toolShears>.remove(<pyrotech:diamond_shears>);
 <ore:toolShears>.remove(<pyrotech:flint_shears>);
 
+<ore:dustTitanium>.remove(<galacticraftplanets:item_basic_asteroids:9>);
+<ore:ingotTin>.remove(<galacticraftcore:basic_item:4>);
+<ore:dustIron>.remove(<appliedenergistics2:material:49>);
+<ore:blockTin>.remove(<galacticraftcore:basic_block_core:10>);
+<ore:ingotCopper>.remove(<galacticraftcore:basic_item:3>);
+//ZBGT OreDicts
 
+//<ore:dustYttriumOxide>.remove(<zbgt:meta_dust:507>);
+//<ore:dustSmallYttriumOxide>.remove(<zbgt:meta_dust_small:507>);
+//<ore:dustTinyYttriumOxide>.remove(<zbgt:meta_dust_tiny:507>);
+
+<ore:blockCopper>.remove(<galacticraftcore:basic_block_core:9>);
+<ore:blockLead>.remove(<galacticraftplanets:venus:12>);
+<ore:ingotLead>.remove(<galacticraftplanets:basic_item_venus:1>);
+<ore:ingotTitanium>.remove(<galacticraftplanets:item_basic_asteroids>);
+<ore:blockTitanium>.remove(<galacticraftplanets:asteroids_block:7>);
+
+
+<ore:blockSilicon>.remove(<galacticraftcore:basic_block_core:13>);
+<ore:itemSilicon>.remove(<galacticraftcore:basic_item:2>);
