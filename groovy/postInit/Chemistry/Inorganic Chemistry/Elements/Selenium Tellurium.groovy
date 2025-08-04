@@ -44,7 +44,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(120)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        CHEMICAL_RECIPES.recipeBuilder() //TODO Slurry Reactor
                 .inputs(metaitem('dustTelluriumDioxide')* 3)
                 .fluidInputs(fluid('sulfur_dioxide')*2000)
                 .fluidInputs(fluid('water')*1000)
@@ -63,7 +63,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(120)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        CHEMICAL_RECIPES.recipeBuilder() //TODO Slurry Reactor
                 .inputs(metaitem('dustSelenousAcid')* 6)
                 .fluidInputs(fluid('sulfur_dioxide')*2000)
                 .outputs(metaitem('dustSelenium'))
@@ -71,4 +71,29 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .fluidOutputs(fluid('sulfur_trioxide')*1000)
                 .duration(300)
                 .EUt(960)
+                .buildAndRegister();
+
+        BATCH_REACTOR_RECIPES.recipeBuilder()
+                .notConsumable(metaitem('fume_hood'))
+                .inputs(metaitem('dustTellurium'))
+                .fluidInputs(fluid('nitric_acid')*2000)
+                .outputs(metaitem('dustTelluriumDioxide')*3)
+                .fluidOutputs(fluid('nitrogen_dioxide')*2000)
+                .fluidOutputs(fluid('water')*1000)
+                .duration(200)
+                .EUt(320)
+                .buildAndRegister();
+
+        ZONE_REFINER_RECIPES.recipeBuilder()
+                .inputs(metaitem('ingotTelluriumDioxide'))
+                .fluidOutputs(fluid('high_purity_tellurium')*144)
+                .duration(400)
+                .EUt(350)
+                .buildAndRegister();
+
+        CRYSTALLIZATION_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('high_purity_tellurium')*144)
+                .outputs(metaitem('dustHighPurityTellurium'))
+                .duration(300)
+                .EUt(440)
                 .buildAndRegister();
