@@ -259,3 +259,34 @@ mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustWroughtIron') * 2, 
 mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('ingotWroughtIron') * 2, metaitem('ingotNickel')], null)
 // Invar Ingot * 3
 mods.gregtech.alloy_smelter.removeByInput(16, [metaitem('dustWroughtIron') * 2, metaitem('dustNickel')], null)
+        
+
+        CUTTER_RECIPES.recipeBuilder()
+                .inputs(metaitem('blockMolybdenum'))
+                .outputs(metaitem('molybdenum_solid_rod'))
+                .fluidInputs(fluid('lubricant')*12)
+                .EUt(700)
+                .duration(300)
+                .buildAndRegister();
+
+        CNC_RECIPES.recipeBuilder()
+                .inputs(metaitem('molybdenum_solid_rod'))
+                .outputs(metaitem('molybdenum_crucible'))
+                .EUt(700)
+                .duration(300)
+                .buildAndRegister();
+
+        TUBE_FURNACE_RECIPES.recipeBuilder()
+                .inputs(metaitem('dustTellurium')*3)
+                .inputs(metaitem('dustBismuth')*2)
+                .outputs(metaitem('ingotBismuthTelluride')*5)
+                .EUt(120)
+                .duration(400)
+                .buildAndRegister();
+
+        MOCVD_UNIT_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('trimethylgallium')*1000)
+                .fluidInputs(fluid('trimethylaluminium')*1000)
+                .fluidInputs(fluid('arsine')*1000)
+                .fluidOutputs(fluid('aluminium_gallium_arsenide')*1000)
+                .fluidOutputs(fluid('methane')*3000)
