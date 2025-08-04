@@ -119,7 +119,7 @@ DISTILLATION_RECIPES.recipeBuilder()
     .duration(250)
     .buildAndRegister();
 
-CHEMICAL_RECIPES.recipeBuilder()
+BATCH_REACTOR_RECIPES.recipeBuilder()
     .fluidInputs(fluid('ethanol')*100)
     .inputs(metaitem('wireGtSingleCopper')*4)
     .inputs(metaitem('dustIodine')*2)
