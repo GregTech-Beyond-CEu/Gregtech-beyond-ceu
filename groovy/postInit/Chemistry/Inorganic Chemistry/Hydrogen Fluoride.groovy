@@ -1,7 +1,7 @@
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        FIXED_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('sulfuric_acid')*1000)
                 .inputs(metaitem('dustFluorite'))
                 .fluidOutputs(fluid('hydrogen_fluoride')*2000)
