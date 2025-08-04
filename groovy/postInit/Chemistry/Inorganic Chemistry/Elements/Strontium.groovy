@@ -30,7 +30,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
         CLARIFIER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('celestine_slurry')*1000)
                 .outputs(metaitem('floatedCelestine')* 16)
-                .fluidOutputs(fluid('waste_water')*1000)
+                .fluidOutputs(fluid('wastewater')*1000)
                 .duration(400)
                 .EUt(50)
                 .buildAndRegister();
