@@ -452,6 +452,16 @@ eventManager.listen {
         customMetaItems.addItem(578, "timer");
         customMetaItems.addItem(579, "simple_alarm_circuit");
         customMetaItems.addItem(580, "copper_anode_slime");
-
+        customMetaItems.addItem(581, "molybdenum_crucible");
+        customMetaItems.addItem(582, "used_chelating_ion_exchange_resin");
+        customMetaItems.addItem(583, "chelating_ion_exchange_resin");
+        customMetaItems.addItem(584, "loaded_chelating_ion_exchange_resin");
+        customMetaItems.addItem(585, "loaded_membrane_cartridge");
+        customMetaItems.addItem(586, "membrane_cartridge");
+        customMetaItems.addItem(587, "pvdf_mesh");
+        customMetaItems.addItem(588, "purolite_s_950_ion_exchange_resin");
+        customMetaItems.addItem(589, "loaded_purolite_s_950_ion_exchange_resin");
+        customMetaItems.addItem(590, "used_purolite_s_950_ion_exchange_resin");
+        customMetaItems.addItem(591, "molybdenum_solid_rod");
         
 }
