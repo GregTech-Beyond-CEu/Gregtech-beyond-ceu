@@ -256,7 +256,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
         CENTRIFUGE_RECIPES.recipeBuilder()
                 .inputs(metaitem('grown_yeast_culture'))
                 .outputs(metaitem('yeast_cells'))
-                .fluidOutputs(fluid('waste_water')*12)
+                .fluidOutputs(fluid('wastewater')*12)
                 .duration(700)
                 .EUt(812)
                 .buildAndRegister();
