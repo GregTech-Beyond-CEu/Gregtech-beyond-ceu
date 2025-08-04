@@ -13,4 +13,4 @@ eventManager.listen(EventPriority.HIGHEST) {
         log.infoMC("Starting new material registration")
         
         GTBMaterials.init()
-} 
+}
