@@ -13,7 +13,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         //Silver Purification [ Ammonia Complexation ]
 
-    CHEMICAL_RECIPES.recipeBuilder()
+    STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
             .fluidInputs(fluid('ammonia')*4000)
             .inputs(metaitem('dustSilverChloride')*2)
             .fluidOutputs(fluid('chlorine')*2000)
@@ -23,7 +23,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
             .EUt(180)
             .buildAndRegister();
 
-    CHEMICAL_RECIPES.recipeBuilder()
+    BATCH_REACTOR_RECIPES.recipeBuilder()
             .fluidInputs(fluid('hydrazine')*1000)
             .fluidInputs(fluid('diamminesilver')*2000)
             .outputs(metaitem('dustSilver')*2)
