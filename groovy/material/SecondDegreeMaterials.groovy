@@ -236,11 +236,6 @@ public class SecondDegreeMaterials {
                 .color(0x786158)
                 .build().setFormula("(H2NbOF5)(H2TaF7)", true);
 
-        DilutedCeriumFiltrate = new Material.Builder(10042, GTBUtil.gtb("diluted_cerium_filtrate"))
-                .fluid()
-                .color(0x406742)
-                .build().setFormula("Ce(H2O)?", true);
-
         DilutedAquaRegia = new Material.Builder(10043, GTBUtil.gtb("diluted_aqua_regia"))
                 .fluid()
                 .color(0xB27743)
@@ -454,8 +449,8 @@ public class SecondDegreeMaterials {
 
         SodiumHydroxideSolution = new Material.Builder(10083, GTBUtil.gtb("sodium_hydroxide_solution"))
                 .fluid()
-                .color(0x9DD6D0)
-                .build().setFormula("(H2O)NaOH", true);
+                .color(0x52598C)
+                .build().setFormula("NaOH(H2O)", true);
 
         PhotopolymerSolution = new Material.Builder(10084, GTBUtil.gtb("photopolymer_solution"))
                 .fluid()
@@ -529,7 +524,6 @@ public class SecondDegreeMaterials {
                 .build().setFormula("Pd?(NH3)", true);
 
         Ethylenediamine = new Material.Builder(10098, GTBUtil.gtb("ethylenediamine"))
-                .dust()
                 .fluid()
                 .color(0x4A148C)
                 .build().setFormula("C2H4(NH2)2", true);
@@ -875,6 +869,25 @@ public class SecondDegreeMaterials {
                 .fluid()
                 .color(0xEAAB43)
                 .build().setFormula("(LiAlH4)(LiH)3", true);
+
+        PolyethyleneTerephthalate = new Material.Builder(10168, GTBUtil.gtb("polyethylene_terephthalate"))
+                .fluid()
+                .dust()
+                .ingot()
+                .flags(GENERATE_PLATE, GENERATE_FRAME, GENERATE_ROD)
+                .color(0x648065)
+                .build().setFormula("[C10H8O4]n", true);
+
+        LowMolecularWeightPolyethyleneTerephthalate = new Material.Builder(10169, GTBUtil.gtb("low_molecular_weight_polyethylene_terephthalate"))
+                .fluid()
+                .color(0x4D804F)
+                .build().setFormula("[C10H8O4]n", true);
+
+        HighMolecularWeightPolyethyleneTerephthalate = new Material.Builder(10170, GTBUtil.gtb("high_molecular_weight_polyethylene_terephthalate"))
+                .fluid()
+                .color(0x307634)
+                .build().setFormula("[C10H8O4]n", true);
+
 
                 
 
