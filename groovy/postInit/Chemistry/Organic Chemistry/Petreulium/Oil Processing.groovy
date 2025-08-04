@@ -392,3 +392,5 @@ mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withN
                 .EUt(170)
                 .buildAndRegister();
 
+// Steam-Cracked Butene Gas * 500
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('butene') * 1000 * 1000, fluid('steam') * 1000 * 1000])
