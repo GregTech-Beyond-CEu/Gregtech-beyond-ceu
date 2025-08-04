@@ -3,7 +3,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
 //Andrussow Process
 
-    CHEMICAL_RECIPES.recipeBuilder()
+    FIXED_BED_REACTOR_RECIPES.recipeBuilder()
         .fluidInputs(fluid('methane')*1000)
         .fluidInputs(fluid('ammonia')*1000)
         .fluidInputs(fluid('oxygen')*3000)
