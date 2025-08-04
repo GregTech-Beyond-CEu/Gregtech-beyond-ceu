@@ -41,7 +41,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(960)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        TRICKLE_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('mercury')*1000)
                 .inputs(metaitem('dustCadmiumZinc')* 3)
                 .fluidOutputs(fluid('cadmium_thalliun_liqour')*1000)
@@ -74,7 +74,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(780)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('sulfuric_acid')*1000)
                 .fluidInputs(fluid('water')*1000)
                 .inputs(metaitem('dustThalliumResidues'))
@@ -83,7 +83,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(580)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('hydrochloric_acid')*1000)
                 .fluidOutputs(fluid('water')*1000)
                 .fluidOutputs(fluid('sulfuric_acid')*1000)
@@ -109,7 +109,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(17)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        BATCH_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('distilled_water')*1000)
                 .inputs(metaitem('dustFineZincSlag'))
                 .fluidOutputs(fluid('zinc_slag_slurry')*1000)
@@ -125,7 +125,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(60)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('phosphoric_acid')*1000)
                 .fluidInputs(fluid('metal_rich_slag_slurry')*1000)
                 .fluidOutputs(fluid('acidic_metal_rich_slag_slurry')*1000)
@@ -133,7 +133,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(570)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        FIXED_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('phosphoric_acid')*1000)
                 .fluidInputs(fluid('acidic_metal_rich_slag_slurry')*2000)
                 .fluidOutputs(fluid('separated_metal_rich_slag_slurry')*1000)
@@ -142,7 +142,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(900)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        TRICKLE_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('separated_metal_rich_slag_slurry') * 1000)
                 .inputs(metaitem('dustSodiumHydroxide')* 18)
                 .outputs(metaitem('dustDisodiumPhosphate')* 24)
