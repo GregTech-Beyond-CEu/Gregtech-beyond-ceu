@@ -3,7 +3,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
 
 
-       ROASTER_RECIPES.recipeBuilder()
+        ROASTER_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustSphalerite')* 2)
                 .fluidInputs(fluid('oxygen')*5000)
                 .outputs(metaitem('dustRoastedSphalerite')* 3)
@@ -65,7 +65,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .buildAndRegister();
 
         // GeCl4 + 2H2O -> GeO2 + 4HCl
-        CHEMICAL_RECIPES.recipeBuilder()
+        BATCH_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('germanium_tetrachloride')*1000)
                 .fluidInputs(fluid('water')*2000)
                 .outputs(metaitem('dustGermaniumDioxide')* 3)
@@ -75,7 +75,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .buildAndRegister();
 
         // GeO2 + 4HCl -> GeCl4 + 2H2O
-        CHEMICAL_RECIPES.recipeBuilder()
+        FIXED_BED_REACTOR_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustGermaniumDioxide')* 3)
                 .fluidInputs(fluid('hydrochloric_acid')*4000)
                 .fluidOutputs(fluid('germanium_tetrachloride')*1000)
@@ -85,7 +85,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .buildAndRegister();
 
         // GeO2 + 4H -> Ge + 2H2O
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustGermaniumDioxide')* 3)
                 .fluidInputs(fluid('hydrogen')*4000)
                 .outputs(metaitem('dustGermanium'))
