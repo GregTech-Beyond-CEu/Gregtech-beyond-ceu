@@ -12,7 +12,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(110)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        TUBE_FURNACE_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustMolybdenumTrioxide')*4)
                 .fluidInputs(fluid('hydrogen')*6000)
                 .outputs(metaitem('dustMolybdenum'))
@@ -49,7 +49,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(60)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        OXIDATION_FURNACE_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustSodaAsh')*6)
                 .inputs(metaitem('dustSodiumHydroxide')*3)
                 .fluidInputs(fluid('trace_rhenium_flue')*1000)
@@ -61,7 +61,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(500)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustPerrhenicAcid')*6)
                 .fluidInputs(fluid('ammonia')*1000)
                 .outputs(metaitem('dustAmmoniumPerrhenate')*10)
@@ -69,7 +69,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(400)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        BATCH_REACTOR_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustAmmoniumPerrhenate')*10)
                 .fluidInputs(fluid('hydrogen_sulfide')*1000)
                 .fluidInputs(fluid('chlorine')*1000)
