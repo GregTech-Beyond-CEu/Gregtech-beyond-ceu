@@ -27,7 +27,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(12)
                 .buildAndRegister()
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        BATCH_REACTOR_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustCalciumChloride')*3)
                 .fluidInputs(fluid('water')*2000)
                 .fluidInputs(fluid('sodium_tungstate')*1000)
@@ -37,7 +37,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(70)
                 .buildAndRegister()
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('water')*2000)
                 .outputs(metaitem('dustTungsticAcid')*7)
                 .outputs(metaitem('dustCalciumHydroxide')*5)
@@ -54,7 +54,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(80)
                 .buildAndRegister()
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('lithium_hydroxide_solution')*1000)
                 .fluidInputs(fluid('hydrofluoric_acid')*1000)
                 .fluidOutputs(fluid('water')*1000)
