@@ -48,11 +48,6 @@ public class UnknownCompositionMaterials {
                 .color(0xAB7564)
                 .build();
 
-        MonaziteRarerEarthFiltrate = new Material.Builder(14506, GTBUtil.gtb("monazite_rarer_earth_filtrate"))
-                .dust()
-                .color(0x758A6C)
-                .build();
-
         AmidoEthylAlkylImidazole = new Material.Builder(14507, GTBUtil.gtb("amido_ethyl_alkyl_imidazole"))
                 .fluid()
                 .color(0x442A62)
@@ -254,35 +249,10 @@ public class UnknownCompositionMaterials {
                 .color(0xABB59E)
                 .build().setFormula("Ce?", true);
 
-        DriedMonaziteFiltrate = new Material.Builder(14547, GTBUtil.gtb("dried_monazite_filtrate"))
-                .dust()
-                .color(0x677753)
-                .build();
-
         ThoriumConcentrate = new Material.Builder(14549, GTBUtil.gtb("thorium_concentrate"))
                 .dust()
                 .color(0x354D21)
                 .build().setFormula("ThU?", true);
-
-        RareEarthFiltrate = new Material.Builder(14550, GTBUtil.gtb("rare_earth_filtrate"))
-                .dust()
-                .color(0x6C6C6B)
-                .build().setFormula("REE?", true);
-
-        ChlorinatedMonaziteFiltrate = new Material.Builder(14551, GTBUtil.gtb("chlorinated_monazite_filtrate"))
-                .dust()
-                .color(0x345727)
-                .build().setFormula("?", true);
-
-        SaturatedChlorinatedMonaziteFiltrate = new Material.Builder(14552, GTBUtil.gtb("saturated_chlorinated_monazite_filtrate"))
-                .dust()
-                .color(0x00695C)
-                .build().setFormula("?", true);
-
-        MonaziteSulfide = new Material.Builder(14553, GTBUtil.gtb("monazite_sulfide"))
-                .dust()
-                .color(0x2A3426)
-                .build().setFormula("?", true);
 
         ThoriumPhosphateCake = new Material.Builder(14554, GTBUtil.gtb("thorium_phoshpate_cake"))
                 .dust()
@@ -298,56 +268,6 @@ public class UnknownCompositionMaterials {
                 .fluid()
                 .color(0x424C5A)
                 .build().setFormula("?", true);
-
-        MonaziteOreByproductSlurry = new Material.Builder(14557, GTBUtil.gtb("monazite_ore_byproduct_slurry"))
-                .fluid()
-                .color(0x436436)
-                .build().setFormula("??", true);
-
-        ImpureMonaziteOreByproductSlurry = new Material.Builder(14558, GTBUtil.gtb("impure_monazite_ore_byproduct_slurry"))
-                .fluid()
-                .color(0x33691E)
-                .build().setFormula("?2", true);
-
-        MuddyMonaziteOreByproducts = new Material.Builder(14559, GTBUtil.gtb("muddy_monazite_ore_byproducts"))
-                .dust()
-                .color(0x5C423A)
-                .build().setFormula("???", true);
-                
-        CooledRareEarthFiltrate = new Material.Builder(14561, GTBUtil.gtb("cooled_rare_earth_filtrate"))
-                .fluid()
-                .color(0x936E62)
-                .build().setFormula("??", true);
-
-        NeutralizedRareEarthFiltrate = new Material.Builder(14562, GTBUtil.gtb("neutralized_rare_earth_filtrate"))
-                .fluid()
-                .color(0x7F5E54)
-                .build().setFormula("?", true);
-
-        MonaziteSulfide = new Material.Builder(14563, GTBUtil.gtb("monazite_sulfide"))
-                .fluid()
-                .color(0x009688)
-                .build().setFormula("??", true);
-
-        RareEarthFiltrate = new Material.Builder(14564, GTBUtil.gtb("rare_earth_filtrate"))
-                .fluid()
-                .color(0x6B524B)
-                .build().setFormula("???", true);
-
-        DilutedMonaziteSulfide = new Material.Builder(14565, GTBUtil.gtb("diluted_monazite_sulfide"))
-                .fluid()
-                .color(0x388E3C)
-                .build().setFormula("??", true);
-
-        MonaziteSolution = new Material.Builder(14566, GTBUtil.gtb("monazite_solution"))
-                .fluid()
-                .color(0x388E3C)
-                .build().setFormula("?", true);
-
-        MuddyMonaziteSolution = new Material.Builder(14567, GTBUtil.gtb("muddy_monazite_solution"))
-                .fluid()
-                .color(0x652A18)
-                .build().setFormula("??", true);
 
         RareGasRichGaseousNitrogen = new Material.Builder(14568, GTBUtil.gtb("rare_gas_rich_gaseous_nitrogen"))
                 .fluid()
@@ -1188,10 +1108,506 @@ public class UnknownCompositionMaterials {
         HighPurityIndiumSolution = new Material.Builder(14728, GTBUtil.gtb("high_purity_indium_solution"))
                 .fluid()
                 .color(0xC48DD2)
-                .build().setFormula("In(H2O)*");
+                .build().setFormula("In(H2O)*", true);
+
+        BisphenolateDianion = new Material.Builder(14729, GTBUtil.gtb("bisphenolate_dianion"))
+                .fluid()
+                .color(0xD5AAA9)
+                .build().setFormula("C₁₅H₁₄O₂²⁻");
+
+        BisphenolADianion = new Material.Builder(14730, GTBUtil.gtb("bisphenol_a_dianion"))
+                .fluid()
+                .color(0xDA7876)
+                .build().setFormula("C₁₅H₁₄O₂²⁻");
+
+        LexanPolymerBackbone = new Material.Builder(14731, GTBUtil.gtb("lexan_polymer_backbone"))
+                .fluid()
+                .color(0xD75451)
+                .build().setFormula("C₁₅H₁₄O₂²⁻");
+
+        LexanPostPolymerizationMixture = new Material.Builder(14732, GTBUtil.gtb("lexan_post_polymerization_mixture"))
+                .fluid()
+                .color(0xE03D3A)
+                .build().setFormula("(C₁₅H₁₄O₂²⁻)n");
+
+        CalciumCarbonate = new Material.Builder(14733, GTBUtil.gtb("calcium_carbonate"))
+                .dust()
+                .color(0x8E8B85)
+                .build().setFormula("CaCO3", true);
+
+        SodiumHypochlorite = new Material.Builder(14734, GTBUtil.gtb("sodium_hypochlorite"))
+                .fluid()
+                .color(0xB1A986)
+                .build().setFormula("NaOCl", true);
+
+        CalciumHydroxideSolution = new Material.Builder(14735, GTBUtil.gtb("calcium_hydroxide_solution"))
+                .fluid()
+                .color(0x48628A)
+                .build().setFormula("Ca(OH)2(H2O)", true);
+
+        MetaphosphoricAcid = new Material.Builder(14736, GTBUtil.gtb("metaphosphoric_acid"))
+                .fluid()
+                .color(0xCDC9AB)
+                .build().setFormula("HPO3", true);
+
+        Dichloroethane = new Material.Builder(14737, GTBUtil.gtb("dichloroethane"))
+                .fluid()
+                .color(0xCDC9AB)
+                .build().setFormula("C2H4Cl2", true);
+
+        MethyltrioctylammoniumChloride = new Material.Builder(14864, GTBUtil.gtb("methyltrioctylammonium_chloride"))
+                .dust()
+                .color(0x66B76A)
+                .build().setFormula("C25H54NCl", true);
+
+        CopperIIChlorideSolution = new Material.Builder(14865, GTBUtil.gtb("copper_ii_chloride_solution"))
+                .fluid()
+                .color(0x5B626B)
+                .build().setFormula("(CuCl2)(H2O)", true);
+
+        AmmoniaSolution = new Material.Builder(14866, GTBUtil.gtb("ammonia_solution"))
+                .fluid()
+                .color(0x75B1E0)
+                .build().setFormula("(NH3)(H2O)", true);
+
+        AmmoniumBisulfateSolution = new Material.Builder(14867, GTBUtil.gtb("ammonium_bisulfate_solution"))
+                .fluid()
+                .color(0x25567E)
+                .build().setFormula("((NH4)HSO4)(H2O)", true);
+
+        AmmoniumPersulfateSolution = new Material.Builder(14868, GTBUtil.gtb("ammonium_persulfate_solution"))
+                .fluid()
+                .color(0x86B452)
+                .build().setFormula("((NH4)2S2O8)(H2O)2", true);
+
+        RoastedXenotime = new Material.Builder(14869, GTBUtil.gtb("roasted_xenotime"))
+                .dust()
+                .color(0x804939)
+                .build().setFormula("REE", true);
+
+        Bis2HydroxyethylTerephthalate = new Material.Builder(14870, GTBUtil.gtb("bis_2_hydroxyethyl_terephthalate"))
+                .fluid()
+                .color(0x62B4AC)
+                .build().setFormula("C12H14O6", true);
+
+        BrassC260 = new Material.Builder(14871, GTBUtil.gtb("brass_c_260"))
+                .fluid()
+                .ingot()
+                .flags(GENERATE_ROD)
+                .color(0xF5923C)
+                .build().setFormula("Cu7Zn3", true);
+
+        GroundMonazite = new Material.Builder(14872, GTBUtil.gtb("ground_monazite"))
+                .dust()
+                .iconSet(ROUGH)
+                .color(0x487137)
+                .build();
+
+        ConcentratedSodiumHydroxide = new Material.Builder(14873, GTBUtil.gtb("concentrated_sodium_hydroxide"))
+                .fluid()
+                .color(0x274C76)
+                .build();
+
+        MonaziteMixedRareEarthHydroxides = new Material.Builder(14874, GTBUtil.gtb("monazite_mixed_rare_earth_hydroxides"))
+                .fluid()
+                .color(0x9B9E59)
+                .build();
+
+        ThoriumFiltrate = new Material.Builder(14875, GTBUtil.gtb("thorium_filtrate"))
+                .dust()
+                .iconSet(ROUGH)
+                .color(0x89A476)
+                .build();
+
+        SodiumPhosphateSolution = new Material.Builder(14876, GTBUtil.gtb("sodium_phosphate_solution"))
+                .fluid()
+                .color(0xD6CB67)
+                .build().setFormula("(Na2HPO4)(H2O)", true);
+
+        MonaziteRareEarthClorideSolution = new Material.Builder(14877, GTBUtil.gtb("monazite_rare_earth_chloride_solution"))
+                .fluid()
+                .color(0xCBADA4)
+                .build();
+
+        CeriumIVHydroxide = new Material.Builder(14878, GTBUtil.gtb("cerium_iv_hydroxide"))
+                .dust()
+                .color(0xA0BBA2)
+                .build().setFormula("Ce(OH)2");
+
+        MonaziteCeriumDepletedRareEarthChlorideSolution = new Material.Builder(14879, GTBUtil.gtb("monazite_cerium_depleted_rare_earth_chloride_solution"))
+                .fluid()
+                .color(0x517853)
+                .build();
+
+        MonaziteLREESolution = new Material.Builder(14880, GTBUtil.gtb("monazite_lree_solution"))
+                .fluid()
+                .color(0x8AA38B)
+                .build();
+
+        D2EHPA = new Material.Builder(14881, GTBUtil.gtb("d_2_ehpa"))
+                .fluid()
+                .color(0x6AB9DF)
+                .build().setFormula("C16H35O4P", true);
+        
+        MonaziteLanthanumRaffinate = new Material.Builder(14882, GTBUtil.gtb("monazite_lanthanum_raffinate"))
+                .fluid()
+                .color(0x668451)
+                .build();
+
+        LanthanumTrichloride = new Material.Builder(14883, GTBUtil.gtb("lanthanum_trichloride"))
+                .fluid()
+                .color(0x627577)
+                .build().setFormula("LaCl3", true);
+
+        LanthanumOxalate = new Material.Builder(14884, GTBUtil.gtb("lanthanum_oxalate"))
+                .dust()
+                .color(0x94856A)
+                .build().setFormula("(La2(C2O4)3)", true);
+        
+        D2EHPASolventSolution = new Material.Builder(14885, GTBUtil.gtb("d_2_ehpa_solvent_solution"))
+                .fluid()
+                .color(0x50A0C7)
+                .build();
+
+        NeodymiumTrichloride = new Material.Builder(14887, GTBUtil.gtb("neodymium_trichloride"))
+                .fluid()
+                .color(0x7A9EAF)
+                .build().setFormula("NdCl3", true);
+
+        NeodymiumOxalate = new Material.Builder(14888, GTBUtil.gtb("neodymium_oxalate"))
+                .dust()
+                .color(0x9E8B73)
+                .build().setFormula("(Nd2(C2O4)3)", true);
 
 
+        SamariumOxalate = new Material.Builder(14889, GTBUtil.gtb("samarium_oxalate"))
+                .dust()
+                .color(0xD9BE92)
+                .build().setFormula("(Sm2(C2O4)3)", true);
 
+        MonaziteSmDepletedRaffinate = new Material.Builder(14890, GTBUtil.gtb("monazite_sm_depleted_raffinate"))
+                .fluid()
+                .color(0x7D9367)
+                .build();
+
+        MonaziteHREERaffinate = new Material.Builder(14891, GTBUtil.gtb("monazite_hree_raffinate"))
+                .fluid()
+                .color(0x596749)
+                .build();
+
+        NeodymiumRaffinate = new Material.Builder(14892, GTBUtil.gtb("neodymium_raffinate"))
+                .fluid()
+                .color(0x535353)
+                .build();
+
+        MonaziteHREESolution = new Material.Builder(14893, GTBUtil.gtb("monazite_hree_solution"))
+                .fluid()
+                .color(0x4A6C4C)
+                .build();
+
+        MonaziteDyDepletedRaffinate = new Material.Builder(14895, GTBUtil.gtb("monazite_dy_depleted_raffinate"))
+                .fluid()
+                .color(0x406F42)
+                .build();
+
+        TerbiumOxalateSolution = new Material.Builder(14896, GTBUtil.gtb("terbium_oxalate_solution"))
+                .fluid()
+                .color(0xDFD6BE)
+                .build();
+
+        MonaziteTbDepletedRaffinate = new Material.Builder(14898, GTBUtil.gtb("monazite_terbium_depleted_raffinate"))
+                .fluid()
+                .color(0x498B4D)
+                .build();
+
+        MonaziteAdjustedTbDepletedRaffinate = new Material.Builder(14899, GTBUtil.gtb("monazite_adjusted_terbium_depleted_raffinate"))
+                .fluid()
+                .color(0x578259)
+                .build();
+
+        MonaziteHolmiumDepletedHREERaffinate = new Material.Builder(14900, GTBUtil.gtb("monazite_holmium_depleted_hree_raffinate"))
+                .fluid()
+                .color(0x729B73)
+                .build();
+
+        MonaziteHolmiumDepletedRaffinate = new Material.Builder(14901, GTBUtil.gtb("monazite_holmium_depleted_raffinate"))
+                .ingot()
+                .color(0x3C7E3F)
+                .build();
+
+        MonaziteErbiumConcentratedRaffinateIngot = new Material.Builder(14902, GTBUtil.gtb("monazite_erbium_concentrate_raffinate_ingot"))
+                .ingot()
+                .color(0xECE1B3)
+                .build();
+
+        PurifiedMonaziteHolmiumDepletedRaffinate = new Material.Builder(14903, GTBUtil.gtb("purifiedmonazite_holmium_depleted_raffinate"))
+                .ingot()
+                .color(0xF4ECC3)
+                .build();
+
+        ErbiumEnrichedRaffinateIngot = new Material.Builder(14904, GTBUtil.gtb("erbium_enriched_raffinate_ingot"))
+                .ingot()
+                .color(0xB1D3B3)
+                .build();
+
+        ErbiumDepletedRaffinateIngot = new Material.Builder(14905, GTBUtil.gtb("erbium_depleted_raffinate_ingot"))
+                .ingot()
+                .color(0xD8B459)
+                .build();
+        
+        ErbiumTrichloride = new Material.Builder(14906, GTBUtil.gtb("erbium_trichloride"))
+                .fluid()
+                .color(0x8DA57C)
+                .build().setFormula("ErCl3", true);
+
+        ErbiumOxalate = new Material.Builder(14907, GTBUtil.gtb("erbium_oxalate"))
+                .dust()
+                .color(0x62824A)
+                .build().setFormula("(Er2(C2O4)3)", true);
+
+        MonaziteMixedREEOxides = new Material.Builder(14909, GTBUtil.gtb("monazite_mixed_ree_oxides"))
+                .dust()
+                .iconSet(ROUGH)
+                .color(0xB1A588)
+                .build().setFormula("REE", true);
+
+        MonaziteMixedREEOxidesSolution = new Material.Builder(14910, GTBUtil.gtb("monazite_mixed_ree_oxides_solution"))
+                .fluid()
+                .color(0xCEB988)
+                .build().setFormula("REE", true);
+
+        MonaziteThuliumRaffinate = new Material.Builder(14911, GTBUtil.gtb("monazite_thulium_raffinate"))
+                .fluid()
+                .color(0xA096B4)
+                .build();
+
+        MonaziteThuliumDepletedRaffinate = new Material.Builder(14912, GTBUtil.gtb("monazite_thulium_depleted_raffinate"))
+                .fluid()
+                .color(0x58975B)
+                .build();
+        
+        LutetiumTrichloride = new Material.Builder(14913, GTBUtil.gtb("lutetium_trichloride"))
+                .fluid()
+                .color(0xB989C5)
+                .build().setFormula("LuCl3", true);
+
+        LutetiumOxalate = new Material.Builder(14914, GTBUtil.gtb("lutetium_oxalate"))
+                .dust()
+                .color(0x9C62AB)
+                .build().setFormula("(Lu2(C2O4)3)", true);
+
+        LutetiumOxide = new Material.Builder(14915, GTBUtil.gtb("lutetium_oxide"))
+                .dust()
+                .color(0x9A72A4)
+                .build().setFormula("LuO2", true);
+
+        YtterbiumDepletedRaffinate = new Material.Builder(14916, GTBUtil.gtb("ytterbium_depleted_raffinate"))
+                .fluid()
+                .color(0x58775A)
+                .build();
+        
+        YtterbiumTrichloride = new Material.Builder(14917, GTBUtil.gtb("ytterbium_trichloride"))
+                .fluid()
+                .color(0x637C64)
+                .build().setFormula("YbCl3", true);
+
+        YtterbiumOxalate = new Material.Builder(14918, GTBUtil.gtb("ytterbium_oxalate"))
+                .dust()
+                .color(0x4C714F)
+                .build().setFormula("(Yb2(C2O4)3)", true);
+
+        YtterbiumOxide = new Material.Builder(14919, GTBUtil.gtb("ytterbium_oxide"))
+                .dust()
+                .color(0x326036)
+                .build().setFormula("YbO2", true);
+        
+        ThuliumTrichloride = new Material.Builder(14920, GTBUtil.gtb("thulium_trichloride"))
+                .fluid()
+                .color(0xAA79B7)
+                .build().setFormula("TmCl3", true);
+
+        ThuliumOxalate = new Material.Builder(14921, GTBUtil.gtb("thulium_oxalate"))
+                .dust()
+                .color(0x844395)
+                .build().setFormula("(Tm2(C2O4)3)", true);
+
+        ThuliumOxide = new Material.Builder(14922, GTBUtil.gtb("thulium_oxide"))
+                .dust()
+                .color(0x945EA3)
+                .build().setFormula("TmO2", true);
+                
+        PraseodymiumD2EHPAComplex = new Material.Builder(14923, GTBUtil.gtb("praseodymium_d_2_ehpa_complex"))
+                .dust()
+                .color(0x62899C)
+                .build();
+                
+        LoadedPraesodymiumComplex = new Material.Builder(14924, GTBUtil.gtb("loaded_praesodymium_complex"))
+                .dust()
+                .color(0x3F7B98)
+                .build();
+
+        PraseodymiumTrichloride = new Material.Builder(14925, GTBUtil.gtb("praseodymium_trichloride"))
+                .fluid()
+                .color(0x7E977F)
+                .build().setFormula("PrCl3", true);
+
+        PraseodymiumOxalate = new Material.Builder(14926, GTBUtil.gtb("praseodymium_oxalate"))
+                .dust()
+                .color(0xA7A97E)
+                .build().setFormula("(Pr2(C2O4)3)", true);
+
+        PraseodymiumOxide = new Material.Builder(14927, GTBUtil.gtb("praseodymium_oxide"))
+                .dust()
+                .color(0x71825E)
+                .build().setFormula("PrO2", true);
+
+        MonaziteSmRichRaffinate = new Material.Builder(14928, GTBUtil.gtb("monazite_sm_rich_raffinate"))
+                .fluid()
+                .color(0x9C9879)
+                .build();
+        
+        SamariumTrichloride = new Material.Builder(14929, GTBUtil.gtb("samarium_trichloride"))
+                .fluid()
+                .color(0xCFCBA9)
+                .build().setFormula("SmCl3", true);
+
+        MonazitePraseodymiumRichMonaziteFeed = new Material.Builder(14930, GTBUtil.gtb("monazite_praseodymium_rich_monazite_feed"))
+                .fluid()
+                .iconSet(ROUGH)
+                .color(0x639365)
+                .build();
+
+        StrippedLanthanumMonaziteLeach = new Material.Builder(14931, GTBUtil.gtb("stripped_lanthanum_monazite_leach"))
+                .fluid()
+                .color(0x748774)
+                .build();
+
+        MonaziteLREEDepletedRareEarthSolution = new Material.Builder(14932, GTBUtil.gtb("monazite_lree_depleted_rare_earth_solution"))
+                .fluid()
+                .color(0x3D7840)
+                .build();
+
+        OxalicAcidSolution = new Material.Builder(14933, GTBUtil.gtb("oxalic_acid_solution"))
+                .fluid()
+                .color(0xE8B574)
+                .build().setFormula("(C2H2O4)(H2O)", true);
+
+        MonaziteDysprosiumYttriumExtract = new Material.Builder(14934, GTBUtil.gtb("monazite_dysprosium_yttrium_extract"))
+                .fluid()
+                .color(0x43A047)
+                .build();
+
+        YttriumOxalate = new Material.Builder(14935, GTBUtil.gtb("yttrium_oxalate"))
+                .dust()
+                .color(0xA3B8A4)
+                .build().setFormula("(Y2(C2O4)3)", true);
+
+        DysprosiumOxalate = new Material.Builder(14936, GTBUtil.gtb("dysprosium_oxalate"))
+                .dust()
+                .color(0x579B5A)
+                .build().setFormula("(Dy2(C2O4)3)", true);
+
+        MonaziteHolmiumExtract = new Material.Builder(14937, GTBUtil.gtb("monazite_holmium_extract"))
+                .fluid()
+                .color(0x9FA992)
+                .build().setFormula("Ho?", true);
+
+        MonaziteHolmiumRaffinate = new Material.Builder(14938, GTBUtil.gtb("monazite_holmium_raffinate"))
+                .fluid()
+                .color(0x8FA973)
+                .build().setFormula("Ho?", true);
+        
+        TerbiumTrichloride = new Material.Builder(14939, GTBUtil.gtb("terbium_trichloride"))
+                .fluid()
+                .color(0x70A472)
+                .build().setFormula("TbCl3", true);
+
+        TerbiumOxalate = new Material.Builder(14940, GTBUtil.gtb("terbium_oxalate"))
+                .dust()
+                .color(0x739975)
+                .build().setFormula("(Tb2(C2O4)3)", true);
+
+        TerbiumOxide = new Material.Builder(14941, GTBUtil.gtb("terbium_oxide"))
+                .dust()
+                .color(0x528754)
+                .build().setFormula("TbO2", true);
+        
+        HolmiumTrichloride = new Material.Builder(14942, GTBUtil.gtb("holmium_trichloride"))
+                .fluid()
+                .color(0x89A476)
+                .build().setFormula("HoCl3", true);
+
+        HolmiumOxalate = new Material.Builder(14943, GTBUtil.gtb("holmium_oxalate"))
+                .dust()
+                .color(0x89A476)
+                .build().setFormula("(Ho2(C2O4)3)", true);
+
+        Cyanex272 = new Material.Builder(14944, GTBUtil.gtb("cyanex_272"))
+                .fluid()
+                .color(0x2E82AA)
+                .build().setFormula("C16H35O2P", true);
+
+        MonaziteLREERaffinate = new Material.Builder(14945, GTBUtil.gtb("monazite_lree_raffinate"))
+                .fluid()
+                .color(0x5D8D60)
+                .build();
+
+        HEHEHP = new Material.Builder(14946, GTBUtil.gtb("hehehp"))
+                .fluid()
+                .color(0xCD3D3D)
+                .build().setFormula("C16H35O3P", true);
+
+        ThuliumSolution = new Material.Builder(14947, GTBUtil.gtb("thulium_solution"))
+                .fluid()
+                .color(0xCD3D3D)
+                .build();
+
+        OxalicAcid = new Material.Builder(14948, GTBUtil.gtb("oxalic_acid"))
+                .fluid()
+                .color(0xE8B574)
+                .build().setFormula("C2H2O4", true);
+
+        CalciumOxide = new Material.Builder(14949, GTBUtil.gtb("calcium_oxide"))
+                .dust()
+                .color(0xE6E1CC)
+                .build().setFormula("CaO", true);
+
+        Isodecanol = new Material.Builder(14950, GTBUtil.gtb("isodecanol"))
+                .fluid()
+                .color(0xD09F90)
+                .build().setFormula("C10H22O", true);
+
+        SodiumPhosphate = new Material.Builder(14951, GTBUtil.gtb("sodium_phosphate"))
+                .dust()
+                .color(0xD6CB67)
+                .build().setFormula("Na2HPO4", true);
+
+        SodiumOxalate = new Material.Builder(14952, GTBUtil.gtb("sodium_oxalate"))
+                .fluid()
+                .color(0x66A8C6)
+                .build().setFormula("Na2C2O4", true);
+
+        HighPurityMagnesium = new Material.Builder(14953, GTBUtil.gtb("high_purity_magnesium"))
+                .dust()
+                .fluid()
+                .color(0xE4C9C9)
+                .build().setFormula("Mg*", true);
+
+        HighPurityTellurium = new Material.Builder(14954, GTBUtil.gtb("high_purity_tellurium"))
+                .dust()
+                .fluid()
+                .color(0xADCBAE)
+                .build().setFormula("Te*", true);
+
+        MagnesiumVapor = new Material.Builder(14955, GTBUtil.gtb("magnesium_vapor"))
+                .fluid()
+                .color(0xEFD9D9)
+                .build().setFormula("Mg", true);
+
+        RecrystallizedMagnesium = new Material.Builder(14956, GTBUtil.gtb("recrystallized_magnesium"))
+                .dust()
+                .color(0xD5BFBF)
+                .build().setFormula("Mg", true);
 
 
   }
