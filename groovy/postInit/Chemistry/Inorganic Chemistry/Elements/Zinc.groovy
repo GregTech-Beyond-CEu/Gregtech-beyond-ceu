@@ -25,3 +25,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(20)
                 .EUt(7)
                 .buildAndRegister();
+
+// Zinc Dust * 1
+mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustZincite') * 2], null)
