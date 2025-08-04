@@ -250,14 +250,6 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(80)
                 .buildAndRegister();
 
-        MIXER_RECIPES.recipeBuilder()
-                .fluidOutputs(fluid('clean_ammonia_solution')*1000)
-                .fluidInputs(fluid('distilled_water')*1000)
-                .fluidInputs(fluid('ammonia')*1000)
-                .duration(120)
-                .EUt(90)
-                .buildAndRegister();
-
         ASSEMBLER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('plastic')*72)
                 .inputs(metaitem('petri_dish'))
@@ -266,3 +258,5 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(100)
                 .EUt(70)
                 .buildAndRegister();
+
+        
