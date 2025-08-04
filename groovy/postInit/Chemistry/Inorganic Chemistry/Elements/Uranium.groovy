@@ -22,7 +22,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         CLARIFIER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('pitchblende_slurry')*1000)
-                .fluidOutputs(fluid('waste_water')*1000)
+                .fluidOutputs(fluid('wastewater')*1000)
                 .outputs(metaitem('dustPitchblendeFiltrate')*2)
                 .outputs(metaitem('dustUraniumThoriumFiltrate')*2)
                 .duration(200)
