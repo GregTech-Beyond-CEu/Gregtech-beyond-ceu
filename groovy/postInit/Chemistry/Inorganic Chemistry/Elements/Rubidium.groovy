@@ -12,7 +12,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(1400)
                 .buildAndRegister();
 
-       CHEMICAL_RECIPES.recipeBuilder()
+       BATCH_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('heavy_alkali_chloride_solution')*1000)
                 .inputs(metaitem('dustTinFourChloride')*2)
                 .outputs(metaitem('dustRubidiumChlorostannate')* 4)
@@ -22,7 +22,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(1400)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('distilled_water')*1000)
                 .fluidInputs(fluid('hydrochloric_acid')*2000)
                 .inputs(metaitem('dustRubidiumChlorostannate')* 6)
@@ -42,7 +42,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(700)
                 .buildAndRegister();
 
-        DISTILLATION_RECIPES.recipeBuilder()
+        BATCH_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('diluted_caesium_solution')*1000)
                 .outputs(metaitem('dustCaesium'))
                 .fluidOutputs(fluid('water')*1000)
