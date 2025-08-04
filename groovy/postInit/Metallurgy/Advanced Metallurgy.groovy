@@ -225,3 +225,64 @@ DISTILLATION_RECIPES.recipeBuilder()
     .EUt(800)
     .duration(300)
     .buildAndRegister();
+
+INDUCTION_FURNACE_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustCopper')*7)
+    .inputs(metaitem('dustZinc')*3)
+    .circuitMeta(1)
+    .fluidOutputs(fluid('brass_c_260')*1440)
+    .EUt(50)
+    .duration(200)
+    .buildAndRegister();
+
+CONTINOUS_CASTING_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('brass_c_260')*72)
+    .notConsumable(metaitem('shape.extruder.rod'))
+    .outputs(metaitem('stickBrassC260'))
+    .EUt(40)
+    .duration(220)
+    .buildAndRegister();
+
+// Block of gtb.material.brass_c_260 * 1
+mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.block')], [fluid('brass_c_260') * 1296 * 1296])
+// gtb.material.brass_c_260 Nugget * 9
+mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.nugget')], [fluid('brass_c_260') * 144 * 144])
+// gtb.material.brass_c_260 Ingot * 1
+mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.ingot')], [fluid('brass_c_260') * 144 * 144])
+
+
+VAR_FURNACE_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustHighPurityCopper')*3)
+    .inputs(metaitem('dustHighPurityZinc'))
+    .notConsumable(metaitem('stickBrassC260')*8)
+    .fluidOutputs(fluid('high_purity_brass') * 512)
+    .EUt(40)
+    .duration(220)
+    .buildAndRegister();
+
+// Block of High Purity Stainless Steel * 1
+mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.block')], [fluid('high_purity_stainless_steel') * 1296 * 1296])
+// High Purity Stainless Steel Plate * 1
+mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.plate')], [fluid('high_purity_stainless_steel') * 144 * 144])
+// High Purity Stainless Steel Nugget * 9
+mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.nugget')], [fluid('high_purity_stainless_steel') * 144 * 144])
+// High Purity Stainless Steel Ingot * 1
+mods.gregtech.fluid_solidifier.removeByInput(7, [metaitem('shape.mold.ingot')], [fluid('high_purity_stainless_steel') * 144 * 144])
+
+CONTINOUS_CASTING_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('high_purity_stainless_steel')*72)
+    .notConsumable(metaitem('shape.extruder.rod'))
+    .outputs(metaitem('stickHighPurityStainlessSteel'))
+    .EUt(40)
+    .duration(220)
+    .buildAndRegister();
+
+BRIDGMAN_FURNACE_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustHighPurityCadmium'))
+    .inputs(metaitem('dustHighPurityMagnesium'))
+    .inputs(metaitem('dustHighPurityTellurium'))
+    .outputs(metaitem('dustCadmiumMagnesiumTellurium'))
+    .fluidInputs(fluid('argon')*1000)
+    .EUt(500)
+    .duration(800)
+    .buildAndRegister();
