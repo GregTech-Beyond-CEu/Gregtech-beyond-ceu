@@ -2,7 +2,6 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 
 
-
         GRAVITY_SEPARATOR_RECIPES.recipeBuilder()   
                 .inputs(metaitem('dustXenotime'))
                 .outputs(metaitem('siftedXenotime'))
@@ -48,3 +47,14 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .duration(300)
                 .EUt(570)
                 .buildAndRegister();
+
+        ROTARY_KILN_RECIPES.recipeBuilder()
+                .inputs(ore('dustSodaAsh') * 18)
+                .inputs(metaitem('concentrateXenotime') * 2)
+                .fluidInputs(fluid('methane')*10)
+                .fluidInputs(fluid('oxygen') * 50)
+                .outputs(metaitem('dustRoastedXenotime'))
+                .fluidOutputs(fluid('carbon_dioxide') * 3000)
+                .duration(160)
+                .EUt(40)
+                .buildAndRegister()
