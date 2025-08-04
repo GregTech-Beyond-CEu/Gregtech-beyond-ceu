@@ -2,41 +2,41 @@ import static gregtech.api.recipes.RecipeMaps.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 
 
-    CHEMICAL_RECIPES.recipeBuilder()
-            .inputs(metaitem('dustSulfur')*4)
-            .fluidInputs(fluid('methane')*1000)
-            .fluidOutputs(fluid('carbon_disulfide')*1000)
-            .fluidOutputs(fluid('hydrogen_sulfide')*1000)
-            .duration(400)
-            .EUt(12)
-            .buildAndRegister();
+        FIXED_BED_REACTOR_RECIPES.recipeBuilder()
+                .inputs(metaitem('dustSulfur')*4)
+                .fluidInputs(fluid('methane')*1000)
+                .fluidOutputs(fluid('carbon_disulfide')*1000)
+                .fluidOutputs(fluid('hydrogen_sulfide')*1000)
+                .duration(400)
+                .EUt(12)
+                .buildAndRegister();
 
-    CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
-            .fluidInputs(fluid('ammonia')*1000)
-            .fluidInputs(fluid('nitric_acid')*1000)
-            .fluidOutputs(fluid('ammonium_nitrate')*1000)
-            .duration(400)
-            .EUt(12)
-            .buildAndRegister();
+        CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('ammonia')*1000)
+                .fluidInputs(fluid('nitric_acid')*1000)
+                .fluidOutputs(fluid('ammonium_nitrate')*1000)
+                .duration(400)
+                .EUt(12)
+                .buildAndRegister();
 
-    MIXER_RECIPES.recipeBuilder()
-            .fluidInputs(fluid('water')*1000)
-            .inputs(metaitem('dustWheat')*3)
-            .circuitMeta(3)
-            .fluidOutputs(fluid('grain_solution')*1000)
-            .duration(400)
-            .EUt(12)
-            .buildAndRegister();
+        MIXER_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('water')*1000)
+                .inputs(metaitem('dustWheat')*3)
+                .circuitMeta(3)
+                .fluidOutputs(fluid('grain_solution')*1000)
+                .duration(400)
+                .EUt(12)
+                .buildAndRegister();
 
-    BLAST_RECIPES.recipeBuilder()
-            .blastFurnaceTemp(1200)
-            .EUt(700)
-            .duration(200)
-            .inputs(metaitem('dustCalciumCarbide')*3)
-            .outputs(metaitem('dustCalciumHydroxide')*5)
-            .fluidInputs(fluid('steam')*2000)
-            .fluidOutputs(fluid('acetylene')*1000)
-            .buildAndRegister();
+        BLAST_RECIPES.recipeBuilder()
+                .blastFurnaceTemp(1200)
+                .EUt(700)
+                .duration(200)
+                .inputs(metaitem('dustCalciumCarbide')*3)
+                .outputs(metaitem('dustCalciumHydroxide')*5)
+                .fluidInputs(fluid('steam')*2000)
+                .fluidOutputs(fluid('acetylene')*1000)
+                .buildAndRegister();
 
 // Calcium Dust * 1
 mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 3], null)
@@ -61,16 +61,17 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
                 .duration(200)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        FIXED_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('nitrobenzene')*1000)
                 .fluidInputs(fluid('hydrogen')*3000)
+                .notConsumable(metaitem('dustNickel'))
                 .fluidOutputs(fluid('water')*2000)
                 .fluidOutputs(fluid('aniline')*1000)
                 .EUt(300)
                 .duration(100)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        FIXED_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('acetylene')*1000)
                 .fluidInputs(fluid('formaldehyde')*1000)
                 .notConsumable(metaitem('dustCopper'))
@@ -97,7 +98,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
                 .duration(200)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        FIXED_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('ethylene')*1000)
                 .fluidInputs(fluid('oxygen')*1000)
                 .notConsumable(metaitem('dustGold'))
@@ -106,7 +107,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
                 .duration(240)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('chloromethane')*1000)
                 .inputs(metaitem('dustWood'))
                 .inputs(metaitem('dustSodiumHydroxide'))
@@ -117,7 +118,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
                 .duration(300)
                 .buildAndRegister();
         
-        CHEMICAL_RECIPES.recipeBuilder()
+        FLUIDIZED_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('chlorine')*1000)
                 .inputs(metaitem('dustIron'))
                 .fluidOutputs(fluid('iron_chloride')*1000)
@@ -127,7 +128,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
 
         //Trimethyl Tin Chloride
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('hydrobromic_acid')*1000)
                 .fluidInputs(fluid('methanol')*1000)
                 .fluidOutputs(fluid('methyl_bromide')*1000)
@@ -135,7 +136,9 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
                 .EUt(40)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        //Grignard Reagent Synthesis
+
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('methyl_bromide')*1000)
                 .notConsumable(metaitem('dustIodine')*2)
                 .notConsumable(fluid('dry_diethyl_ether')*1000)
@@ -155,7 +158,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
                 .EUt(240)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        FLUIDIZED_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('chlorine')*4000)
                 .inputs(metaitem('dustTin'))
                 .outputs(metaitem('dustTinChloride'))
@@ -163,7 +166,9 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
                 .EUt(380)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        //Grignard Reaction
+
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustTinChloride'))
                 .fluidInputs(fluid('methylmagnesium_bromide')*1000)
                 .fluidOutputs(fluid('trimethyl_tin_chloride') * 1000)
@@ -174,7 +179,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
 
         //Chichibabin Synthesis
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('formaldehyde')*1000)
                 .fluidInputs(fluid('ammonia')*1000)
                 .fluidInputs(fluid('gtfo_acetaldehyde')*1000)
@@ -197,7 +202,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
 
         //Diluted Acetone
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('distilled_water')*1000)
                 .fluidInputs(fluid('acetone')*1000)
                 .fluidOutputs(fluid('diluted_acetone')*1000)
@@ -207,10 +212,12 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
 
         //Phosphorus Oxychloride
 
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('oxygen')*2000)
+        BATCH_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('phosphorus_trichloride')*3000)
                 .fluidInputs(fluid('phosphoric_acid')*1000)
-                .fluidInputs(fluid('phosphorus_oxychloride')*1000)
+                .notConsumable(metaitem('fume_hood'))
+                .fluidOutputs(fluid('phosphorus_oxychloride')*4000)
+                .fluidOutputs(fluid('hydrochloric_acid')*3000)
                 .duration(200)
                 .EUt(40)
                 .buildAndRegister();
@@ -298,3 +305,40 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCalciumChloride') * 
                 .duration(400)
                 .EUt(150)
                 .buildAndRegister();
+                
+// Hydrochloric Acid * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(7, null, [fluid('chlorine') * 1000 * 1000, fluid('hydrogen') * 1000 * 1000])
+// Liquid Iron III Chloride * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('dustIron'), metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('hydrochloric_acid') * 3000 * 3000])
+// Hydrochloric Acid * 2000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('chlorine') * 4000 * 4000, fluid('benzene') * 1000 * 1000])
+// Nitric Acid * 2000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 3])], [fluid('water') * 1000 * 1000, fluid('oxygen') * 1000 * 1000, fluid('nitrogen_dioxide') * 2000 * 2000])
+// Phosphoric Acid * 2000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 24]), metaitem('dustPhosphorus') * 2], [fluid('water') * 3000 * 3000, fluid('oxygen') * 5000 * 5000])
+// Nitric Oxide Gas * 2000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('oxygen') * 5000 * 5000, fluid('ammonia') * 2000 * 2000])
+// Nitrogen Dioxide Gas * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('oxygen') * 1000 * 1000, fluid('nitric_oxide') * 1000 * 1000])
+// Sulfuric Acid * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(7, null, [fluid('sulfur_trioxide') * 1000 * 1000, fluid('water') * 1000 * 1000])
+// Sulfuric Acid * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('hydrogen_sulfide') * 1000 * 1000, fluid('oxygen') * 4000 * 4000])
+// Water * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('oxygen') * 3000 * 3000, fluid('hydrogen_sulfide') * 1000 * 1000])
+// Sulfur Trioxide Gas * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(7, null, [fluid('sulfur_dioxide') * 1000 * 1000, fluid('oxygen') * 1000 * 1000])
+// Sulfur Dioxide Gas * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(7, [metaitem('circuit.integrated').withNbt(['Configuration': 2]), metaitem('dustSulfur')], [fluid('oxygen') * 2000 * 2000])
+// Iridium Dust * 1
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('dustIridiumChloride') * 4], [fluid('hydrogen') * 3000 * 3000])
+// Iridium Metal Residue * 5
+mods.gregtech.large_chemical_reactor.removeByInput(7680, [metaitem('dustRarestMetalMixture') * 7], [fluid('hydrochloric_acid') * 4000 * 4000])
+// Acetone * 2000
+mods.gregtech.large_chemical_reactor.removeByInput(480, [metaitem('dustQuicklime'), metaitem('circuit.integrated').withNbt(['Configuration': 24])], [fluid('acetic_acid') * 3000 * 3000])
+// Salt * 4
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 24]), metaitem('dustSodiumHydroxide') * 6], [fluid('benzene') * 2000 * 2000, fluid('chlorine') * 4000 * 4000])
+// Phenol * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 24])], [fluid('propene') * 1000 * 1000, fluid('benzene') * 1000 * 1000, fluid('oxygen') * 1000 * 1000, fluid('phosphoric_acid') * 100 * 100])
+// Phenol * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 24])], [fluid('benzene') * 1000 * 1000, fluid('chlorine') * 2000 * 2000, fluid('water') * 1000 * 1000])
