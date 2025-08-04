@@ -78,8 +78,15 @@ mods.gregtech.centrifuge.removeByInput(480, null, [fluid('ender_air') * 10000 * 
                 .EUt(80)
                 .buildAndRegister();
 
+// Deuterium Gas * 2000
+
+mods.gregtech.electrolyzer.removeByInput(30, null, [fluid('heavy_water') * 1000 * 1000])
+
+
         ELECTROLYZER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('heavy_water')*1000)
+                .notConsumable(metaitem('stickSteel'))
+                .notConsumable(metaitem('stickNickel'))
                 .fluidOutputs(fluid('deuterium')*2000)
                 .fluidOutputs(fluid('oxygen')*1000)
                 .duration(200)
