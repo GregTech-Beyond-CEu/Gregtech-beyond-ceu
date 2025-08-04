@@ -21,7 +21,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 [ore('rotorBronze'), item('gregtech:machine_casing'), ore('rotorBronze')],
                 [ore('plateLowQualitySteel'), ore('rotorBronze') ,ore('plateLowQualitySteel')]])
             
-        crafting.addShaped("gregtech:fractional_distillation_unit", item('gregtech:machine', 3054),[
+        crafting.addShaped("gregtech:fractional_distillation_unit", item('gregtech:machine', 3064),[
                 [metaitem('pipeTinyFluidSteel'), ore('circuitHv'), metaitem('pipeTinyFluidSteel')],
                 [metaitem('electric.pump.hv'), metaitem('hull.hv'),metaitem('electric.pump.hv')],
                 [metaitem('pipeTinyFluidSteel'), ore('circuitHv') ,metaitem('pipeTinyFluidSteel')]])
@@ -269,3 +269,67 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
         crafting.addShaped("flash_chromatography_system", item('gregtech:machine', 3078), [[ore('circuitHv'), ore('pipeNormalFluidTitanium'), ore('circuitHv')], [item('gregtech:meta_item_1', 144), item('gregtech:machine', 988), item('gregtech:meta_item_1', 144)], [ore('circuitHv'), ore('pipeNormalFluidTitanium'), ore('circuitHv')]])
         crafting.addShaped("vacuum_desiccator", item('gregtech:machine', 3085), [[item('gregtech:meta_item_1', 143), ore('frameGtSteel'), item('gregtech:meta_item_1', 143)], [ore('item_casingSteel'), item('gregtech:machine', 987), ore('item_casingSteel')], [item('gregtech:meta_item_1', 173), ore('frameGtSteel'), item('gregtech:meta_item_1', 173)]])
         crafting.addShaped("precision_laser_engraving", item('gregtech:machine', 3081), [[ore('plateTitaniumTungstenCarbide'), item('gregtech:meta_item_1', 190), ore('plateTitaniumTungstenCarbide')], [ore('circuitIv'), item('gregtech:machine', 989), ore('circuitIv')], [ore('plateTitaniumTungstenCarbide'), item('gregtech:meta_item_1', 190), ore('plateTitaniumTungstenCarbide')]])
+
+        ASSEMBLER_RECIPES.recipeBuilder()      
+                .fluidInputs(fluid('soldering_alloy')*144)
+                .inputs(metaitem('hull.hv'))
+                .inputs(metaitem('voltage_coil.hv')*2)
+                .inputs(metaitem('electric.motor.hv'))
+                .inputs(ore('circuitHv')*2)
+                .inputs(metaitem('plateStainlessSteel')*4)
+                .inputs(metaitem('emitter.hv'))
+                .inputs(metaitem('sensor.hv'))
+                .outputs(item('gregtech:machine', 3086))
+                .EUt(180)
+                .duration(250)
+                .buildAndRegister();
+
+        ASSEMBLER_RECIPES.recipeBuilder()
+                .inputs(metaitem('hull.ev'))
+                .inputs(metaitem('electric.pump.hv'))
+                .inputs(ore('circuitIv')*2)
+                .inputs(metaitem('voltage_coil.hv')*2)
+                .inputs(metaitem('emitter.hv'))
+                .inputs(metaitem('sensor.hv'))
+                .inputs(metaitem('frameStainlessSteel'))
+                .fluidInputs(fluid('soldering_alloy')*250)
+                .outputs(item('gregtech:machine', 3087))
+                .EUt(180)
+                .duration(250)
+                .buildAndRegister();
+
+crafting.addShaped("electrochemical_cell", item('gregtech:machine', 3088), [
+[ore('circuitHv'), item('gregtech:meta_item_1', 189), ore('circuitHv')], 
+[item('gregtech:meta_item_2', 426), item('gregtech:machine', 988), item('gregtech:meta_item_2', 426)], 
+[item('gregtech:meta_item_1', 144), item('gregtech:meta_item_1', 189), item('gregtech:meta_item_1', 144)]
+])
+crafting.addShaped("electron_beam_melting_furnace", item('gregtech:machine', 3089), [
+[ore('circuitHv'), item('gregtech:meta_item_1', 204), ore('circuitHv')], 
+[item('gregtech:meta_item_1', 189), item('gregtech:machine', 988), item('gregtech:meta_item_1', 189)], 
+[item('gregtech:meta_item_1', 99), item('gregtech:machine', 97), item('gregtech:meta_item_1', 99)]
+])
+crafting.addShaped("cnc_machine", item('gregtech:machine', 3090), [
+[item('gregtech:meta_item_1', 235), item('gregtech:meta_item_2', 558), item('gregtech:meta_item_1', 220)], 
+[item('gregtech:meta_item_1', 130), item('gregtech:machine', 988), item('gregtech:meta_item_1', 130)], 
+[ore('circuitHv'), item('gregtech:machine', 442), ore('circuitHv')]
+])
+crafting.addShaped("gate_assembler", item('gregtech:machine', 3091), [
+[item('gregtech:meta_item_1', 191), item('gregtech:meta_item_1', 206), item('gregtech:meta_item_1', 191)], 
+[ore('circuitIv'), item('gregtech:machine', 114), ore('circuitIv')], 
+[item('gregtech:meta_item_1', 191), item('gregtech:machine', 990), item('gregtech:meta_item_1', 191)]
+])
+crafting.addShaped("mixer_settler_reactor", item('gregtech:machine', 3092), [
+[item('gregtech:meta_item_1', 130), ore('cableGtSingleAluminium'), item('gregtech:meta_item_1', 130)], 
+[ore('circuitIv'), item('gregtech:machine', 989), ore('circuitIv')], 
+[item('gregtech:meta_item_1', 145), item('gregtech:meta_item_1', 250), item('gregtech:meta_item_1', 145)]
+])
+crafting.addShaped("catalytic_converter", item('gregtech:machine', 3102), [
+[ore('cableGtSingleTin'), item('gregtech:meta_item_1', 247), ore('cableGtSingleTin')], 
+[ore('circuitLv'), item('gregtech:machine', 986), ore('circuitLv')], 
+[item('gregtech:meta_item_1', 142), ore('circuitLv'), item('gregtech:meta_item_1', 142)]
+])
+crafting.addShaped("combustion_furnace", item('gregtech:machine', 3095), [
+[item('gregtech:meta_item_1', 97), ore('circuitLv'), item('gregtech:meta_item_1', 97)], 
+[item('gregtech:meta_item_1', 142), item('gregtech:machine', 986), item('gregtech:meta_item_1', 142)], 
+[ore('circuitLv'), item('gregtech:meta_item_1', 202), ore('circuitLv')]
+])
