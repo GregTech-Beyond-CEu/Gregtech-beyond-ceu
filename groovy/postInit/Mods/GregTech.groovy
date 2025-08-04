@@ -189,7 +189,7 @@ ASSEMBLER_RECIPES.recipeBuilder()
 
 ADSORPTION_TOWER.recipeBuilder()
     .fluidInputs(fluid('sulfuric_acid')*1000)
-    .fluidInputs(fluid('sulfur_trioxide')*1000)
+    .fluidInputs(fluid('sulfur_trioxide')*100)
     .fluidOutputs(fluid('oleum')*1000)
     .duration(120)
     .EUt(68)
@@ -413,9 +413,9 @@ crafting.addShaped("atomic_layer_deposition", item('gregtech:machine', 3075), [
 ])
 
 crafting.addShaped("adsorption_tower_recipes", item('gregtech:machine', 3067), [
-[item('gregtech:meta_item_1', 175), item('gregtech:meta_item_1', 145), item('gregtech:meta_item_1', 175)], 
-[ore('rotorStainlessSteel'), item('gregtech:metal_casing', 4), ore('rotorStainlessSteel')], 
-[item('gregtech:meta_item_1', 145), ore('circuitHv'), item('gregtech:meta_item_1', 145)]
+[item('gregtech:meta_item_1', 172), item('gregtech:meta_item_1', 142), item('gregtech:meta_item_1', 172)], 
+[ore('rotorSteel'), item('gregtech:metal_casing', 4), ore('rotorSteel')], 
+[item('gregtech:meta_item_1', 142), ore('circuitLv'), item('gregtech:meta_item_1', 142)]
 ])
 
 crafting.addShaped("basic_structural_casing", item('gtb:gtb_multiblock_casing', 7), [
@@ -865,9 +865,132 @@ CHEMICAL_RECIPES.recipeBuilder()
 BATCH_REACTOR_RECIPES.recipeBuilder()
     .fluidInputs(fluid('chlorine')*6000)
     .inputs(metaitem('dustCarbon')*3)
-    .inputs(metaitem('supercritical:dustBoronTrioxide')*5)
+    .inputs(metaitem('dustBoronTrioxide')*5)
     .fluidOutputs(fluid('carbon_monoxide')*3000)
     .fluidOutputs(fluid('boron_trichloride')*2000)
     .duration(400)
     .EUt(245)
     .buildAndRegister();
+
+crafting.remove('gregtech:fluid_filter_lazurite');
+crafting.remove('gregtech:fluid_filter_sodalite');
+crafting.remove('gregtech:fluid_filter_lapis');
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('foilZinc')*32)
+    .inputs(metaitem('plateLapis'))
+    .outputs(metaitem('fluid_filter'))
+    .EUt(12)
+    .duration(300)
+    .buildAndRegister();
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('foilZinc')*32)
+    .inputs(metaitem('plateSodalite'))
+    .outputs(metaitem('fluid_filter'))
+    .EUt(12)
+    .duration(300)
+    .buildAndRegister();
+
+ASSEMBLER_RECIPES.recipeBuilder()
+    .inputs(metaitem('foilZinc')*32)
+    .inputs(metaitem('plateLazurite'))
+    .outputs(metaitem('fluid_filter'))
+    .EUt(12)
+    .duration(300)
+    .buildAndRegister();
+
+DISTILLATION_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('sodium_phosphate_solution')*1000)
+    .fluidOutputs(fluid('water')*1000)
+    .outputs(metaitem('dustSodiumPhosphate')*8)
+    .EUt(20)
+    .duration(400)
+    .buildAndRegister();
+
+CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('hydrochloric_acid')*2000)
+    .inputs(metaitem('dustSodiumPhosphate')*8)
+    .outputs(metaitem('dustSalt')*2)
+    .fluidOutputs(fluid('phosphoric_acid')*1000)
+    .EUt(20)
+    .duration(200)
+    .buildAndRegister();
+
+FIXED_BED_REACTOR_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('benzene')*1000)
+    .fluidInputs(fluid('propylene')*1000)
+    .notConsumable(metaitem('dustAluminiumChloride'))
+    .fluidOutputs(fluid('cumene')*1000)
+    .EUt(40)
+    .duration(340)
+    .buildAndRegister();
+
+// Cumene Gas * 8000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('phosphoric_acid') * 1000 * 1000, fluid('benzene') * 8000 * 8000, fluid('propene') * 8000 * 8000])
+
+STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('methylmagnesium_bromide') * 2000)
+    .inputs(metaitem('dustZincChloride')*3)
+    .fluidInputs(fluid('diethyl_ether')*2000)
+    .fluidOutputs(fluid('dimethylzinc')*1000)
+    .outputs(metaitem('dustMagnesiumBromideChlorideSalt')*2)
+    .EUt(30)
+    .duration(340)
+    .buildAndRegister();
+
+CONTINOUS_STIRRING_TANK_REACTOR_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('hydrogen_peroxide')*1000)
+    .inputs(metaitem('dustMagnesia')*2)
+    .outputs(metaitem('dustManganeseDioxide')*3)
+    .fluidOutputs(fluid('water')*1000)
+    .EUt(20)
+    .duration(200)
+    .buildAndRegister();
+
+TUBE_FURNACE_RECIPES.recipeBuilder()
+    .inputs(metaitem('dustTantalum'))
+    .fluidInputs(fluid('nitrogen')*1000)
+    .outputs(metaitem('dustTantalumNitride'))
+    .EUt(40)
+    .duration(250)
+    .buildAndRegister();
+
+//Oxalic Acid Production
+
+ROTARY_KILN_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('sodium_formate')*1000)
+    .fluidOutputs(fluid('hydrogen')*2000)
+    .fluidOutputs(fluid('sodium_oxalate')*1000)
+    .EUt(50)
+    .duration(200)
+    .buildAndRegister();
+
+TRICKLE_BED_REACTOR_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('sulfuric_acid')*1000)
+    .fluidInputs(fluid('sodium_oxalate')*1000)
+    .outputs(metaitem('dustSodiumSulfate')*7)
+    .fluidOutputs(fluid('oxalic_acid')*1000)
+    .EUt(80)
+    .duration(200)
+    .buildAndRegister();
+
+MIXER_RECIPES.recipeBuilder()
+    .fluidInputs(fluid('oxalic_acid')*1000)
+    .fluidInputs(fluid('water')*1000)
+    .fluidOutputs(fluid('oxalic_acid_solution') * 1000)
+    .EUt(70)
+    .duration(300)
+    .buildAndRegister();
+
+// Hydrogen Sulfide Gas * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(7, [metaitem('dustSulfur')], [fluid('hydrogen') * 2000 * 2000])
+// 1,1-Dimethylhydrazine * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(480, null, [fluid('dimethylamine') * 1000 * 1000, fluid('monochloramine') * 1000 * 1000])
+// 1,1-Dimethylhydrazine * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(480, null, [fluid('methanol') * 2000 * 2000, fluid('ammonia') * 2000 * 2000, fluid('hypochlorous_acid') * 1000 * 1000])
+// Epichlorohydrin * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 23]), metaitem('dustSodiumHydroxide') * 3], [fluid('chlorine') * 4000 * 4000, fluid('propene') * 1000 * 1000, fluid('water') * 1000 * 1000])
+// Epichlorohydrin * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 24]), metaitem('dustSodiumHydroxide') * 3], [fluid('chlorine') * 2000 * 2000, fluid('propene') * 1000 * 1000, fluid('hypochlorous_acid') * 1000 * 1000])
+
