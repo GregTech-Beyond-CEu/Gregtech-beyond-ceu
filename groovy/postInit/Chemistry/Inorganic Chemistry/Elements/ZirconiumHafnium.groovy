@@ -30,7 +30,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         CLARIFIER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('zircon_slurry')*1000)
-                .fluidOutputs(fluid('waste_water')*1000)
+                .fluidOutputs(fluid('wastewater')*1000)
                 .outputs(metaitem('floatedZircon')* 16)
                 .duration(200)
                 .EUt(700)
@@ -258,7 +258,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
         CLARIFIER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('zirkelite_slurry')*1000)
                 .outputs(metaitem('dustCalciumHydroxide')*3)
-                .fluidOutputs(fluid('waste_water')*1000)
+                .fluidOutputs(fluid('wastewater')*1000)
                 .outputs(metaitem('floatedZirkelite')*8)
                 .duration(300)
                 .EUt(180)
