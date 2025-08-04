@@ -44,7 +44,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
         CLARIFIER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('bedrock_slurry')*1000)
                 .fluidOutputs(fluid('purified_bedrock_slurry')*900)
-                .fluidOutputs(fluid('waste_water')*100)
+                .fluidOutputs(fluid('wastewater')*100)
                 .duration(100)
                 .EUt(700)
                 .buildAndRegister()
