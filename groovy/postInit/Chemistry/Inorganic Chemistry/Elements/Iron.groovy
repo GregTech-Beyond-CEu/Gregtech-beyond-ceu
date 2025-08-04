@@ -145,5 +145,27 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustBandedIron') * 5], n
                 .fluidOutputs(fluid('sulfur_trioxide')*2000)
                 .fluidInputs(fluid('air')*1000)
                 .duration(220)
-                .EUt(100)
+                .EUt(20)
+                .buildAndRegister();
+
+// Iron Dust * 1
+mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustPyrite') * 3], null)
+
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('oxygen')*30000)
+                .fluidInputs(fluid('water')*8000)
+                .inputs(metaitem('dustPyrite')*4)
+                .outputs(metaitem('dustIronSulfate')*4)
+                .fluidOutputs(fluid('sulfuric_acid')*4000)
+                .duration(240)
+                .EUt(12)
+                .buildAndRegister();
+
+        ROTARY_KILN_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('oxygen')*22000)
+                .fluidOutputs(fluid('sulfur_dioxide')*8000)
+                .inputs(metaitem('dustPyrite')*4)
+                .outputs(metaitem('dustIronOxide')*2)
+                .duration(280)
+                .EUt(20)
                 .buildAndRegister();
