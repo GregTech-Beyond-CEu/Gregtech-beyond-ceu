@@ -1,14 +1,6 @@
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('redstone')*1000)
-                .inputs(metaitem('wafer.ultra_high_power_integrated_circuit'))
-                .outputs(metaitem('plate.ultra_high_power_integrated_circuit'))
-                .duration(200)
-                .EUt(120)
-                .buildAndRegister();
-
         ASSEMBLER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('novolacs_photoresist')*144)
                 .inputs(metaitem('photocoated_hassium_wafer'))
@@ -437,7 +429,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(80)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        FIXED_BED_REACTOR_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustNaquadah'))
                 .fluidInputs(fluid('very_hot_aqua_regia')*1000)
                 .fluidOutputs(fluid('chloronaquadic_acid')*1000)
@@ -447,7 +439,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         // Naquadah Dioxide
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        PLUG_FLOW_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('chloronaquadic_acid')*1000)
                 .inputs(metaitem('dustSodiumNitrate'))
                 .outputs(metaitem('dustNaquadahDioxide'))
@@ -515,10 +507,12 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(12)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('hydrogen_chloride')*1000)
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('hydrogen_chloride')*3000)
                 .inputs(metaitem('dustFlerovium'))
-                .fluidOutputs(fluid('trichloroflerane')*1000).fluidOutputs(fluid('hydrogen')*1000)
+                .notConsumable(metaitem('fume_hood'))
+                .fluidOutputs(fluid('trichloroflerane')*1000)
+                .fluidOutputs(fluid('hydrogen')*666)
                 .EUt(120)
                 .duration(800)
                 .buildAndRegister();
@@ -580,7 +574,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         // Pre-engraved Naquadah Dioxide Wafer
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        BUBBLE_COLUMN_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('super_fluid_helium_4')*1000)
                 .fluidOutputs(fluid('helium_4')*1000)
                 .inputs(metaitem('naquadah_dioxide_wafer'))
@@ -1697,8 +1691,6 @@ mods.gregtech.laser_engraver.removeByInput(7680, [metaitem('wafer.neutronium'), 
 mods.gregtech.chemical_reactor.removeByInput(7680, [metaitem('wafer.power_integrated_circuit'), metaitem('dustIndiumGalliumPhosphide') * 2], [fluid('vanadium_gallium') * 288 * 288])
 // HPIC Wafer * 1
 mods.gregtech.large_chemical_reactor.removeByInput(7680, [metaitem('wafer.power_integrated_circuit'), metaitem('dustIndiumGalliumPhosphide') * 2], [fluid('vanadium_gallium') * 288 * 288])
-// UHPIC * 1
-mods.gregtech.chemical_reactor.removeByInput(120, [metaitem('wafer.ultra_high_power_integrated_circuit')], [fluid('redstone') * 1000 * 1000])
 // UHPIC * 2
 mods.gregtech.cutter.removeByInput(30720, [metaitem('wafer.ultra_high_power_integrated_circuit')], [fluid('water') * 1000 * 1000])
 // UHPIC * 2
@@ -1709,8 +1701,6 @@ mods.gregtech.cutter.removeByInput(30720, [metaitem('wafer.ultra_high_power_inte
 mods.gregtech.chemical_reactor.removeByInput(30720, [metaitem('wafer.high_power_integrated_circuit'), metaitem('dustIndiumGalliumPhosphide') * 8], [fluid('naquadah') * 576 * 576])
 // UHPIC Wafer * 1
 mods.gregtech.large_chemical_reactor.removeByInput(30720, [metaitem('wafer.high_power_integrated_circuit'), metaitem('dustIndiumGalliumPhosphide') * 8], [fluid('naquadah') * 576 * 576])
-// UHPIC * 1
-mods.gregtech.large_chemical_reactor.removeByInput(120, [metaitem('wafer.ultra_high_power_integrated_circuit')], [fluid('redstone') * 1000 * 1000])
 
         ELECTROLYZER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('hydrofluoric_acid')*100)
@@ -2006,3 +1996,5 @@ mods.gregtech.large_chemical_reactor.removeByInput(1920, [metaitem('wafer.nano_c
 
 // ASoC Wafer * 1
 mods.gregtech.laser_engraver.removeByInput(1920, [metaitem('wafer.naquadah'), metaitem('glass_lens.purple')], null)
+// ASoC Wafer * 2
+mods.gregtech.laser_engraver.removeByInput(7680, [metaitem('wafer.neutronium'), metaitem('glass_lens.purple')], null)
