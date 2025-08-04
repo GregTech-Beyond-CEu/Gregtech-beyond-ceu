@@ -26,7 +26,7 @@ crafting.addShaped("granite_anvil_pyrotech_recipe", item('pyrotech:anvil_granite
 
 crafting.remove("pyrotech:ignition/flint_and_tinder")
 
-mods.pyrotech.anvil.removeByOutput(item('pyrotech:material', 16)*2);
+mods.pyrotech.anvil.removeByOutput(item('pyrotech:material', 16)*2)
 
 mods.pyrotech.anvil.recipeBuilder()
     .input(metaitem('ingotMasonryBrick'))
@@ -161,31 +161,6 @@ mods.gregtech.chemical_bath.removeByInput(7, [item('minecraft:reeds')], [fluid('
 mods.gregtech.chemical_bath.removeByInput(4, [metaitem('dustWood')], [fluid('distilled_water') * 100 * 100])
 // Paper * 1
 mods.gregtech.chemical_bath.removeByInput(4, [metaitem('dustPaper')], [fluid('distilled_water') * 100 * 100])
-
-
-CUTTER_RECIPES.recipeBuilder()
-    .inputs(ore('slabWood'))
-    .fluidInputs(fluid('water')*25)
-    .outputs(item('minecraft:wooden_slab', 3) * 4)
-    .EUt(12)
-    .duration(200)
-    .buildAndRegister();
-
-CUTTER_RECIPES.recipeBuilder()
-    .inputs(ore('slabWood'))
-    .fluidInputs(fluid('distilled_water')*20)
-    .outputs(item('minecraft:wooden_slab', 3) * 4)
-    .EUt(12)
-    .duration(150)
-    .buildAndRegister();
-
-CUTTER_RECIPES.recipeBuilder()
-    .inputs(ore('slabWood'))
-    .fluidInputs(fluid('lubricant')*15)
-    .outputs(item('minecraft:wooden_slab', 3) * 4)
-    .EUt(12)
-    .duration(100)
-    .buildAndRegister();
 
 CUTTER_RECIPES.recipeBuilder()
     .inputs(item('pyrotech:material', 45))
