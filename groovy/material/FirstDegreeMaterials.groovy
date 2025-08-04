@@ -95,7 +95,7 @@ public class FirstDegreeMaterials {
                 .build().setFormula("K2CO3", true)
 
         HydrogenFluoride = new Material.Builder(8015, GTBUtil.gtb("hydrogen_fluoride"))
-                .fluid()
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xC5E3C6)
                 .build().setFormula("HF2", true)
 
@@ -475,7 +475,7 @@ public class FirstDegreeMaterials {
                 .build().setFormula("BaTiO2", true);
 
         HydrogenChloride = new Material.Builder(8089, GTBUtil.gtb("hydrogen_chloride"))
-                .fluid()
+                .gas(new FluidBuilder().attribute(FluidAttributes.ACID))
                 .color(0xC5CAE9)
                 .build().setFormula("HCl", true);
 
@@ -1253,6 +1253,7 @@ public class FirstDegreeMaterials {
 
         TelluriumDioxide = new Material.Builder(8241, GTBUtil.gtb("tellurium_dioxide"))
                 .dust()
+                .ingot()
                 .color(0xE3DDB8)
                 .iconSet(METALLIC)
                 .build().setFormula("TeO2", true);
@@ -2203,12 +2204,11 @@ public class FirstDegreeMaterials {
                 .iconSet(DULL)
                 .color(0xCBD1D4)
                 .build().setFormula("BO2", true);
-
         
         FormicAcid = new Material.Builder(8426, GTBUtil.gtb("formic_acid"))
                 .fluid()
                 .color(0xD15918)
-                .build().setFormula("CH20H2", true);
+                .build().setFormula("CH4O", true);
 
         SodiumFormate = new Material.Builder(8427, GTBUtil.gtb("sodium_formate"))
                 .fluid()
@@ -2273,11 +2273,8 @@ public class FirstDegreeMaterials {
 
         IronSulfate = new Material.Builder(8440, GTBUtil.gtb("iron_sulfate"))
                 .dust()
+                .iconSet(ROUGH)
                 .color(0xFFF176).build().setFormula("FeSO4", true);
-
-        SodiumSulfate = new Material.Builder(8441, GTBUtil.gtb("sodium_sulfate"))
-                .dust()
-                .color(0x2A6E8D).build().setFormula("Na2SO4", true);
         
         FluoroniobicAcid = new Material.Builder(8442, GTBUtil.gtb("fluoroniobic_acid"))
                 .fluid()
@@ -3047,7 +3044,7 @@ public class FirstDegreeMaterials {
                 .dust()
                 .ingot()
                 .color(0x6D816D)
-                .build().setFormula("BiTe", true);
+                .build().setFormula("Bi2Te3", true);
 
         Ytterbium = new Material.Builder(8597, GTBUtil.gtb("ytterbium"))
                 .dust()
