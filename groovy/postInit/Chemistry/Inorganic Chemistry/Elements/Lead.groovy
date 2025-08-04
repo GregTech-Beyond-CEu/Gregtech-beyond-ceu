@@ -9,7 +9,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(8)
                 .buildAndRegister()
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        BATCH_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('molten_galena')*144)
                 .fluidInputs(fluid('oxygen')*1000)
                 .fluidOutputs(fluid('molten_oxidized_galena')*144)
