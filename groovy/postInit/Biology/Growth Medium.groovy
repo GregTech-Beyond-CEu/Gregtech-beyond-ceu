@@ -83,7 +83,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .buildAndRegister();
 
         MICROSCOPE_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('waste_water')*100)
+                .fluidInputs(fluid('wastewater')*100)
                 .chancedOutput(metaitem('dustStreptococcusPyogenes')*1, 300, 0)
                 .duration(212)
                 .EUt(700)
@@ -221,3 +221,5 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 
         // Sterilized Growth Medium * 100
 mods.gregtech.fluid_heater.removeByInput(7680, [metaitem('circuit.integrated').withNbt(['Configuration': 1])], [fluid('raw_growth_medium') * 100 * 100])
+// Raw Growth Medium * 4000
+mods.gregtech.mixer.removeByInput(7680, [metaitem('dustMeat') * 4, metaitem('dustSalt') * 4, metaitem('dustCalcium') * 4, metaitem('dustAgar') * 4], [fluid('mutagen') * 4000 * 4000])
