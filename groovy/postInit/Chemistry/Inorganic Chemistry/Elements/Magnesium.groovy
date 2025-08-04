@@ -42,3 +42,33 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustMagnesiumChloride') 
                 .duration(100)
                 .EUt(70)
                 .buildAndRegister();
+
+        VACUUM_FURNACE_RECIPES.recipeBuilder()
+                .inputs(metaitem('dustMagnesium'))
+                .fluidOutputs(fluid('magnesium_vapor')*1000)
+                .duration(140)
+                .EUt(60)
+                .buildAndRegister();
+
+        VACUUM_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('magnesium_vapor')*1000)
+                .outputs(metaitem('dustRecrystallizedMagnesium'))
+                .duration(300)
+                .EUt(150)
+                .buildAndRegister();
+
+        INDUCTION_FURNACE_RECIPES.recipeBuilder()
+                .inputs(metaitem('dustRecrystallizedMagnesium'))
+                .fluidInputs(fluid('argon')*1000)
+                .notConsumable(metaitem('graphite_cruicible'))
+                .fluidOutputs(fluid('high_purity_magnesium')*144)
+                .duration(400)
+                .EUt(250)
+                .buildAndRegister();
+
+        CRYSTALLIZATION_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('high_purity_magnesium')*144)
+                .outputs(metaitem('dustHighPurityMagnesium'))
+                .duration(500)
+                .EUt(350)
+                .buildAndRegister();
