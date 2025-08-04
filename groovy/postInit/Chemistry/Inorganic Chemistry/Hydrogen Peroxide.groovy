@@ -24,7 +24,7 @@ mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withN
                 .EUt(200)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        BATCH_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('ethyl_benzene')*1000)
                 .inputs(metaitem('dustPhthalicAnhydride')* 15)
                 .fluidOutputs(fluid('ethylanthraquinone')*1000)
@@ -33,7 +33,7 @@ mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withN
                 .EUt(800)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        FIXED_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('ethylanthraquinone')*1000)
                 .fluidInputs(fluid('hydrogen')*1000)
                 .fluidOutputs(fluid('ethylanthrahydroquinone')*1000)
@@ -41,7 +41,7 @@ mods.gregtech.distillery.removeByInput(30, [metaitem('circuit.integrated').withN
                 .EUt(100)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        BUBBLE_COLUMN_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('ethylanthrahydroquinone')*1000)
                 .notConsumable(fluid('anthracene')*1000)
                 .fluidInputs(fluid('oxygen')*2000)
