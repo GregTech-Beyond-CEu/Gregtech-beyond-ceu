@@ -102,6 +102,81 @@ class GTBMaterials {
         public static Material PerfluorinatedAlkaneSolution;
         public static Material AntimonyTriiodide;
         public static Material SodiumMethoxide;
+        public static Material PolyethyleneTerephthalate;
+        public static Material LowMolecularWeightPolyethyleneTerephthalate;
+        public static Material Bis2HydroxyethylTerephthalate;
+        public static Material HighMolecularWeightPolyethyleneTerephthalate;
+        public static Material BrassC260;
+        public static Material GroundMonazite;
+        public static Material ConcentratedSodiumHydroxide;
+        public static Material MonaziteMixedRareEarthHydroxides;
+        public static Material ThoriumFiltrate;
+        public static Material MonaziteRareEarthClorideSolution;
+        public static Material CeriumIVHydroxide;
+        public static Material MonaziteCeriumDepletedRareEarthChlorideSolution;
+        public static Material MonaziteLREESolution;
+        public static Material D2EHPA;
+        public static Material MonaziteLanthanumRaffinate;
+        public static Material LanthanumTrichloride;
+        public static Material LanthanumOxalate;
+        public static Material LanthanumOxide;
+        public static Material PraseodymiumD2EHPAComplex;
+        public static Material LoadedPraesodymiumComplex;
+        public static Material PraseodymiumTrichloride;
+        public static Material PraseodymiumOxalate;
+        public static Material PraseodymiumOxide;
+        public static Material D2EHPASolventSolution;
+        public static Material NeodymiumTrichloride;
+        public static Material NeodymiumOxalate;
+        public static Material NeodymiumOxide;
+        public static Material MonaziteSmRichRaffinate;
+        public static Material SamariumTrichloride;
+        public static Material SamariumOxalate;
+        public static Material MonaziteSmDepletedRaffinate;
+        public static Material MonaziteHREERaffinate;
+        public static Material NeodymiumRaffinate;
+        public static Material MonazitePraseodymiumRichMonaziteFeed;
+        public static Material StrippedLanthanumMonaziteLeach;
+        public static Material MonaziteLREEDepletedRareEarthSolution;
+        public static Material MonaziteHREESolution;
+        public static Material MonaziteDyDepletedRaffinate;
+        public static Material TerbiumOxalateSolution;
+        public static Material OxalicAcidSolution;
+        public static Material MonaziteDysprosiumYttriumExtract;
+        public static Material YttriumOxalate;
+        public static Material DysprosiumOxalate;
+        public static Material MonaziteHolmiumExtract;
+        public static Material MonaziteHolmiumRaffinate;
+        public static Material TerbiumTrichloride;
+        public static Material TerbiumOxalate;
+        public static Material TerbiumOxide;
+        public static Material HolmiumTrichloride;
+        public static Material HolmiumOxalate;
+        public static Material MonaziteTbDepletedRaffinate;
+        public static Material MonaziteAdjustedTbDepletedRaffinate;
+        public static Material MonaziteHolmiumDepletedHREERaffinate;
+        public static Material MonaziteHolmiumDepletedRaffinate;
+        public static Material MonaziteErbiumConcentratedRaffinateIngot;
+        public static Material PurifiedMonaziteHolmiumDepletedRaffinate;
+        public static Material ErbiumEnrichedRaffinateIngot;
+        public static Material ErbiumDepletedRaffinateIngot;
+        public static Material ErbiumTrichloride;
+        public static Material ErbiumOxalate;
+        public static Material ErbiumOxide;
+        public static Material MonaziteMixedREEOxides;
+        public static Material MonaziteMixedREEOxidesSolution;
+        public static Material MonaziteThuliumRaffinate;
+        public static Material MonaziteThuliumDepletedRaffinate;
+        public static Material LutetiumTrichloride;
+        public static Material LutetiumOxalate;
+        public static Material LutetiumOxide;
+        public static Material YtterbiumDepletedRaffinate;
+        public static Material YtterbiumOxalate;
+        public static Material YtterbiumOxide;
+        public static Material YtterbiumTrichloride;
+        public static Material ThuliumTrichloride;
+        public static Material ThuliumOxalate;
+        public static Material ThuliumOxide;
 
         //Unknown Materials
 
@@ -243,7 +318,6 @@ class GTBMaterials {
         public static Material ColumbiteMinorOxideResidue;
         public static Material LeachedColumbite;
         public static Material IronSulfate;
-        public static Material SodiumSulfate;
         public static Material TantaliteMinorOxideResidue;
         public static Material FluoroniobicAcid;
         public static Material FusedTantalite;
@@ -378,9 +452,15 @@ class GTBMaterials {
         public static Material SiliconNitride;
         public static Material PyromelliticDianhydrideOxydianilin;
         public static Material PyromelliticDianhydrideSolution;
+        public static Material OxalicAcid;
+        public static Material HighPurityMagnesium;
+        public static Material HighPurityTellurium;
+        public static Material MagnesiumVapor;
+        public static Material RecrystallizedMagnesium;
 
         //Biology Materials
 
+        public static Material CalciumOxide;
         public static Material ZirkeliteSlurry;
         public static Material ImpureZirkeliteSlurry;
         public static Material CupriavidusNecator;
@@ -424,7 +504,7 @@ class GTBMaterials {
         public static Material YeastExtract;
         public static Material Mannitol;
         public static Material YeastMixture;
-        public static Material WasteWater;
+        public static Material Wastewater;
         public static Material NutrientRichSolution;
         public static Material MaltExtract;
         public static Material Peptone;
@@ -554,6 +634,9 @@ class GTBMaterials {
         public static Material IndiumPrecipitationSolution;
         public static Material HighPurityIndiumSolution;
         public static Material IndiumMotherLiqour;
+        public static Material BisphenolateDianion;
+        public static Material BisphenolADianion;
+        public static Material LexanPolymerBackbone;
 
         //First Degree Materials
 
@@ -999,9 +1082,8 @@ class GTBMaterials {
         public static Material GadoliniteLeachSolution;
         public static Material CooledGadoliniteLeachSolution;
         public static Material DysprosiumOxideSolution;
-        public static Material YttriumOxide;
-        public static Material ErbiumOxide;
         public static Material DysprosiumOxide;
+        public static Material YttriumOxide;
         public static Material ScandiumOxide;
         public static Material RareNaqFluoroantimonicAcid;
         public static Material NaqHydrochloricAcid;
@@ -1041,8 +1123,7 @@ class GTBMaterials {
         public static Material PalmaticAcid;
         public static Material ZieglerAlfolMixture;
         public static Material Dodecanol;
-        public static Material MonaziteSolution;
-        public static Material MuddyMonaziteSolution;
+        public static Material Isodecanol;
         public static Material Decanol;
         public static Material Hexanol;
         public static Material LeadNitrateSolution;
@@ -1050,27 +1131,14 @@ class GTBMaterials {
         public static Material LithiumHydride;
         public static Material LithiumAluminiumHydrideSolution;
         public static Material CaprylicAcid;
-        public static Material MonaziteOreByproductSlurry;
-        public static Material ImpureMonaziteOreByproductSlurry;
-        public static Material MuddyMonaziteOreByproducts;
-        public static Material DilutedCeriumFiltrate;
-        public static Material CooledRareEarthFiltrate;
-        public static Material NeutralizedRareEarthFiltrate;
-        public static Material RareEarthFiltrate;
-        public static Material DilutedMonaziteSulfide;
-        public static Material MonaziteSulfide;
         public static Material ZincChloride;
-        public static Material DriedMonaziteFiltrate;
         public static Material EuropiumOxide;
         public static Material ThoriumConcentrate;
         public static Material AluminiumHydroxide;
         public static Material GadoliniumOxide;
-        public static Material MonaziteRarerEarthFiltrate;
-        public static Material ChlorinatedMonaziteFiltrate;
         public static Material HafniumOxide;
         public static Material HafniumZirconiumSlag;
         public static Material WetHafniumZirconiumBlend;
-        public static Material SaturatedChlorinatedMonaziteFiltrate;
         public static Material RoastedHafniumZirconiumSlag;
         public static Material ZirconiumOxide;
         public static Material CeriumOxide;
@@ -1092,8 +1160,6 @@ class GTBMaterials {
         public static Material SamaricRareEarthConcentrate;
         public static Material HydrogenationCatalyst;
         public static Material NeodymiumRareEarthConcentrate;
-        public static Material NeodymiumOxide;
-        public static Material LanthanumOxide;
         public static Material SamariumRareEarthConcentrate;
         public static Material SamariumOxide;
         public static Material HolmiumOxide;
@@ -1151,7 +1217,26 @@ class GTBMaterials {
         public static Material XenonDifluoride;
         public static Material BismuthTelluride;
         public static Material ManganeseZincFerrite;
-
+        public static Material LexanPostPolymerizationMixture;
+        public static Material CalciumCarbonate;
+        public static Material SodiumHypochlorite;
+        public static Material CalciumHydroxideSolution;
+        public static Material MetaphosphoricAcid;
+        public static Material Dichloroethane;
+        public static Material MethyltrioctylammoniumChloride;
+        public static Material CopperIIChlorideSolution;
+        public static Material AmmoniaSolution;
+        public static Material AmmoniumPersulfateSolution;
+        public static Material AmmoniumBisulfateSolution;
+        public static Material SodiumPhosphateSolution;
+        public static Material RoastedXenotime;
+        public static Material MonaziteLREERaffinate;
+        public static Material HEHEHP;
+        public static Material Cyanex272;
+        public static Material ThuliumSolution;
+        public static Material SodiumPhosphate;
+        public static Material SodiumOxalate;
+        
         //Fantasy Materials
 
         public static Material DegenerateRhenium;
