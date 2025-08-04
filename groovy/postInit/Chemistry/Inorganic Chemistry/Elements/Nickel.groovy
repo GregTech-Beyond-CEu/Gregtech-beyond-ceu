@@ -10,7 +10,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(90)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('water')*9500)
                 .fluidInputs(fluid('oxygen')*37000)
                 .fluidInputs(fluid('sulfuric_acid')*4000)
@@ -81,7 +81,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(70)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        CHEMICAL_RECIPES.recipeBuilder() //TODO Reduction Furnace
                 .fluidInputs(fluid('hydrogen')*2000)
                 .fluidInputs(fluid('ammonia')*2800)
                 .inputs(metaitem('dustCopperFreeNickelSulfide')* 6)
@@ -91,8 +91,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(70)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('hydrogen_sulfide')*2000)
+        CRYSTALLIZATION_RECIPES.recipeBuilder()
                 .outputs(metaitem('dustCobaltSulfate')* 2)
                 .outputs(metaitem('dustNickelSulfate')* 2)
                 .fluidInputs(fluid('ammonia_metal_sulfuric_solution')*5000)
@@ -100,7 +99,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(70)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('distilled_water')*1000)
                 .inputs(metaitem('dustCopperSulfide'))
                 .fluidOutputs(fluid('copper_sulfide_solution')*1000)
@@ -143,7 +142,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCupricOxide') * 2], 
                 .EUt(50)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('sulfuric_acid')*1000)
                 .fluidInputs(fluid('pregnant_cobalt_leach_solution')*1000)
                 .fluidOutputs(fluid('leached_cobalt_leach_solution')*1000)
@@ -151,7 +150,7 @@ mods.gregtech.electrolyzer.removeByInput(30, [metaitem('dustCupricOxide') * 2], 
                 .EUt(150)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        MIXER_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('leached_cobalt_leach_solution')*1000)
                 .inputs(metaitem('dustCalciumHydroxide')*3)
                 .fluidOutputs(fluid('neutralized_cobalt_leach_solution')*1000)
