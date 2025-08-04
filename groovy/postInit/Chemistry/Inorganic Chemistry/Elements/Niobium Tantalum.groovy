@@ -73,7 +73,7 @@ mods.gregtech.electrolyzer.removeByInput(60, [metaitem('dustTantalite') * 9], nu
                 .EUt(300)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('hydrofluoric_acid')*13000)
                 .inputs(metaitem('dustLeachedTantalite')*17)
                 .fluidOutputs(fluid('fluorotantalic_acid')*2000)
@@ -100,7 +100,7 @@ mods.gregtech.electrolyzer.removeByInput(60, [metaitem('dustTantalite') * 9], nu
                 .EUt(540)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder() //PFR
+        BATCH_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('water')*9000)
                 .inputs(metaitem('dustPotassiumFluoroniobate')*20)
                 .fluidOutputs(fluid('potassium_fluoroniobate_solution')*1000)
@@ -127,7 +127,7 @@ mods.gregtech.electrolyzer.removeByInput(60, [metaitem('dustTantalite') * 9], nu
                 .EUt(700)
                 .buildAndRegister();
         
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('heptafluorotantalate')*1000)
                 .fluidInputs(fluid('potassium_hydroxide')*1000)
                 .outputs(metaitem('dustPotassiumFluorotantalate')*5)
@@ -136,7 +136,7 @@ mods.gregtech.electrolyzer.removeByInput(60, [metaitem('dustTantalite') * 9], nu
                 .EUt(560)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder() //PFR
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder() //PFR
                 .fluidInputs(fluid('water')*9000)
                 .inputs(metaitem('dustPotassiumFluorotantalate')*20)
                 .fluidOutputs(fluid('potassium_fluorotantalate_solution')*1000)
@@ -173,7 +173,7 @@ mods.gregtech.electrolyzer.removeByInput(60, [metaitem('dustTantalite') * 9], nu
                 .EUt(400)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('nbutanol')*3000)
                 .fluidInputs(fluid('phosphoryl_chloride')*1000)
                 .fluidOutputs(fluid('hydrochloric_acid')*3000)
@@ -182,7 +182,7 @@ mods.gregtech.electrolyzer.removeByInput(60, [metaitem('dustTantalite') * 9], nu
                 .EUt(450)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        FIXED_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('phosphorus_trichloride')*1000)
                 .fluidInputs(fluid('oxygen')*1000)
                 .fluidOutputs(fluid('phosphoryl_chloride')*1000)
@@ -209,10 +209,11 @@ mods.gregtech.electrolyzer.removeByInput(60, [metaitem('dustTantalite') * 9], nu
                 .EUt(200)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
-                .fluidInputs(fluid('hydrogen_peroxide')*1000)
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
+                .fluidInputs(fluid('water')*2000)
                 .inputs(metaitem('dustBarium'))
                 .outputs(metaitem('dustBariumHydroxide')*5)
+                .fluidOutputs(fluid('hydrogen')*2000)
                 .duration(300)
                 .EUt(240)
                 .buildAndRegister();
