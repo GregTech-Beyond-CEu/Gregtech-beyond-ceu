@@ -226,7 +226,7 @@ public class BiologicalMaterials {
                 .color(0x00796B)
                 .build().setFormula("Yeast(C6H14O6)", true);
 
-        WasteWater = new Material.Builder(12042, GTBUtil.gtb("waste_water"))
+        Wastewater = new Material.Builder(12042, GTBUtil.gtb("wastewater"))
                 .fluid()
                 .color(0x06383E)
                 .build().setFormula("(H2O)?", true);
