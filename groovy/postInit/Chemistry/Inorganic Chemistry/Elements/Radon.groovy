@@ -1,8 +1,6 @@
 import static gregtech.api.recipes.RecipeMaps.*;
 import static gtb.api.recipes.GTBRecipeMaps.*;
 import static supercritical.api.recipes.SCRecipeMaps.*;
-     // Plutonium 239 Dust * 8
-mods.gregtech.large_chemical_reactor.removeByInput(480, [metaitem('ingotPlutonium') * 8, metaitem('dustUranium')], [fluid('air') * 10000 * 10000])
 // Nitrogen Dioxide Gas * 122000
 mods.gregtech.distillation_tower.removeByInput(7680, null, [fluid('liquid_ender_air') * 200000 * 200000])
 
@@ -40,3 +38,6 @@ mods.gregtech.distillation_tower.removeByInput(7680, null, [fluid('liquid_ender_
             .EUt(480)
             .duration(300)
             .buildAndRegister();
+
+// Radon Gas * 1000
+mods.gregtech.distillation_tower.removeByInput(240, null, [fluid('radon_rich_gas_mixture') * 3000 * 3000])
