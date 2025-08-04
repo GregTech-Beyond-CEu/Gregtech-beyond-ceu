@@ -19,7 +19,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .buildAndRegister();
 
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        FLUIDIZED_BED_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('chlorine')*4000)
                 .inputs(metaitem('dustCarbon')* 2)
                 .inputs(metaitem('dustRutile'))
@@ -36,7 +36,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(120)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .inputs(metaitem('dustRedMudConcentrate'))
                 .fluidInputs(fluid('hydrochloric_acid')*1000)
                 .fluidOutputs(fluid('neutralised_red_mud')*1000)
@@ -62,7 +62,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(70)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        STIRRED_TANK_REACTOR_RECIPES.recipeBuilder()
                 .fluidInputs(fluid('sulfuric_acid')*2000)
                 .fluidInputs(fluid('red_slurry')*2000)
                 .fluidOutputs(fluid('titanyl_sulfate')*2000)
@@ -78,7 +78,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .EUt(290)
                 .buildAndRegister();
 
-        CHEMICAL_RECIPES.recipeBuilder()
+        CHEMICAL_RECIPES.recipeBuilder() //TODO Reduction Reactor
                 .fluidInputs(fluid('hydrochloric_acid')*4000)
                 .inputs(metaitem('dustCrystallizedTitanylSulfate')* 1)
                 .outputs(metaitem('dustTitanium')* 1)
@@ -91,3 +91,5 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
 mods.gregtech.electric_blast_furnace.removeByInput(480, [metaitem('dustMagnesium') * 2], [fluid('titanium_tetrachloride') * 1000 * 1000])
 // Carbon Monoxide Gas * 2000
 mods.gregtech.chemical_reactor.removeByInput(480, [metaitem('dustCarbon') * 2, metaitem('dustRutile')], [fluid('chlorine') * 4000 * 4000])
+// Carbon Monoxide Gas * 2000
+mods.gregtech.large_chemical_reactor.removeByInput(480, [metaitem('dustCarbon') * 2, metaitem('dustRutile')], [fluid('chlorine') * 4000 * 4000])
