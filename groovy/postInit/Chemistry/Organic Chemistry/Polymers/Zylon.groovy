@@ -23,7 +23,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .fluidInputs(fluid('bromine')*2000)
                 .fluidOutputs(fluid('dibromomethylbenzene')*1000)
                 .fluidOutputs(fluid('water')*1000)
-                .EUt(7680)
+                .EUt(1200)
                 .duration(150)
                 .buildAndRegister()
 
@@ -34,7 +34,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .fluidOutputs(fluid('hydrogen_sulfide')*1000)
                 .fluidOutputs(fluid('hydrogen_peroxide')*1000)
                 .outputs(metaitem('dustTerephthalaldehyde')*16)
-                .EUt(7680)
+                .EUt(1500)
                 .duration(50)
                 .buildAndRegister()
 
@@ -42,7 +42,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .inputs(metaitem('dustGold'))
                 .inputs(metaitem('dustPdCCatalyst')*2)
                 .outputs(metaitem('dustAuPdCCatalyst')*3)
-                .EUt(2000000)
+                .EUt(2000)
                 .duration(60)
                 .buildAndRegister()
 
@@ -74,7 +74,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .fluidOutputs(fluid('acetic_acid')*1000)
                 .fluidOutputs(fluid('sodium_acetate')*1000)
                 .outputs(metaitem('dustSalt')*2)
-                .EUt(7680)
+                .EUt(1900)
                 .duration(50)
                 .buildAndRegister()
 
@@ -82,7 +82,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .fluidInputs(fluid('sodium_acetate')*1000)
                 .outputs(metaitem('dustSodiumHydroxide')* 3)
                 .fluidOutputs(fluid('ethenone')*1000)
-                .EUt(7680)
+                .EUt(2000)
                 .duration(50)
                 .buildAndRegister()
 
@@ -92,7 +92,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .notConsumable(metaitem('dustAuPdCCatalyst'))
                 .outputs(metaitem('dustPreZylon'))
                 .fluidOutputs(fluid('oxygen')*6000)
-                .EUt(1966080)
+                .EUt(2000)
                 .duration(50)
                 .buildAndRegister()
 
@@ -102,7 +102,7 @@ import static gtb.api.recipes.GTBRecipeMaps.*;
                 .outputs(metaitem('dustPolymerizationReadyZylon'))
                 .EUt(120)
                 .duration(16000)
-                .blastFurnaceTemp(10000)
+                .blastFurnaceTemp(3000)
                 .buildAndRegister()
 
         POLYMERIZATION_TANK_RECIPES.recipeBuilder()
