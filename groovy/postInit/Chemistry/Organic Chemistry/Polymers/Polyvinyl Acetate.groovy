@@ -72,3 +72,5 @@ mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integr
 mods.gregtech.chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('air') * 7500 * 7500, fluid('vinyl_acetate') * 2160 * 2160, fluid('titanium_tetrachloride') * 100 * 100])
 // Polyvinyl Acetate * 3240
 mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 2])], [fluid('air') * 7500 * 7500, fluid('vinyl_acetate') * 2160 * 2160, fluid('titanium_tetrachloride') * 100 * 100])
+// Water * 1000
+mods.gregtech.large_chemical_reactor.removeByInput(30, [metaitem('circuit.integrated').withNbt(['Configuration': 3])], [fluid('oxygen') * 1000 * 1000, fluid('acetic_acid') * 1000 * 1000, fluid('ethylene') * 1000 * 1000])
